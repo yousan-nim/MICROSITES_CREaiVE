@@ -52,28 +52,23 @@ const CentralBeuatyAward = () => {
             }, 30000)
         }
 
-    },[isTouch])
+    }, [isTouch])
 
     return (
-        <div className='relative w-screen h-screen overflow-hidden bg-black'>
-
-            {/* <div className='absolute w-screen items-center text-center text-[200px] text-black m-auto '>
-                CENTRAL 
-            </div> */}
-
-
-
+        <div >
             {
                 isTouch ? (
-                    <div>
-                        {/* selecting coins */}
+                    <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF]'>
+                        <div className='relative w-screen h-screen items-center text-center text-[200px] m-auto' >
+                            {/* selecting coins */}
 
-                        <div className="absolute text-[120px] w-full text-center top-[30%]">
-                            "ไม่มีคนทำต่อ รอไปก่อน"
+                            <div className="absolute text-[90px] w-full text-center text-black top-[30%]">
+                                "NOBODY DO THIS TASK PLEASE WAITING..."
+                            </div>
                         </div>
                     </div>
                 ) : (
-                    <div>
+                    <div className='relative w-screen h-screen overflow-hidden  bg-black'>
                         <div className='absolute z-20 w-full h-full opacity-60'>
                             <video
                                 loop
