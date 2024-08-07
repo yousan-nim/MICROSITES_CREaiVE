@@ -41,7 +41,15 @@ const CentralBeuatyAward = () => {
 
 
 
-            <div className='absolute w-full h-full z-50 '>
+            <div className='absolute z-30 w-full text-gray text-center top-[55%]'>
+                <div className='flex text-[50px] justify-center items-center w-[300px] h-[300px] border-8 rounded-[100%] border-gray m-auto bg-gray-500 bg-opacity-50 uppercase'>
+                    Touch
+                </div>
+            </div>
+
+
+
+            {/* <div className='absolute w-full h-full z-50 '>
                 <Canvas
                     className='overflow-visible rounded-[20px]'>
                     <OrbitControls
@@ -65,7 +73,7 @@ const CentralBeuatyAward = () => {
                     />
                     <Tropgy />
                 </Canvas>
-            </div>
+            </div> */}
 
 
 
