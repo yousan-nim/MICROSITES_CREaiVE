@@ -40,11 +40,6 @@ const CentralBeuatyAward = () => {
 
     useEffect(() => {
 
-        // setTimeout(() => {
-        //     setIstouch(!isTouch)
-        //     console.log("text")
-        // }, 2000)
-
         if (isTouch) {
             setTimeout(() => {
                 setIstouch(!isTouch)
@@ -58,7 +53,7 @@ const CentralBeuatyAward = () => {
         <div >
             {
                 isTouch ? (
-                    <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF]'>
+                    <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF] transition-all duration-75'>
                         <div className='relative w-screen h-screen items-center text-center text-[200px] m-auto' >
                             {/* selecting coins */}
 
@@ -68,7 +63,7 @@ const CentralBeuatyAward = () => {
                         </div>
                     </div>
                 ) : (
-                    <div className='relative w-screen h-screen overflow-hidden  bg-black'>
+                    <div className='relative w-screen h-screen overflow-hidden bg-black transition-all duration-75'>
                         <div className='absolute z-20 w-full h-full opacity-60'>
                             <video
                                 loop
@@ -86,7 +81,7 @@ const CentralBeuatyAward = () => {
 
                         <div className='absolute z-30 w-full text-gray text-center top-[55%] opacity-loop-animate'>
                             <button onClick={CliclHandler}>
-                                <div className='flex text-[50px] justify-center items-center w-[300px] h-[300px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase'>
+                                <div className='animate-bounce flex text-[50px] justify-center items-center w-[300px] h-[300px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase'>
                                     Click !
                                 </div>
                             </button>
