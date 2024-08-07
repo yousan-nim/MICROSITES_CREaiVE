@@ -39,14 +39,15 @@ const CentralBeuatyAward = () => {
                 </video>
             </div>
 
-
-
             <div className='absolute z-30 w-full text-gray text-center top-[55%] opacity-loop-animate'>
-                <div className='flex text-[50px] justify-center items-center w-[300px] h-[300px] border-8 rounded-[100%] border-gray m-auto bg-gray-500 bg-opacity-50 uppercase'>
+                <div className='flex text-[50px] justify-center items-center w-[300px] h-[300px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase'>
                     Click !
                 </div>
             </div>
 
+            <div>
+
+            </div>
 
 
             {/* <div className='absolute w-full h-full z-50 '>

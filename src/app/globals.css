@@ -54,8 +54,10 @@ body {
   100% { opacity:1; }
 }
 .opacity-loop-animate {
-   -webkit-animation: flickerAnimation 3s infinite;
-   -moz-animation: flickerAnimation 3s infinite;
-   -o-animation: flickerAnimation 3s infinite;
-    animation: flickerAnimation 3s infinite;
+   -webkit-animation: flickerAnimation 6s infinite;
+   -moz-animation: flickerAnimation 6s infinite;
+   -o-animation: flickerAnimation 6s infinite;
+    animation: flickerAnimation 6s infinite;
+
+    transition-duration: 3;
 }
