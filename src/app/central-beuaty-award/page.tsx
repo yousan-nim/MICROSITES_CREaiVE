@@ -1,5 +1,11 @@
-import React from 'react'
+'use client'
 
+import React, { useRef, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import { PointLight } from 'three';
+
+import Tropgy from './Trophy';
 // <!-- BODY -->
 // <!-- #F6E7DF -->
 // <!-- #e4c7ad -->
@@ -7,14 +13,18 @@ import React from 'react'
 // <!-- #b18b68 -->
 
 const CentralBeuatyAward = () => {
+
+    // const [cardType, setCardType] = useState()
+    const lightRef = useRef<PointLight>(null);
+    // bg-[#F6E7DF]
     return (
         <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF]'>
 
-            <div className='absolute w-screen items-center text-center text-[200px] text-black m-auto '>
+            {/* <div className='absolute w-screen items-center text-center text-[200px] text-black m-auto '>
                 CENTRAL 
-            </div>
+            </div> */}
 
-            <div className='absolute z-50 w-full h-full opacity-90'>
+            <div className='absolute z-20 w-full h-full opacity-80'>
                 <video
                     loop
                     muted
@@ -28,6 +38,38 @@ const CentralBeuatyAward = () => {
                     />
                 </video>
             </div>
+
+
+
+            <div className='absolute w-full h-full z-50 '>
+                <Canvas
+                    className='overflow-visible rounded-[20px]'>
+                    <OrbitControls
+                        // enableRotate
+                        // autoRotate
+                        onChange={(e) => {
+                            if (!e) return;
+                            const camera = e.target.object;
+
+                            if (lightRef.current) {
+                                lightRef.current.position.set(0, 1, 0);
+                                lightRef.current.position.add(camera.position);
+                            }
+                        }} />
+                    <ambientLight intensity={1} />
+
+                    <pointLight
+                        ref={lightRef}
+                        intensity={15}
+                        position={[1, 1, 1]}
+                    />
+                    <Tropgy />
+                </Canvas>
+            </div>
+
+
+
+
         </div>
     )
 }
