@@ -18,13 +18,13 @@ const CentralBeuatyAward = () => {
     const lightRef = useRef<PointLight>(null);
     // bg-[#F6E7DF]
     return (
-        <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF]'>
+        <div className='relative w-screen h-screen overflow-hidden bg-black'>
 
             {/* <div className='absolute w-screen items-center text-center text-[200px] text-black m-auto '>
                 CENTRAL 
             </div> */}
 
-            <div className='absolute z-20 w-full h-full opacity-80'>
+            <div className='absolute z-20 w-full h-full opacity-60'>
                 <video
                     loop
                     muted
@@ -43,7 +43,7 @@ const CentralBeuatyAward = () => {
 
             <div className='absolute z-30 w-full text-gray text-center top-[55%] opacity-loop-animate'>
                 <div className='flex text-[50px] justify-center items-center w-[300px] h-[300px] border-8 rounded-[100%] border-gray m-auto bg-gray-500 bg-opacity-50 uppercase'>
-                    Touch
+                    Click !
                 </div>
             </div>
 
