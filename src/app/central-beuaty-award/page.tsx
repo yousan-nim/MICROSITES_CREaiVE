@@ -23,7 +23,7 @@ const CentralBeuatyAward = () => {
     // const [cardType, setCardType] = useState()
     const lightRef = useRef<PointLight>(null);
 
-    const [isTouch, setIstouch] = useState(false)
+    const [isTouch, setIstouch] = useState(true)
     // bg-[#F6E7DF]
 
 
@@ -57,8 +57,15 @@ const CentralBeuatyAward = () => {
                         <div className='relative w-screen h-screen items-center text-center text-[200px] m-auto' >
                             {/* selecting coins */}
 
-                            <div className="absolute text-[90px] w-full text-center text-black top-[30%]">
+                            <div className="absolute text-[90px] w-full h-screen text-center text-black top-[30%]">
                                 "NOBODY DO THIS TASK PLEASE WAITING..."
+
+                                <div className='absolute z-30 top-[20%]'>                   
+                                    <img 
+                                        src='/MICROSITES_CREaiVE/img/MockTrophy.png'
+                                        className='w-full h-full'
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
