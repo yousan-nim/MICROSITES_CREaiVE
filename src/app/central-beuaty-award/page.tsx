@@ -11,7 +11,7 @@ const CentralBeuatyAward = () => {
         <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF]'>
 
             <div className='absolute w-screen items-center text-center text-[200px] text-black m-auto '>
-                {/* CENTRAL  */}
+                CENTRAL 
             </div>
 
             <div className='absolute z-50 w-full h-full opacity-90'>
@@ -23,7 +23,7 @@ const CentralBeuatyAward = () => {
                     className='w-full'
                 >
                     <source
-                        src="/mp4/award.mp4"
+                        src="/MICROSITES_CREaiVE/mp4/award.mp4"
                         type="video/mp4"
                     />
                 </video>
