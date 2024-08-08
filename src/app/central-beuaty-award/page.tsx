@@ -62,7 +62,7 @@ const CentralBeuatyAward = () => {
 
                                 <div className='absolute z-30'>                   
                                     <img 
-                                        src='/MICROSITES_CREaiVE/img/Central trophy2.png'
+                                        src='/MICROSITES_CREaiVE/img/homeTrophy.png'
                                         className='w-full h-full'
                                     />
                                 </div>
