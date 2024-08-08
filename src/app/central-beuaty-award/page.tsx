@@ -57,16 +57,23 @@ const CentralBeuatyAward = () => {
                         <div className='relative w-screen h-screen items-center text-center text-[200px] m-auto' >
                             {/* selecting coins */}
 
-                            <div className="absolute text-[90px] w-full h-screen text-center text-black top-[30%]">
-                                "NOBODY DO THIS TASK PLEASE WAITING..."
+                            <div className="absolute text-[90px] w-full h-screen text-center text-black top-[10%] ">
+                                {/* "NOBODY DO THIS TASK PLEASE WAITING..." */}
 
-                                <div className='absolute z-30 top-[20%]'>                   
+                                <div className='absolute z-30'>                   
                                     <img 
-                                        src='/MICROSITES_CREaiVE/img/MockTrophy.png'
+                                        src='/MICROSITES_CREaiVE/img/Central trophy2.png'
                                         className='w-full h-full'
                                     />
                                 </div>
                             </div>
+
+
+                            <div>
+
+
+                            </div>
+
                         </div>
                     </div>
                 ) : (
