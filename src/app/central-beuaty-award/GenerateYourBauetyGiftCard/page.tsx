@@ -27,6 +27,9 @@ const page = () => {
     const [imgSrc, setImgSrc] = useState<string | null>(null);
     const [timeLeft, setTimeLeft] = useState(1);
 
+
+    // const 
+
     // const deepFunction = await fetch("https://campaign.creaive.ai/centrall/uploadBase64", {
     //     method: 'POST',
     //     headers: {
@@ -86,10 +89,13 @@ const page = () => {
                         }),
                     })
 
-                    console.log(result)
+                    console.log(result, "res")
+
                 } catch (e) {
                     console.log(e);
                 }
+
+                
             }
         }, 5000);
 
@@ -152,7 +158,7 @@ const page = () => {
                             height={600}
                             width={600}
                             ref={webcamRef}
-                            screenshotFormat="image/jpeg"
+                            screenshotFormat="image/png"
                             className='flex w-[80%] h-auto m-auto items-center justify-center bg-white rounded-[40px]'
 
                         />
