@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei'
 import { PointLight } from 'three';
 
 import Tropgy from './Trophy';
+import Link from 'next/link';
 // <!-- BODY -->
 // <!-- #F6E7DF -->
 // <!-- #e4c7ad -->
@@ -27,25 +28,22 @@ const CentralBeuatyAward = () => {
     // bg-[#F6E7DF]
 
 
-
-
-
-
-
-
     const CliclHandler = () => {
         setIstouch(!isTouch)
     }
 
+    const GenerateBauetyGiftCard = () => {
+
+    }
 
     useEffect(() => {
 
-        if (isTouch) {
-            setTimeout(() => {
-                setIstouch(!isTouch)
-                console.log("text")
-            }, 30000)
-        }
+        // if (isTouch) {
+        //     setTimeout(() => {
+        //         setIstouch(!isTouch)
+        //         console.log("text")
+        //     }, 30000)
+        // }
 
     }, [isTouch])
 
@@ -53,27 +51,63 @@ const CentralBeuatyAward = () => {
         <div >
             {
                 isTouch ? (
-                    <div className='relative w-screen h-screen overflow-hidden bg-[#F6E7DF] transition-all duration-75'>
+                    <div className='relative w-screen h-screen overflow-hidden bg-white '>
                         <div className='relative w-screen h-screen items-center text-center text-[200px] m-auto' >
-                            {/* selecting coins */}
+                            <div className='flex w-full m-auto items-center justify-center'>
+                                <img
+                                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024.png"
+                                // onClick={}
+                                />
+                            </div>
 
-                            <div className="absolute text-[90px] w-full h-screen text-center text-black top-[10%] ">
-                                {/* "NOBODY DO THIS TASK PLEASE WAITING..." */}
-
-                                <div className='absolute z-30'>                   
-                                    <img 
-                                        src='/MICROSITES_CREaiVE/img/homeTrophy.png'
-                                        className='w-full h-full'
+                            <div className='relative z-50 w-screen h-screen m-auto items-center justify-center top-0 '>
+                                
+                                <Link 
+                                    href="/central-beuaty-award/GenerateYourBauetyGiftCard"
+                                    className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[900px] m-auto '
+                                    onClick={() => {}}
+                                >
+                                    <img
+                                        src='/MICROSITES_CREaiVE/img/Generate your beauty giftcard.png'
+                                        className='w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[800px]'
                                     />
-                                </div>
+                                </Link>
+                                
+                                <button className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[1600px] m-auto'>
+                                    <img
+                                        src='/MICROSITES_CREaiVE/img/Best Eco-Friendly.png'
+                                        className='w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]'
+                                    />
+                                </button>
+                                
+                                <button className='absolute top-1/2 left-[2%] -translate-y-[1100px] m-auto'>
+                                    <img
+                                        src='/MICROSITES_CREaiVE/img/Best Eco-Friendly.png'
+                                        className='w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]'
+                                    />
+                                </button>
+                                
+                                <button className='absolute top-1/2 right-[2%] -translate-y-[1100px] m-auto'>
+                                    <img
+                                        src='/MICROSITES_CREaiVE/img/Best Eco-Friendly.png'
+                                        className='w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]'
+                                    />
+                                </button>
+                                
+                                <button className='absolute top-1/2 left-[8%] -translate-y-[300px] m-auto'>
+                                    <img
+                                        src='/MICROSITES_CREaiVE/img/Best Eco-Friendly.png'
+                                        className='w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]'
+                                    />
+                                </button>
+                                
+                                <button className='absolute top-1/2 right-[8%] -translate-y-[300px] m-auto'>
+                                    <img
+                                        src='/MICROSITES_CREaiVE/img/Best Eco-Friendly.png'
+                                        className='w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]'
+                                    />
+                                </button>
                             </div>
-
-
-                            <div>
-
-
-                            </div>
-
                         </div>
                     </div>
                 ) : (
@@ -103,37 +137,6 @@ const CentralBeuatyAward = () => {
                     </div>
                 )
             }
-
-
-            {/* <div className='absolute w-full h-full z-50 '>
-                <Canvas
-                    className='overflow-visible rounded-[20px]'>
-                    <OrbitControls
-                        // enableRotate
-                        // autoRotate
-                        onChange={(e) => {
-                            if (!e) return;
-                            const camera = e.target.object;
-
-                            if (lightRef.current) {
-                                lightRef.current.position.set(0, 1, 0);
-                                lightRef.current.position.add(camera.position);
-                            }
-                        }} />
-                    <ambientLight intensity={1} />
-
-                    <pointLight
-                        ref={lightRef}
-                        intensity={15}
-                        position={[1, 1, 1]}
-                    />
-                    <Tropgy />
-                </Canvas>
-            </div> */}
-
-
-
-
         </div>
     )
 }
