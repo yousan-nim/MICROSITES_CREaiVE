@@ -8,21 +8,93 @@ import { FaCamera } from "react-icons/fa";
 import { IoShareOutline } from "react-icons/io5";
 
 
+
+
+
+// async function deepFuntion() {
+//     const response = await fetch("https://campaign.creaive.ai/centrall/uploadBase64", {
+//         method: 'POST',
+//         headers: {
+//             'Content-type': 'application/json',
+//         },
+//         body: JSON.stringify({ img_upload: imgSrc }),
+//     })
+// }
+
+
 const page = () => {
     const webcamRef = useRef<Webcam>(null);
     const [imgSrc, setImgSrc] = useState<string | null>(null);
-    const [timeLeft, setTimeLeft] = useState(5);
+    const [timeLeft, setTimeLeft] = useState(1);
+
+    // const deepFunction = await fetch("https://campaign.creaive.ai/centrall/uploadBase64", {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ img_upload: imgSrc }),
+    // }).then(
+    //     // setImgSrc(() => imgSrc)
+    // ).catch((e) => {
+    //     console.error(e);
+    // })
+
+
+    const deepFunction = async () => {
+        try {
+            const result = await fetch("https://campaign.creaive.ai/centrall/uploadBase64", {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    img_upload: imgSrc
+                }),
+            })
+
+            console.log(result)
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+
+
+    // "/central/generateNextStep"
+    // body: {
+    //     _id: this.imgData._id,
+    //   },
+
 
     const capture = useCallback(async () => {
         setInterval(() => {
             setTimeLeft(timeLeft => --timeLeft)
         }, 1000);
-        setTimeout(() => {
+        setTimeout(async () => {
             const imageSrc = webcamRef.current?.getScreenshot();
             if (imageSrc) {
-                setImgSrc(imageSrc);
-              }
+                console.log("imgSrc", imageSrc)
+                // setImgSrc(imageSrc);
+                try {
+                    const result = await fetch("https://campaign.creaive.ai/centrall/uploadBase64", {
+                        method: 'POST',
+                        headers: {
+                            'Content-type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            img_upload: imageSrc
+                        }),
+                    })
+
+                    console.log(result)
+                } catch (e) {
+                    console.log(e);
+                }
+            }
         }, 5000);
+
+        // deepFunction()
+
     }, [webcamRef])
 
     const share = useCallback(() => {
@@ -37,16 +109,7 @@ const page = () => {
     }
 
     useEffect(() => {
-        let i = 0;
-
-        function pollDOM() {
-            console.log(i);
-            i++;
-        }
-
-        const interval = setInterval(pollDOM, 3000);
-
-        return () => clearInterval(interval);
+        // deepFunction()
     }, [])
 
 
@@ -89,6 +152,7 @@ const page = () => {
                             height={600}
                             width={600}
                             ref={webcamRef}
+                            screenshotFormat="image/jpeg"
                             className='flex w-[80%] h-auto m-auto items-center justify-center bg-white rounded-[40px]'
 
                         />
