@@ -18,8 +18,10 @@ const page = () => {
             setTimeLeft(timeLeft => --timeLeft)
         }, 1000);
         setTimeout(() => {
-            const imageSrc = webcamRef.current.getScreenshot();
-            setImgSrc(imageSrc);
+            const imageSrc = webcamRef.current?.getScreenshot();
+            if (imageSrc) {
+                setImgSrc(imageSrc);
+              }
         }, 5000);
     }, [webcamRef])
 
