@@ -1,22 +1,21 @@
+import { PostAPI_Type } from "./type";
 
-
-
-// import { headers } from "next/headers"
-
-
-
-
-// async function Api() {
-//     const res = await fetch("https://campaign.creaive.ai/centrall/uploadBase64", {
-
-//         method: 'POST',
-//         headers: {
-//             'Content-type': 'application/json',
-//         },
-//         body: JSON.stringify({ img_upload: imgSrc }),
-//     }).then(
-//         // setImgSrc(() => imgSrc)
-//     ).catch((e) => {
-//         console.error(e);
-//     })
-// }
+export async function PostImgAPI(imageSrc: PostAPI_Type) {
+  try {
+    const result = await fetch(
+      "https://campaign.creaive.ai/centrall/uploadBase64",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          img_upload: imageSrc,
+        }),
+      }
+    );
+    console.log(result, "res");
+  } catch (e) {
+    console.log(e);
+  }
+}
