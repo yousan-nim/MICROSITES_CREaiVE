@@ -67,7 +67,7 @@ const page = () => {
   return (
     <div className="w-screen h-screen bg-[#F6E7DF]">
       <div className="flex w-full m-auto items-center justify-center">
-        <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024.png" />
+        <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
       </div>
 
       {imgSrc ? (
