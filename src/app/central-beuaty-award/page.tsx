@@ -79,24 +79,24 @@ const CentralBeuatyAward = () => {
               </Link>
 
               <Link
-                href="/central-beuaty-award/"
+                href="/central-beuaty-award/BestMakeUp"
                 onClick={() => {}}
               >
                 <button className="absolute top-1/2 right-[2%] -translate-y-[1100px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestMakeUp/Best Make Up.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
               </Link>
 
               <Link
-                href="/central-beuaty-award/"
+                href="/central-beuaty-award/BestSkincare"
                 onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[300px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
@@ -108,7 +108,7 @@ const CentralBeuatyAward = () => {
               >
                 <button className="absolute top-1/2 right-[8%] -translate-y-[300px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
@@ -126,7 +126,6 @@ const CentralBeuatyAward = () => {
               />
             </video>
           </div>
-
           <div className="absolute z-30 w-full text-gray text-center top-[55%] opacity-loop-animate">
             <button onClick={CliclHandler}>
               <div className="animate-bounce flex text-[50px] justify-center items-center w-[300px] h-[300px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase">
