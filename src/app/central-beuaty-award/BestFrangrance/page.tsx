@@ -1,6 +1,6 @@
 import React from "react";
 
-const BestEcoFriendly = () => {
+const BestFrangrance = () => {
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white ">
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
@@ -14,4 +14,4 @@ const BestEcoFriendly = () => {
   );
 };
 
-export default BestEcoFriendly;
+export default BestFrangrance;

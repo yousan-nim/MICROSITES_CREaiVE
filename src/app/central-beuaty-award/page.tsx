@@ -53,32 +53,33 @@ const CentralBeuatyAward = () => {
                 />
               </Link>
 
+              {/* Top Center */}
               <Link
-                href="/central-beuaty-award/GenerateYourBauetyGiftCard"
+                href="/central-beuaty-award/BestFrangrance"
                 onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[1600px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestFrangrance/Best Fragrance.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
               </Link>
 
               <Link
-                href="/central-beuaty-award/GenerateYourBauetyGiftCard"
+                href="/central-beuaty-award/BestLuxury"
                 onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-[2%] -translate-y-[1100px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestLuxury/Best Luxury.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
               </Link>
 
               <Link
-                href="/central-beuaty-award/GenerateYourBauetyGiftCard"
+                href="/central-beuaty-award/"
                 onClick={() => {}}
               >
                 <button className="absolute top-1/2 right-[2%] -translate-y-[1100px] m-auto">
@@ -90,7 +91,7 @@ const CentralBeuatyAward = () => {
               </Link>
 
               <Link
-                href="/central-beuaty-award/GenerateYourBauetyGiftCard"
+                href="/central-beuaty-award/"
                 onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[300px] m-auto">
