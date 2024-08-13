@@ -96,7 +96,7 @@ const CentralBeuatyAward = () => {
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[300px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/Best Skincare.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
@@ -108,7 +108,7 @@ const CentralBeuatyAward = () => {
               >
                 <button className="absolute top-1/2 right-[8%] -translate-y-[300px] m-auto">
                   <img
-                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/.png"
+                    src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
                     className="w-[100px] sm:w-[80px] md:w-[400px] xl:w-[200px] hv:w-[600px]"
                   />
                 </button>
