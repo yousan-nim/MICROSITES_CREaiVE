@@ -10,7 +10,7 @@ export const data = {
         id: 1,
         name: "DIOR PRESTIGE LA MICRO-LOTION DE ROSE ADVANCED",
         image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/BestEssence/1.png",
-        imageQr: "",
+        imageQr: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/BestEssence/qr1.png",
         link: "",
       },
       second: {
