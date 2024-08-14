@@ -13,6 +13,7 @@ interface ButtonProps {
 }
 
 const CentralBeuatyAward = () => {
+  // const router = useRouter()
   const [isTouch, setIstouch] = useState(true);
 
   const [height, setHeight] = useState(0)

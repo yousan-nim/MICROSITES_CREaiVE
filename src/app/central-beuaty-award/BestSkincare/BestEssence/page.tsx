@@ -1,9 +1,15 @@
 "use client"
 import React, { useEffect, useState, FC } from 'react'
+import { useRouter } from 'next/navigation'
+
 import { data } from "../data"
+import { MdOutlineArrowBack } from "react-icons/md";
+import { MdHome } from "react-icons/md";
 
 
 const page = () => {
+  const router = useRouter()
+
   const [hero, setHero] = useState({
     img: data.data.BestEssence.first.image,
     name: data.data.BestEssence.first.name,
@@ -64,8 +70,13 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
+        <div className='absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4'>
+          <MdHome size={80}  onClick={() => router.push('/central-beuaty-award')} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]'/>
+          <MdOutlineArrowBack size={80} onClick={() => router.back()} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]'/>
+        </div>
+
         <div className='absolute right-0 w-[300px] text-black top-[6vh] p-4'>
-        <div onClick={FirstClick}>
+          <div onClick={FirstClick}>
             <img src={data.data.BestEssence.first.image} />
             <div className='text-[18px]'>
               {data.data.BestEssence.first.name}
