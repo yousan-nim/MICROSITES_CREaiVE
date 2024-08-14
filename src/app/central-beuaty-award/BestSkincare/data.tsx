@@ -4,6 +4,8 @@ export const data = {
     "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Trophys/SkinCare.png",
   data: {
     BestEssence: {
+      name:"Essence",
+      href:"/central-beuaty-award/BestSkincare/BestEssence",
       first: {
         id: 1,
         name: "DIOR PRESTIGE LA MICRO-LOTION DE ROSE ADVANCED",
@@ -41,6 +43,8 @@ export const data = {
       },
     },
     BestEyeCream: {
+      name:"Eye Cream",
+      href:"/central-beuaty-award/BestSkincare/BestEyeCream",
       first: {
         id: 1,
         name: "ESTEE LAUDER ADVANCED NIGHT REPAIR EYE SUPERCHARGED GEL-CREME",
@@ -78,6 +82,8 @@ export const data = {
       },
     },
     BestMenSkincare: {
+      name:"Men's Skincare",
+      href:"/central-beuaty-award/BestSkincare/BestMenSkincare",
       first: {
         id: 1,
         name: "SHISEIDO MEN Ultimune Power Infusing Concentrate",
@@ -115,6 +121,8 @@ export const data = {
       },
     },
     BestMoisturizer: {
+      name:"Moisturizer",
+      href:"/central-beuaty-award/BestSkincare/BestMoisturizer",
       first: {
         id: 1,
         name: "SHISEIDO VITAL PERFECTION Uplifting and Firming Advanced Cream",
@@ -152,6 +160,8 @@ export const data = {
       },
     },
     BestSerum: {
+      name:"Serum",
+      href:"/central-beuaty-award/BestSkincare/BestSerum",
       first: {
         id: 1,
         name: "LA MER THE CONCENTRATE",
@@ -189,6 +199,8 @@ export const data = {
       },
     },
     BestSuncreen: {
+      name:"Suncreen",
+      href:"/central-beuaty-award/BestSkincare/BestSuncreen",
       first: {
         id: 1,
         name: "CLARINS UV PLUS [3P] ANTI-POLLUTION SPF50 PA++++",
