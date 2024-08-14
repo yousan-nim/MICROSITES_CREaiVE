@@ -113,7 +113,7 @@ const page = () => {
         </div>
 
         {/* Hero image */}
-        <div className='relative m-auto pt-10 justify-center items-center text-center'>
+        <div className='relative m-auto pt-10 justify-center items-center text-center w-[50vw]'>
           <img src={hero.img}
             className='w-[80vw] m-auto'
           />

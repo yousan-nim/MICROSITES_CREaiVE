@@ -70,7 +70,7 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className='absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4'>
+        <div className='absolute z-50 text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4'>
           <MdHome size={80} onClick={() => router.push('/central-beuaty-award')} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
           <MdOutlineArrowBack size={80} onClick={() => router.back()} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
         </div>
@@ -113,7 +113,7 @@ const page = () => {
         </div>
 
         {/* Hero image */}
-        <div className='relative m-auto pt-10 justify-center items-center text-center'>
+        <div className='relative m-auto pt-10 justify-center items-center text-center w-[50vw]'>
           <img src={hero.img}
             className='w-[80vw] m-auto'
           />
