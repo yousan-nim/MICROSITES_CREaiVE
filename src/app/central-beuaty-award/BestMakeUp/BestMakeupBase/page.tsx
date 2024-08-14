@@ -11,48 +11,48 @@ const page = () => {
   const router = useRouter()
 
   const [hero, setHero] = useState({
-    img: data.data.BestFoundation.first.image,
-    name: data.data.BestFoundation.first.name,
-    qr: data.data.BestFoundation.first.imageQr
+    img: data.data.BestMakeupBase.first.image,
+    name: data.data.BestMakeupBase.first.name,
+    qr: data.data.BestMakeupBase.first.imageQr
   })
 
   const FirstClick = () => {
     setHero({
-      img: data.data.BestFoundation.first.image,
-      name: data.data.BestFoundation.first.name,
-      qr: data.data.BestFoundation.first.imageQr
+      img: data.data.BestMakeupBase.first.image,
+      name: data.data.BestMakeupBase.first.name,
+      qr: data.data.BestMakeupBase.first.imageQr
     })
   }
 
   const SecondClick = () => {
     setHero({
-      img: data.data.BestFoundation.second.image,
-      name: data.data.BestFoundation.second.name,
-      qr: data.data.BestFoundation.second.imageQr
+      img: data.data.BestMakeupBase.second.image,
+      name: data.data.BestMakeupBase.second.name,
+      qr: data.data.BestMakeupBase.second.imageQr
     })
   }
 
   const ThirdClick = () => {
     setHero({
-      img: data.data.BestFoundation.third.image,
-      name: data.data.BestFoundation.third.name,
-      qr: data.data.BestFoundation.third.imageQr
+      img: data.data.BestMakeupBase.third.image,
+      name: data.data.BestMakeupBase.third.name,
+      qr: data.data.BestMakeupBase.third.imageQr
     })
   }
 
   const FourthClick = () => {
     setHero({
-      img: data.data.BestFoundation.fourth.image,
-      name: data.data.BestFoundation.fourth.name,
-      qr: data.data.BestFoundation.fourth.imageQr
+      img: data.data.BestMakeupBase.fourth.image,
+      name: data.data.BestMakeupBase.fourth.name,
+      qr: data.data.BestMakeupBase.fourth.imageQr
     })
   }
 
   const FifthClick = () => {
     setHero({
-      img: data.data.BestFoundation.fifth.image,
-      name: data.data.BestFoundation.fifth.name,
-      qr: data.data.BestFoundation.fifth.imageQr
+      img: data.data.BestMakeupBase.fifth.image,
+      name: data.data.BestMakeupBase.fifth.name,
+      qr: data.data.BestMakeupBase.fifth.imageQr
     })
   }
 
@@ -77,37 +77,37 @@ const page = () => {
 
         <div className='absolute z-50 right-0 w-[250px] text-black top-[16vh] p-2'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
-            <img src={data.data.BestFoundation.first.image} />
+            <img src={data.data.BestMakeupBase.first.image} />
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
-              {data.data.BestFoundation.first.name}
+              {data.data.BestMakeupBase.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFoundation.second.image} />
+            <img src={data.data.BestMakeupBase.second.image} />
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
-              {data.data.BestFoundation.second.name}
+              {data.data.BestMakeupBase.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFoundation.third.image} />
+            <img src={data.data.BestMakeupBase.third.image} />
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
-              {data.data.BestFoundation.third.name}
+              {data.data.BestMakeupBase.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFoundation.fourth.image} />
+            <img src={data.data.BestMakeupBase.fourth.image} />
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
-              {data.data.BestFoundation.fourth.name}
+              {data.data.BestMakeupBase.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFoundation.fifth.image} />
+            <img src={data.data.BestMakeupBase.fifth.image} />
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
-              {data.data.BestFoundation.fifth.name}
+              {data.data.BestMakeupBase.fifth.name}
             </div>
           </div>
         </div>
