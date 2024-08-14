@@ -4,7 +4,7 @@ export const data = {
     "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Trophys/Best Luxury.png",
   data: {
     BestLuxury: {
-      name:"Essence",
+      name:"BestLuxury",
       href:"/central-beuaty-award/BestSkincare/BestLuxury",
       first: {
         id: 1,
