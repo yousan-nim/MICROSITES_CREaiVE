@@ -15,6 +15,9 @@ interface ButtonProps {
 const CentralBeuatyAward = () => {
   const [isTouch, setIstouch] = useState(true);
 
+  const [height, setHeight] = useState(window.innerHeight)
+  const [width, setWidth] = useState(window.innerWidth)
+
   const CliclHandler = () => {
     setIstouch(!isTouch);
   };
@@ -33,6 +36,9 @@ const CentralBeuatyAward = () => {
     <div>
       {isTouch ? (
         <div className="relative w-screen h-screen overflow-hidden bg-white ">
+          <div className="absolute text-[100px] bg-red-600">
+            {width}x{height}
+           </div> 
           <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
             <div className="flex w-full m-auto items-center justify-center">
               <img
