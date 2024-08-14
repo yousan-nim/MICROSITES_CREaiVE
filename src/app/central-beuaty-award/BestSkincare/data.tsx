@@ -155,7 +155,7 @@ export const data = {
       first: {
         id: 1,
         name: "LA MER THE CONCENTRATE",
-        image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/BestSerum/1.jpg",
+        image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/BestSerum/1.png",
         imageQr: "",
         link: "",
       },
@@ -183,7 +183,7 @@ export const data = {
       fifth: {
         id: 5,
         name: "SK-II GenOptics Ultraura Essence",
-        image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/BestSerum/5.jpg",
+        image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/BestSerum/5.png",
         imageQr: "",
         link: "",
       },

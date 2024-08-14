@@ -194,7 +194,7 @@ const page = () => {
                   <img
                     src={imgSrc}
                     alt="webcam"
-                    className="z-0 flex blur-lg w-[1728px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                    className="z-0 flex blur-lg w-[1440px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
                   />
                   {/*  */}
                   <div className="absolute z-10 w-full top-[40%]">
@@ -253,7 +253,7 @@ const page = () => {
                 <Webcam
                   ref={webcamRef}
                   screenshotFormat="image/png"
-                  className="flex w-[1728px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                  className="flex w-[1440px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
                 />
 
                 <div className="relative w-full m-auto  justify-center items-center flex ">
