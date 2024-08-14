@@ -14,8 +14,6 @@ type Props = {
   href_to: string
 }
 
-
-
 const First_ProductBox = ({ image, name, href_to }: Props) => {
   return (
     <Link href={href_to}>
@@ -28,9 +26,6 @@ const First_ProductBox = ({ image, name, href_to }: Props) => {
     </Link>
   )
 }
-
-
-
 
 
 function BestSkincare() {
@@ -48,46 +43,32 @@ function BestSkincare() {
           <MdOutlineArrowBack size={80} onClick={() => router.back()} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
         </div>
 
-        <div className="absolute z-10 flex top-[25%] w-full m-auto">
+        <div className="absolute z-10 flex top-[25%] w-full m-auto font-gothamBook uppercase">
           <div className="grid grid-cols-12 justify-center items-center m-auto gap-10">
             <div className="col-start-4">
               {/*  */}
             </div>
             <div className="col-start-3 col-span-8 items-center justify-center m-auto">
-              <div className="flex">
+              <div className="flex text-[40px] ">
                 <First_ProductBox image={data.data.BestEssence.first.image} name={data.data.BestEssence.name} href_to={data.data.BestEssence.href} />
-
-                <First_ProductBox image={data.data.BestEyeCream.first.image} name={data.data.BestEyeCream.name} href_to={data.data.BestEyeCream.href} />
-              </div>
-            </div>
-
-
-            <div className="col-start-2 col-span-3">
-              <First_ProductBox image={data.data.BestMenSkincare.first.image} name={data.data.BestMenSkincare.name} href_to={data.data.BestMenSkincare.href} />
-            </div>
-
-            <div className="col-end-12 col-span-3">
-              <First_ProductBox image={data.data.BestMoisturizer.first.image} name={data.data.BestMoisturizer.name} href_to={data.data.BestMoisturizer.href} />
-            </div>
-
-
-            <div className="col-start-3 col-span-8  items-center justify-center m-auto">
-              <div className="flex">
-                <First_ProductBox image={data.data.BestSerum.first.image} name={data.data.BestSerum.name} href_to={data.data.BestSerum.href} />
-
                 <First_ProductBox image={data.data.BestSuncreen.first.image} name={data.data.BestSuncreen.name} href_to={data.data.BestSuncreen.href} />
               </div>
             </div>
 
-
-
-            {/* <div className="col-end-4 col-span-3">
-              <First_ProductBox image={data.data.BestSerum.fourth.image} />
+            <div className="col-start-2 col-span-3 text-[40px]">
+              <First_ProductBox image={data.data.BestMenSkincare.first.image} name={data.data.BestMenSkincare.name} href_to={data.data.BestMenSkincare.href} />
+            </div>
+            <div className="col-end-12 col-span-3 text-[40px]">
+              <First_ProductBox image={data.data.BestSerum.first.image} name={data.data.BestSerum.name} href_to={data.data.BestSerum.href} />
             </div>
 
-            <div className="col-end-13 col-span-3">
-              <First_ProductBox image={data.data.BestSerum.fifth.image} />
-            </div> */}
+            <div className="col-start-3 col-span-3 text-[40px]">
+              <First_ProductBox image={data.data.BestMoisturizer.first.image} name={data.data.BestMoisturizer.name} href_to={data.data.BestMoisturizer.href} />
+            </div>
+
+            <div className="col-end-11 col-span-3 text-[40px]">
+              <First_ProductBox image={data.data.BestEyeCream.first.image} name={data.data.BestEyeCream.name} href_to={data.data.BestEyeCream.href} />
+            </div>
           </div>
         </div>
 
