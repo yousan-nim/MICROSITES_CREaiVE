@@ -23,6 +23,8 @@ const nextConfig = {
     images: {
       unoptimized: true,
     },
+    reactStrictMode: true,
+    staticPageGenerationTimeout: 1000,
   };
   
   export default nextConfig;
