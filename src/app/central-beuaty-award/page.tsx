@@ -15,8 +15,10 @@ interface ButtonProps {
 const CentralBeuatyAward = () => {
   const [isTouch, setIstouch] = useState(true);
 
-  const [height, setHeight] = useState(window.innerHeight)
-  const [width, setWidth] = useState(window.innerWidth)
+  const [height, setHeight] = useState(0)
+  const [width, setWidth] = useState(0)
+
+
 
   const CliclHandler = () => {
     setIstouch(!isTouch);
@@ -25,6 +27,13 @@ const CentralBeuatyAward = () => {
   const GenerateBauetyGiftCard = () => {};
 
   useEffect(() => {
+    
+  const heightx = window.innerHeight
+  const widthx = window.innerWidth
+
+  setHeight(heightx)
+  setWidth(widthx)
+
     if (isTouch) {
         setTimeout(() => {
             setIstouch(!isTouch)
