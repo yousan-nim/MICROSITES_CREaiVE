@@ -20,7 +20,13 @@ const config: Config = {
         xl: "1280px",
         xxl: "1536px",
         xxxl: "1536px",
-        hv: "2160px",
+        hv: "1440px",
+      },
+      fontSize: {},
+      fontFamily: {
+        centrallMeduim: ["Centrall-Medium", "sans-serif"],
+        gothamLight: ["Gotham-Light", "sans-serif"],
+        gothamBook: ["Gotham-Book", "sans-serified"],
       }
     },
   },

@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Centrall-Medium";
+  /* src: url('../p/font/CentralSangBleu-Medium.otf') format('otf'); */
+  src: url('../../public/font/CentralSangBleu-Medium.otf')
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url('../../public/font/Gotham-Light.otf') format('otf');
+}
+
+@font-face {
+  font-family: "Gotham-Book";
+  src: url('../../public/font/Gotham-Book.otf') format('otf');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

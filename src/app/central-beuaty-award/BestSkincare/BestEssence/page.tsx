@@ -78,35 +78,35 @@ const page = () => {
         <div className='absolute z-50 right-0 w-[250px] text-black top-[16vh] p-2'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestEssence.first.image} />
-            <div className='text-[14px] pt-4 px-2'>
+            <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
               {data.data.BestEssence.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestEssence.second.image} />
-            <div className='text-[14px] pt-4 px-2'>
+            <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
               {data.data.BestEssence.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestEssence.third.image} />
-            <div className='text-[14px] pt-4 px-2'>
+            <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
               {data.data.BestEssence.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestEssence.fourth.image} />
-            <div className='text-[14px] pt-4 px-2'>
+            <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
               {data.data.BestEssence.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestEssence.fifth.image} />
-            <div className='text-[14px] pt-4 px-2'>
+            <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
               {data.data.BestEssence.fifth.name}
             </div>
           </div>
@@ -119,7 +119,7 @@ const page = () => {
           />
 
           {/* Text */}
-          <div className='text-black text-[32px] border-2 rounded-[20px] w-[50vw] m-auto shadow-xl p-4'>
+          <div className='text-black text-[30px] border-2 rounded-[20px] w-[50vw] m-auto shadow-xl p-4 font-centrallMeduim uppercase'>
             {hero.name}
           </div>
 
@@ -130,7 +130,7 @@ const page = () => {
           <img src={hero.qr}
             className='w-[30%] m-auto border-2 rounded-[20px] shadow-xl p-4'
           />
-          <div className='text-[20px] pt-4'>
+          <div className='text-[20px] pt-4 font-gothamBook uppercase'>
             BUY HERE!
           </div>
         </div>
