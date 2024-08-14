@@ -75,7 +75,7 @@ const page = () => {
           <MdOutlineArrowBack size={80} onClick={() => router.back()} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
         </div>
 
-        <div className='absolute right-0 w-[250px] text-black top-[16vh] p-2'>
+        <div className='absolute z-50 right-0 w-[250px] text-black top-[16vh] p-2'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestEssence.first.image} />
             <div className='text-[14px] pt-4 px-2'>
