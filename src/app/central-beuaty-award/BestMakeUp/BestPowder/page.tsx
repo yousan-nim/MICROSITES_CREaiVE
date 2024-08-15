@@ -75,7 +75,7 @@ const page = () => {
           <MdOutlineArrowBack size={80} onClick={() => router.back()} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
         </div>
 
-        <div className='absolute z-50 right-0 w-[250px] text-black top-[16vh] p-2'>
+        <div className='absolute z-50 right-0 w-[250px] text-black top-[20vh] p-4 pt-0'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestPowder.first.image} />
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>
@@ -112,26 +112,31 @@ const page = () => {
           </div>
         </div>
 
-        {/* Hero image */}
-        <div className='relative m-auto pt-10 justify-center items-center text-center w-[800px]'>
-          <img src={hero.img}
-            className='w-full m-auto'
-          />
-
-          {/* Text */}
-          <div className='text-black text-[30px] border-2 rounded-[20px] w-[50vw] m-auto shadow-xl p-4 font-centrallMeduim uppercase'>
-            {hero.name}
+                <div className='border-2 rounded-[20px] w-[60vw] h-[60vh] m-auto shadow-xl'>
+          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-red-600 text-[40px] uppercase font-gothamBook'>
+            {data.dataPageTitle} : {data.data.BestPowder.name}
           </div>
 
-        </div>
+          {/* Hero image */}
+          <div className='relative m-auto pt-10 justify-center items-center text-center w-[50vw]'>
+            <img src={hero.img}
+              className='w-[90vw] m-auto'
+            />
 
-        {/* QR code */}
-        <div className='w-full m-auto text-black pt-10 '>
-          <img src={hero.qr}
-            className='w-[30%] m-auto border-2 rounded-[20px] shadow-xl p-4'
-          />
-          <div className='text-[20px] pt-4 font-gothamBook uppercase'>
-            BUY HERE!
+            {/* Text */}
+            <div className='text-black text-[25px] border-2 rounded-[20px] w-[50vw] h-[5vh] m-auto shadow-lg p-4 font-centrallMeduim uppercase'>
+              {hero.name}
+            </div>
+          </div>
+
+          {/* QR code */}
+          <div className='w-full m-auto text-black pt-10 '>
+            <img src={hero.qr}
+              className='w-[40%] m-auto border-2 rounded-[20px] shadow-xl p-4'
+            />
+            <div className='text-[20px] pt-4 font-gothamBook uppercase'>
+              BUY HERE!
+            </div>
           </div>
         </div>
       </div>
