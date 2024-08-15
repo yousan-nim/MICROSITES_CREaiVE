@@ -1,3 +1,7 @@
+
+// export const dynamic = 'force-static'
+// export const dynamicParams = false
+
 // export function generateStaticParams() {
 //     return [{ id: '1' }, { id: '2' }, { id: '3' }]
 // }
@@ -25,8 +29,7 @@
 //     )
 //   }
 
-export const dynamic = 'force-static'
-export const dynamicParams = true
+
 
 export default function Page({ params }: { params: { slug: string } }) {
     return <div>My Post: {params.slug}</div>

@@ -24,8 +24,9 @@ const nextConfig = {
     images: {
       unoptimized: true,
     },
-    reactStrictMode: true,
+    // reactStrictMode: true,
     staticPageGenerationTimeout: 1000,
+    
     
   };
 
