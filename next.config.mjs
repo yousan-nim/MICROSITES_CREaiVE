@@ -26,7 +26,8 @@ const nextConfig = {
       unoptimized: true,
     },
     // reactStrictMode: true,
-    staticPageGenerationTimeout: 1000,distDir: 'build'
+    staticPageGenerationTimeout: 1000,
+    // distDir: 'build'
     
     
   };
