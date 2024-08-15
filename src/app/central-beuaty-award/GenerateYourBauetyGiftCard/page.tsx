@@ -10,55 +10,11 @@ import { MdHome } from "react-icons/md";
 import { useRouter } from "next/navigation";
 
 import Loader from "@/components/Loader";
-// import { setRequestMeta } from "next/dist/server/request-meta";
-
-// const myAsync = async (): Promise<Record<string, number | string>> => {
-//   await angelMowersPromise
-//   const response = await myPaymentPromise
-//   return response
-// }
-
-// async function PostImage(imageSrc:string): Promise<T> {
-//   const { response } = await fetch(
-//     "https://campaign.creaive.ai/centrall/uploadBase64",
-//     {
-//       method: "POST",
-//       headers: {
-//         "Content-type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         img_upload: imageSrc,
-//       }),
-//     }
-//   ).then((response) => {
-//     response.json()
-//   }).then((response) =>
-//     console.log(response)
-//   )
-//   return response.json()
-// }
-
-// const POSTImagg = async (): Promise<Record<string, number | string>> => {
-//   await fetch(
-//     "https://campaign.creaive.ai/centrall/uploadBase64",
-//     {
-//       method: "POST",
-//       headers: {
-//         "Content-type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         img_upload: imageSrc,
-//       }),
-//     }
-//   )
-
-//   return response
-// }
 
 const page = () => {
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(1);
+  const [timeLeft, setTimeLeft] = useState(5);
   const [totalImg, setTotalImg] = useState<string[]>([]);
   const [keepUrls, setKeepUrls] = useState<string[]>([]);
 
@@ -120,7 +76,7 @@ const page = () => {
   // #########################################################################
   // #########################################################################
   const capture = () => {
-    const delay = 1000;
+    const delay = 5000;
 
     setInterval(() => {
       setTimeLeft((timeLeft) => --timeLeft);
@@ -176,7 +132,7 @@ const page = () => {
               /> */}
 
             <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-              <MdHome
+              {/* <MdHome
                 size={80}
                 onClick={() => router.push("/central-beuaty-award")}
                 color="#e4c7ad"
@@ -187,7 +143,7 @@ const page = () => {
                 onClick={() => router.back()}
                 color="#e4c7ad"
                 className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -197,36 +153,26 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-            <MdHome
-              size={80}
-              onClick={() => router.push("/central-beuaty-award")}
-              color="#e4c7ad"
-              className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-            />
-            <MdOutlineArrowBack
-              size={80}
-              onClick={() => router.back()}
-              color="#e4c7ad"
-              className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-            />
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[15%] p-4 ">
+            <div className="flex justify-end">
+              <MdOutlineArrowBack
+                size={80}
+                onClick={() => router.back()}
+                color="#e4c7ad"
+                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+              />
+              <MdHome
+                size={80}
+                onClick={() => router.push("/central-beuaty-award")}
+                color="#e4c7ad"
+                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+              />
+            </div>
           </div>
 
           {imgSrc ? (
             <div>
               <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-                <MdHome
-                  size={80}
-                  onClick={() => router.push("/central-beuaty-award")}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
-                <MdOutlineArrowBack
-                  size={80}
-                  onClick={() => router.back()}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
               </div>
               <div className="relative">
                 {/*  */}
@@ -244,7 +190,7 @@ const page = () => {
               <div className="relative w-full m-auto justify-center items-center flex ">
                 <button
                   className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-white rounded-[100%] border-2 border-gray-400"
-                  // onClick={share}
+                // onClick={share}
                 >
                   <IoShareOutline
                     className="w-full"
@@ -290,7 +236,7 @@ const page = () => {
               </div>
 
               <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-                <MdHome
+                {/* <MdHome
                   size={80}
                   onClick={() => router.push("/central-beuaty-award")}
                   color="#e4c7ad"
@@ -301,7 +247,7 @@ const page = () => {
                   onClick={() => router.back()}
                   color="#e4c7ad"
                   className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
+                /> */}
               </div>
 
               <Webcam

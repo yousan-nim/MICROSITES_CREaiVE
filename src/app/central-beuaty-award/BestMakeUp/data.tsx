@@ -30,7 +30,7 @@ export const data = {
       fourth: {
         id: 4,
         name: "M.A.C STUDIO FIX COMPACT SPF 50/PA++++",
-        image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestMakeUp/BestCushion/4.jpg",
+        image: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestMakeUp/BestCushion/4.png",
         imageQr: "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestMakeUp/BestCushion/qr1.png",
         link: "",
       },

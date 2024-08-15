@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { MdTouchApp } from "react-icons/md";
 import Link from "next/link";
 // <!-- COLORS -->
 // <!-- #F6E7DF -->
@@ -14,7 +15,7 @@ interface ButtonProps {
 
 const CentralBeuatyAward = () => {
   // const router = useRouter()
-  const [isTouch, setIstouch] = useState(true);
+  const [isTouch, setIstouch] = useState(false);
 
   const [height, setHeight] = useState(0)
   const [width, setWidth] = useState(0)
@@ -134,7 +135,7 @@ const CentralBeuatyAward = () => {
           </div>
         </div>
       ) : (
-        <div className="relative w-screen h-screen overflow-hidden bg-black transition-all duration-75">
+        <div className="relative w-screen h-screen overflow-hidden bg-black transition-all duration-75" onClick={CliclHandler}>
           <div className="absolute z-20 w-full h-full opacity-60">
             <video loop autoPlay preload="none" className="w-full">
               <source
@@ -143,13 +144,14 @@ const CentralBeuatyAward = () => {
               />
             </video>
           </div>
-          <div className="absolute z-30 w-full text-gray text-center top-[55%] opacity-loop-animate">
+          <div className="absolute z-30 w-full text-gray text-end top-[20%] opacity-loop-animate ">
             <button onClick={CliclHandler}>
-              <div className="animate-bounce flex text-[50px] justify-center items-center w-[300px] h-[300px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase">
-                Click !
+              <div className="animate-bounce flex text-[40px] justify-center items-center w-[200px] h-[200px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase mr-10">
+                Touch 
               </div>
             </button>
           </div>
+              {/* <MdTouchApp size={120} className="justify-end w-full"/> */}
         </div>
       )}
     </div>
