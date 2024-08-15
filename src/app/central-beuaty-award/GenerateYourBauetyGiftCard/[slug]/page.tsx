@@ -1,8 +1,8 @@
-
 // export const dynamic = 'force-static'
 // export const dynamicParams = false
 
-export function generateStaticParams() {
+
+export async function generateStaticParams() {
     return [{ id: '1' }, { id: '2' }, { id: '3' }]
 }
 
