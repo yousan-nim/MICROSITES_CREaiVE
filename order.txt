@@ -1,0 +1,4 @@
+ssh -i "microsite-creaive.pem" ubuntu@ec2-54-173-99-17.compute-1.amazonaws.com
+
+
+54.173.99.17
