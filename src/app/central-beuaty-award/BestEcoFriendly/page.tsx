@@ -114,7 +114,7 @@ const page = () => {
 
                 <div className='border-2 rounded-[20px] w-[60vw] h-[60vh] m-auto shadow-xl'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-red-600 text-[40px] uppercase font-gothamBook'>
-            {data.dataPageTitle} : {data.data.BestSuncreen.name}
+            {data.dataPageTitle} : {data.data.BestEcoFriendly.name}
           </div>
 
           {/* Hero image */}
