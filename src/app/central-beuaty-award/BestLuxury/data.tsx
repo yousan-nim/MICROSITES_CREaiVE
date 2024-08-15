@@ -1,10 +1,10 @@
 export const data = {
-  dataPageTitle: "Best Luxury",
+  dataPageTitle: "Luxury",
   dataTrophy:
     "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Trophys/Best Luxury.png",
   data: {
     BestLuxury: {
-      name:"BestLuxury",
+      name:"Bauety Luxury",
       href:"/central-beuaty-award/BestSkincare/BestLuxury",
       first: {
         id: 1,

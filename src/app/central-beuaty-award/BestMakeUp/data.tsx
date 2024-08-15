@@ -1,5 +1,5 @@
 export const data = {
-  dataPageTitle: "Best Make Up",
+  dataPageTitle: "Make Up",
   dataTrophy:
     "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Trophys/Best Make up.png",
   data: {

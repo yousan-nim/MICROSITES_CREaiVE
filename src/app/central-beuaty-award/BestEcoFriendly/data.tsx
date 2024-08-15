@@ -4,7 +4,7 @@ export const data = {
     "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Trophys/Best Eco.png",
   data: {
     BestEcoFriendly: {
-      name:"BestEco",
+      name:"Eco Friendly",
       href:"/central-beuaty-award/BestSkincare/BestEcoFriendly",
       first: {
         id: 1,
