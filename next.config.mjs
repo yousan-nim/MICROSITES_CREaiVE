@@ -5,7 +5,7 @@ const nextConfig = {
      *
      * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
      */
-    output: "export",
+    // output: "export",
     // output: process.env.GITHUB_ACTION ? 'export' : undefined,
   
     /**
