@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { MdTouchApp } from "react-icons/md";
 import Link from "next/link";
 // <!-- COLORS -->
-// <!-- #F6E7DF -->
+// <!-- # -->
 // <!-- #e4c7ad -->
 // <!-- #dcbb9a -->
 // <!-- #b18b68 -->

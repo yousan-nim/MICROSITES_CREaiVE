@@ -67,8 +67,7 @@ const page = () => {
     );
     const result = await response.json();
     console.log(result, "response post image");
-    POST_nextStept(result._id);
-    // setKeenUrls(result.images_faceSwap)
+    // POST_nextStept(result._id);
 
     setKeepUrls(result.images_faceSwap);
     // console.log(result.images_faceSwap);
@@ -138,13 +137,14 @@ const page = () => {
             />
             <div className="relative w-full m-auto justify-center items-center flex ">
               <button
-                className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-white rounded-[100%] border-2 border-gray-400"
+                className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
               // onClick={share}
               >
                 <IoShareOutline
-                  className="w-full"
+                  className="w-full border-[#e4c7ad]"
                   size={80}
-                  style={{ color: "#7e7e7e" }}
+                  color="#e4c7ad"
+                  // style={{ color: "#7e7e7e" }}
                 />
               </button>
             </div>
@@ -231,18 +231,20 @@ const page = () => {
               <Webcam
                 ref={webcamRef}
                 screenshotFormat="image/png"
+                color="#e4c7ad"
                 className="flex w-[1300px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
               />
 
               <div className="relative w-full m-auto  justify-center items-center flex ">
                 <button
-                  className="absolute w-[150px] h-[150px] text-black text-center text-[40px] bg-white rounded-[100%] border-2 border-gray-400"
+                  className="absolute w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
                   onClick={capture}
                 >
                   <FaCamera
-                    className="w-full m-auto"
+                    className="w-full m-auto border-[#e4c7ad]"
                     size={80}
-                    style={{ color: "#7e7e7e" }}
+                    color="#e4c7ad"
+                    // style={{ color: "#7e7e7e" }}
                   />
                 </button>
               </div>
