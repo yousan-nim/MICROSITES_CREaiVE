@@ -113,7 +113,7 @@ const page = () => {
         </div>
 
         <div className='border-2 rounded-[20px] w-[55vw] h-auto m-auto shadow-xl'>
-          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-[#FF0000] text-[40px] uppercase font-gothamBook'>
+          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[40px] uppercase font-gothamBook'>
             {data.dataPageTitle} : {data.data.BestEssence.name}
           </div>
 
@@ -124,7 +124,7 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[25px] border-2 rounded-[20px] w-[90%] h-[5vh] m-auto shadow-sm p-4 font-centrallMeduim uppercase'>
+            <div className='text-black text-[25px] border-2 rounded-[20px] w-[90%] h-[5vh] m-auto shadow-sm p-4 font-gothamBook uppercase'>
               {hero.name}
             </div>
           </div>

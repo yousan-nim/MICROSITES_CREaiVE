@@ -137,7 +137,7 @@ const CentralBeuatyAward = () => {
       ) : (
         <div className="relative w-screen h-screen overflow-hidden bg-black transition-all duration-75" onClick={CliclHandler}>
           <div className="absolute z-20 w-full h-full opacity-60">
-            <video loop autoPlay preload="none" className="w-full">
+            <video loop muted autoPlay preload="none" className="w-full">
               <source
                 src="/MICROSITES_CREaiVE/mp4/CentralBauetyAward2024/award.mp4"
                 type="video/mp4"
