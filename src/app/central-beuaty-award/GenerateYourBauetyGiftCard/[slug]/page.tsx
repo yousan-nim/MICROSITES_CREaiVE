@@ -26,6 +26,7 @@
 //   }
 
 export const dynamic = 'force-static'
+export const dynamicParams = true
 
 export default function Page({ params }: { params: { slug: string } }) {
     return <div>My Post: {params.slug}</div>
