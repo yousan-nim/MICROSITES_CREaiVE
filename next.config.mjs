@@ -5,8 +5,8 @@ const nextConfig = {
      *
      * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
      */
-    // output: "export",
-    output: process.env.GITHUB_ACTION ? 'export' : undefined,
+    output: "export",
+    // output: process.env.GITHUB_ACTION ? 'export' : undefined,
     trailingSlash: true,
   
     /**
@@ -28,6 +28,8 @@ const nextConfig = {
     // reactStrictMode: true,
     staticPageGenerationTimeout: 1000,
     // distDir: 'build'
+
+    
     
     
   };
