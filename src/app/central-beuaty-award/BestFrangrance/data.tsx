@@ -43,7 +43,7 @@ export const data = {
       },
     },
     BestFragranceSporty: {
-      name:"Best Fragrance Sporty",
+      name:"Fragrance Sporty",
       href:"/central-beuaty-award/BestFrangrance/BestFragranceSporty",
       first: {
         id: 1,
