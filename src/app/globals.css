@@ -104,9 +104,9 @@ body {
 
 .container {
   --uib-size: 300px;
-  --uib-color: black;
-  --uib-speed: 1s;
-  --uib-stroke: 3px;
+  --uib-color: rgb(255, 255, 255);
+  --uib-speed: 2s;
+  --uib-stroke: 6px;
   position: relative;
   display: flex;
   align-items: center;

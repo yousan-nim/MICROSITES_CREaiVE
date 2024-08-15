@@ -18,6 +18,8 @@ const page = () => {
   const [totalImg, setTotalImg] = useState<string[]>([]);
   const [keepUrls, setKeepUrls] = useState<string[]>([]);
 
+  const imageGen = 1
+
   const router = useRouter();
 
   // #########################################################################
@@ -37,9 +39,9 @@ const page = () => {
       }
     );
     const result = await response.json();
-    console.log(result, "response post next step");
+    // console.log(result, "response post next step");
 
-    if (result.images_faceSwap.length < 4) {
+    if (result.images_faceSwap.length < imageGen) {
       POST_nextStept(_id);
     } else {
       setKeepUrls(result.images_faceSwap);
@@ -69,7 +71,7 @@ const page = () => {
     // setKeenUrls(result.images_faceSwap)
 
     setKeepUrls(result.images_faceSwap);
-    console.log(result.images_faceSwap);
+    // console.log(result.images_faceSwap);
   };
 
   // #########################################################################
@@ -80,7 +82,7 @@ const page = () => {
 
     setInterval(() => {
       setTimeLeft((timeLeft) => --timeLeft);
-    }, delay);
+    }, 1000);
 
     setTimeout(async () => {
       const imageSrc = webcamRef.current?.getScreenshot();
@@ -108,44 +110,46 @@ const page = () => {
 
   return (
     <div>
-      {keepUrls.length === 1 ? (
+      {keepUrls.length === imageGen ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-full m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
-          <div className="relative grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
-            <img
-              src={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
-              className="w-full h-[80%]"
-            />
-
-            {/* <img src={`https://campaign.creaive.ai/images/replicate/${keepUrls[1]}`}
-                className="w-full h-full"
-              />
-
-              <img src={`https://campaign.creaive.ai/images/replicate/${keepUrls[2]}`}
-                className="w-full h-full"
-              />
-
-              <img src={`https://campaign.creaive.ai/images/replicate/${keepUrls[3]}`}
-                className="w-full h-full"
-              /> */}
-
-            <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-              {/* <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[15%] pt-4 ">
+            <div className="flex justify-start ml-[58px]">
               <MdOutlineArrowBack
                 size={80}
                 onClick={() => router.back()}
                 color="#e4c7ad"
                 className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              /> */}
+              />
+              <MdHome
+                size={80}
+                onClick={() => router.push("/central-beuaty-award")}
+                color="#e4c7ad"
+                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+              />
             </div>
           </div>
+          <div className="relative grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
+            <img
+              src={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
+              className="w-[1300px] rounded-[40px] m-auto"
+            />
+            <div className="relative w-full m-auto justify-center items-center flex ">
+              <button
+                className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-white rounded-[100%] border-2 border-gray-400"
+              // onClick={share}
+              >
+                <IoShareOutline
+                  className="w-full"
+                  size={80}
+                  style={{ color: "#7e7e7e" }}
+                />
+              </button>
+            </div>
+          </div>
+
         </div>
       ) : (
         <div className="w-screen h-screen bg-[#F6E7DF]">
@@ -153,8 +157,8 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[15%] p-4 ">
-            <div className="flex justify-end">
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[15%] pt-4 ">
+            <div className="flex justify-start ml-[58px]">
               <MdOutlineArrowBack
                 size={80}
                 onClick={() => router.back()}
@@ -179,7 +183,7 @@ const page = () => {
                 <img
                   src={imgSrc}
                   alt="webcam"
-                  className="z-0 flex blur-lg w-[1440px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                  className="z-0 flex blur-lg w-[1300px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
                 />
                 {/*  */}
                 <div className="absolute z-10 w-full top-[40%]">
@@ -187,18 +191,7 @@ const page = () => {
                 </div>
               </div>
 
-              <div className="relative w-full m-auto justify-center items-center flex ">
-                <button
-                  className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-white rounded-[100%] border-2 border-gray-400"
-                // onClick={share}
-                >
-                  <IoShareOutline
-                    className="w-full"
-                    size={80}
-                    style={{ color: "#7e7e7e" }}
-                  />
-                </button>
-              </div>
+
 
               {/* {keepUrls.length === 4 && (
                 <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
@@ -233,21 +226,6 @@ const page = () => {
             <div>
               <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
                 {timeLeft}
-              </div>
-
-              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-                {/* <MdHome
-                  size={80}
-                  onClick={() => router.push("/central-beuaty-award")}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
-                <MdOutlineArrowBack
-                  size={80}
-                  onClick={() => router.back()}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                /> */}
               </div>
 
               <Webcam
