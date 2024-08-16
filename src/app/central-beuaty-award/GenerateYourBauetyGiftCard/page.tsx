@@ -8,6 +8,7 @@ import { PostImgAPI, NextStepImgAPI } from "./controller";
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { useQRCode } from 'next-qrcode';
 
 import Loader from "@/components/Loader";
 
@@ -21,6 +22,8 @@ const page = () => {
   const imageGen = 1
 
   const router = useRouter();
+  const { Canvas } = useQRCode();
+
 
   // #########################################################################
   // #########################################################################
@@ -136,7 +139,22 @@ const page = () => {
               className="w-[1300px] rounded-[40px] m-auto"
             />
             <div className="relative w-full m-auto justify-center items-center flex ">
-              <button
+              <div className="p-4 border-2 rounded-[40px] m-auto">
+                <Canvas
+                  text={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
+                  options={{
+                    errorCorrectionLevel: 'M',
+                    margin: 3,
+                    scale: 8,
+                    width: 250,
+                    color: {
+                      dark: '#000000',
+                      light: '#F6E7DF',
+                    },
+                  }}
+                />
+              </div>
+              {/* <button
                 className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
               // onClick={share}
               >
@@ -144,9 +162,9 @@ const page = () => {
                   className="w-full border-[#e4c7ad]"
                   size={80}
                   color="#e4c7ad"
-                  // style={{ color: "#7e7e7e" }}
+                // style={{ color: "#7e7e7e" }}
                 />
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -244,7 +262,7 @@ const page = () => {
                     className="w-full m-auto border-[#e4c7ad]"
                     size={80}
                     color="#e4c7ad"
-                    // style={{ color: "#7e7e7e" }}
+                  // style={{ color: "#7e7e7e" }}
                   />
                 </button>
               </div>
