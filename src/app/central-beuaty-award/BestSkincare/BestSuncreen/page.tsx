@@ -70,9 +70,19 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className='absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4'>
-          <MdHome size={80} onClick={() => router.push('/central-beuaty-award')} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
-          <MdOutlineArrowBack size={80} onClick={() => router.back()} color='#e4c7ad' className='m-4 border-2 border-[#e4c7ad] rounded-[100px]' />
+        <div className="absolute z-0 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
+          <MdOutlineArrowBack
+            size={80}
+            onClick={() => router.back()}
+            color="#e4c7ad"
+            className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+          />
+          <MdHome
+            size={80}
+            onClick={() => router.push("/central-beuaty-award")}
+            color="#e4c7ad"
+            className="m-4 border-2 border-[#e4c7ad] rounded-[100px] "
+          />
         </div>
 
         <div className='absolute z-50 right-8 w-[250px] text-black top-[20vh] p-4 pt-0 '>

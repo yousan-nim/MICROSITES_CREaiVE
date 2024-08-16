@@ -22,6 +22,7 @@ const First_ProductBox = ({ image, name, href_to }: Props) => {
   );
 };
 
+
 function BestSkincare() {
   const router = useRouter();
 
@@ -32,7 +33,7 @@ function BestSkincare() {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-10 hv:z-20 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
+        <div className="absolute z-0 hv:z-20 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
@@ -47,60 +48,60 @@ function BestSkincare() {
           />
         </div>
 
-        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase">
-          <div className="grid grid-cols-12 justify-center items-center m-auto gap-10 w-screen">
+        <div className="absolute z-10 flex top-[23%] w-full m-auto font-gothamBook uppercase">
+          <div className="grid grid-cols-12 justify-center items-center m-auto gap-10">
             <div className="col-start-4">{/*  */}</div>
-            <div className="col-start-3 col-span-3 items-center justify-center m-auto">
+            <div className="col-start-5 col-span-4 items-center justify-center m-auto top-[10vh]">
               <First_ProductBox
-                image={data.data.BestEssence.first.image}
-                name={data.data.BestEssence.name}
-                href_to={data.data.BestEssence.href}
+                image={data.data.BestFragranceEveryday.first.image}
+                name={data.data.BestFragranceEveryday.name}
+                href_to={data.data.BestFragranceEveryday.href}
               />
             </div>
 
-            <div className="col-end-11 col-span-3 items-center justify-center m-auto">
+            {/* <div className="col-end-11 col-span-3 items-center justify-center m-auto">
               <First_ProductBox
                 image={data.data.BestSuncreen.first.image}
                 name={data.data.BestSuncreen.name}
                 href_to={data.data.BestSuncreen.href}
               />
-            </div>
+            </div> */}
 
             <div className="col-start-2 col-span-3 text-[40px]">
               <First_ProductBox
-                image={data.data.BestMenSkincare.first.image}
-                name={data.data.BestMenSkincare.name}
-                href_to={data.data.BestMenSkincare.href}
+                image={data.data.BestFragranceSporty.first.image}
+                name={data.data.BestFragranceSporty.name}
+                href_to={data.data.BestFragranceSporty.href}
               />
             </div>
-            <div className="col-end-12 col-span-3 text-[40px]">
+            {/* <div className="col-end-12 col-span-3 text-[40px]">
               <First_ProductBox
                 image={data.data.BestSerum.first.image}
                 name={data.data.BestSerum.name}
                 href_to={data.data.BestSerum.href}
               />
-            </div>
+            </div> */}
 
-            <div className="col-start-3 col-span-3 hv:col-start-2 hv:col-span-3 text-[40px]">
+            {/* <div className="col-start-3 col-span-3 text-[40px]">
               <First_ProductBox
-                image={data.data.BestMoisturizer.first.image}
-                name={data.data.BestMoisturizer.name}
-                href_to={data.data.BestMoisturizer.href}
+                image={data.data.BestFragranceSpecialOcciasion.first.image}
+                name={data.data.BestFragranceSpecialOcciasion.name}
+                href_to={data.data.BestFragranceSpecialOcciasion.href}
               />
-            </div>
+            </div> */}
 
-            <div className="col-end-11 col-span-3 hv:col-end-12 hv:col-span-3 text-[40px]">
+            <div className="col-start-9 col-span-3 text-[40px]">
               <First_ProductBox
-                image={data.data.BestEyeCream.first.image}
-                name={data.data.BestEyeCream.name}
-                href_to={data.data.BestEyeCream.href}
+                image={data.data.BestFragranceSpecialOcciasion.first.image}
+                name={data.data.BestFragranceSpecialOcciasion.name}
+                href_to={data.data.BestFragranceSpecialOcciasion.href}
               />
             </div>
           </div>
         </div>
 
         <div className="relative w-screen h-full top-[-16%]">
-          <img src={data.dataTrophy} className="z-0 bottom-0" />
+          <img src={data.dataTrophy} className="z-0" />
         </div>
       </div>
     </div>

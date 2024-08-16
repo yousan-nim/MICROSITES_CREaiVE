@@ -61,7 +61,7 @@ const CentralBeuatyAward = () => {
             <div className="relative z-50 w-screen h-screen m-auto items-center justify-center top-[15%] ">
               <Link
                 href="/central-beuaty-award/GenerateYourBauetyGiftCard"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[1000px] m-auto "
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40vh] m-auto "
                 onClick={() => {}}
               >
                 <img
@@ -75,7 +75,7 @@ const CentralBeuatyAward = () => {
                 href="/central-beuaty-award/BestFrangrance"
                 onClick={() => {}}
               >
-                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[1450px] m-auto">
+                <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[58vh] m-auto">
                   <img
                     src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestFrangrance/Best Fragrance.png"
                     className="w-[30vw]"
@@ -87,7 +87,7 @@ const CentralBeuatyAward = () => {
                 href="/central-beuaty-award/BestLuxury"
                 onClick={() => {}}
               >
-                <button className="absolute top-1/2 left-[2%] -translate-y-[1100px] m-auto">
+                <button className="absolute top-1/2 left-[2%] -translate-y-[44vh] m-auto">
                   <img
                     src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestLuxury/Best Luxury.png"
                     className="w-[30vw]"
@@ -99,7 +99,7 @@ const CentralBeuatyAward = () => {
                 href="/central-beuaty-award/BestMakeUp"
                 onClick={() => {}}
               >
-                <button className="absolute top-1/2 right-[2%] -translate-y-[1100px] m-auto">
+                <button className="absolute top-1/2 right-[2%] -translate-y-[44vh] m-auto">
                   <img
                     src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestMakeUp/Best Make Up.png"
                     className="w-[30vw]"
@@ -111,7 +111,7 @@ const CentralBeuatyAward = () => {
                 href="/central-beuaty-award/BestSkincare"
                 onClick={() => {}}
               >
-                <button className="absolute top-1/2 left-[8%] -translate-y-[600px] m-auto">
+                <button className="absolute top-1/2 left-[8%] -translate-y-[22vh] m-auto">
                   <img
                     src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestSkincare/Best Skincare.png"
                     className="w-[30vw]"
@@ -123,7 +123,7 @@ const CentralBeuatyAward = () => {
                 href="/central-beuaty-award/BestEcoFriendly"
                 onClick={() => {}}
               >
-                <button className="absolute top-1/2 right-[8%] -translate-y-[600px] m-auto">
+                <button className="absolute top-1/2 right-[8%] -translate-y-[22vh] m-auto">
                   <img
                     src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/BestEcoFriendly/Best Eco-Friendly.png"
                     className="w-[30vw]"

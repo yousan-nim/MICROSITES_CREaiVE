@@ -117,8 +117,8 @@ const page = () => {
           <div className="flex w-full m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[15%] pt-4 ">
-            <div className="flex justify-start ml-[58px]">
+          <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
+            {/* <div className="flex justify-around  hv:justify-start hv:ml-[58px]">
               <MdOutlineArrowBack
                 size={80}
                 onClick={() => router.back()}
@@ -131,28 +131,40 @@ const page = () => {
                 color="#e4c7ad"
                 className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
               />
-            </div>
+            </div> */}
           </div>
-          <div className="relative grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
+          <div className="absolute grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
               src={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
               className="w-[1300px] rounded-[40px] m-auto"
             />
-            <div className="relative w-full m-auto justify-center items-center flex ">
-              <div className="p-4 border-2 rounded-[40px] m-auto">
+            <div className="relative z-20 w-full m-auto justify-center items-center flex ">
+              <div className="flex border-2 rounded-[40px] m-auto justify-center items-center">
+                <MdOutlineArrowBack
+                  size={80}
+                  onClick={() => router.back()}
+                  color="#e4c7ad"
+                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+                />
                 <Canvas
                   text={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
                   options={{
                     errorCorrectionLevel: 'M',
                     margin: 3,
                     scale: 8,
-                    width: 250,
+                    width: 200,
                     color: {
                       dark: '#000000',
                       light: '#F6E7DF',
                     },
                   }}
                 />
+              <MdHome
+                size={80}
+                onClick={() => router.push("/central-beuaty-award")}
+                color="#e4c7ad"
+                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+              />
               </div>
               {/* <button
                 className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
@@ -175,8 +187,8 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[15%] pt-4 ">
-            <div className="flex justify-start ml-[58px]">
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
+            <div className="flex justify-around  hv:justify-start hv:ml-[58px]">
               <MdOutlineArrowBack
                 size={80}
                 onClick={() => router.back()}
@@ -201,7 +213,7 @@ const page = () => {
                 <img
                   src={imgSrc}
                   alt="webcam"
-                  className="z-0 flex blur-lg w-[1300px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                  className="z-0 flex blur-lg  m-auto items-center justify-center bg-white rounded-[40px] w-[400px] h-[600px] object-cover hv:w-[1300px] hv:h-auto"
                 />
                 {/*  */}
                 <div className="absolute z-10 w-full top-[40%]">
@@ -250,12 +262,12 @@ const page = () => {
                 ref={webcamRef}
                 screenshotFormat="image/png"
                 color="#e4c7ad"
-                className="flex w-[1300px] h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                className="flex w-[400px] h-[600px] object-cover hv:w-[1300px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
               />
 
-              <div className="relative w-full m-auto  justify-center items-center flex ">
+              <div className="relative w-full m-auto  justify-center items-center flex pt-4">
                 <button
-                  className="absolute w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
+                  className="absolute top-[100%] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
                   onClick={capture}
                 >
                   <FaCamera
