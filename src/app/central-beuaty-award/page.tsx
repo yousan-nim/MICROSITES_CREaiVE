@@ -137,16 +137,16 @@ const CentralBeuatyAward = () => {
       ) : (
         <div className="relative w-screen h-screen overflow-hidden bg-black transition-all duration-75" onClick={CliclHandler}>
           <div className="absolute z-20 w-full h-full opacity-60">
-            <video loop muted autoPlay preload="none" className="w-full">
+            <video loop muted autoPlay preload="none" className="w-screen h-screen object-cover">
               <source
                 src="/MICROSITES_CREaiVE/mp4/CentralBauetyAward2024/award.mp4"
                 type="video/mp4"
               />
             </video>
           </div>
-          <div className="absolute z-30 w-full text-gray text-end top-[20%] opacity-loop-animate ">
+          <div className="absolute z-30 w-full text-gray text-center top-[50%] hv:text-end hv:top-[20%] opacity-loop-animate">
             <button onClick={CliclHandler}>
-              <div className="animate-bounce flex text-[40px] justify-center items-center w-[200px] h-[200px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase mr-10">
+              <div className="animate-bounce flex text-[40px] justify-center items-center w-[200px] h-[200px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase hv:mr-10">
                 Touch 
               </div>
             </button>
