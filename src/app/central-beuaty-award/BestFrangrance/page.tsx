@@ -17,7 +17,7 @@ const First_ProductBox = ({ image, name, href_to }: Props) => {
   return (
     <Link href={href_to}>
       <img src={image} className="w-[400px] h-[400px] z-20 top-[1200px]" />
-      <div className="text-black text-[18px] p-4 ">{name}</div>
+      <div className="text-black text-[30px] font-semiBold p-4 ">{name}</div>
     </Link>
   );
 };
