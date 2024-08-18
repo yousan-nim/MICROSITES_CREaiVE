@@ -70,7 +70,7 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-0 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
+        <div className="absolute -z-0 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
@@ -85,7 +85,7 @@ const page = () => {
           />
         </div>
 
-        <div className='absolute z-50 right-8 w-[250px] text-black top-[20vh] p-4 pt-0 '>
+        <div className='absolute z-50 right-8 w-[250px] text-black top-[20vh] p-4 pt-0 appear-animetion'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestSuncreen.first.image} className='pt-4'/>
             <div className='text-[14px] pt-4 px-2 font-gothamBook uppercase'>

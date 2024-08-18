@@ -46,7 +46,7 @@ const CentralBeuatyAward = () => {
   return (
     <div>
       {isTouch ? (
-        <div className="relative w-screen h-screen overflow-hidden bg-white ">
+        <div className="relative w-screen h-screen overflow-hidden bg-white appear-animetion">
           {/* <div className="absolute text-[100px] bg-red-600">
             {width}x{height}
            </div>  */}

@@ -32,7 +32,7 @@ function BestSkincare() {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-10 hv:z-20 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
+        <div className="absolute z-10 hv:z-20 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 ">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
@@ -47,10 +47,10 @@ function BestSkincare() {
           />
         </div>
 
-        <div className="absolute z-0 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase">
+        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase">
           <div className="grid grid-cols-12 justify-center items-center m-auto gap-10 w-screen">
             <div className="col-start-4">{/*  */}</div>
-            <div className="col-start-2 col-span-3 items-center justify-center m-auto">
+            <div className="col-start-3 col-span-3 items-center justify-center m-auto">
               <First_ProductBox
                 image={data.data.BestCushion.first.image}
                 name={data.data.BestCushion.name}
@@ -58,7 +58,7 @@ function BestSkincare() {
               />
             </div>
 
-            <div className="col-end-12 col-span-3 items-center justify-center m-auto">
+            <div className="col-end-11 col-span-3 items-center justify-center m-auto">
               <First_ProductBox
                 image={data.data.BestEverydayLipstick.first.image}
                 name={data.data.BestEverydayLipstick.name}
