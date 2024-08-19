@@ -122,7 +122,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className='w-[55vw] h-auto m-auto '>
+        <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
             {data.dataPageTitle} : {data.data.BestFragranceSpecialOcciasion.name}
           </div>
@@ -134,13 +134,13 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase p-2'>
               {hero.name}
             </div>
           </div>
 
           {/* QR code */}
-          <div className='w-full m-auto text-black pt-10 '>
+          <div className='w-full m-auto text-black pt-2 '>
             <img src={hero.qr}
               className='w-[90%] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />

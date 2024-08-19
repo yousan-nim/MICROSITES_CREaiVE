@@ -85,7 +85,7 @@ const page = () => {
           />
         </div>
 
-        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 '>
+        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestPowder.first.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
@@ -122,7 +122,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className='w-[55vw] h-auto m-auto '>
+        <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
             {data.dataPageTitle} : {data.data.BestPowder.name}
           </div>
@@ -134,13 +134,13 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase p-2'>
               {hero.name}
             </div>
           </div>
 
           {/* QR code */}
-          <div className='w-full m-auto text-black pt-10 '>
+          <div className='w-full m-auto text-black pt-2 '>
             <img src={hero.qr}
               className='w-[90%] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />

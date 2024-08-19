@@ -32,7 +32,7 @@ function BestSkincare() {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-10 hv:z-20 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 ">
+        <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
@@ -47,7 +47,7 @@ function BestSkincare() {
           />
         </div>
 
-        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase">
+        <div className="absolute z-20 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase appear-animetion">
           <div className="grid grid-cols-12 justify-center items-center m-auto gap-10 w-screen">
             <div className="col-start-4">{/*  */}</div>
             <div className="col-start-3 col-span-3 items-center justify-center m-auto">
@@ -99,7 +99,7 @@ function BestSkincare() {
           </div>
         </div>
 
-        <div className="relative w-screen h-full top-[-16%]">
+        <div className="relative w-screen h-full top-[-16%] appear-animetion">
           <img src={data.dataTrophy} className="z-0 bottom-0" />
         </div>
       </div>

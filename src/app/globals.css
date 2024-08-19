@@ -58,6 +58,18 @@ body {
 }
 
 
+@keyframes moveLeft {
+  from {
+    right: -20vw;
+  } to {
+    /* right: 16px; */
+  }
+}
+
+.move-left-animation {
+  animation: moveLeft 1s linear
+}
+
 
 
 
