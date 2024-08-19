@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestFragranceSporty.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceSporty.first.image,
       name: data.data.BestFragranceSporty.first.name,
       qr: data.data.BestFragranceSporty.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceSporty.second.image,
       name: data.data.BestFragranceSporty.second.name,
       qr: data.data.BestFragranceSporty.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceSporty.third.image,
       name: data.data.BestFragranceSporty.third.name,
       qr: data.data.BestFragranceSporty.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceSporty.fourth.image,
       name: data.data.BestFragranceSporty.fourth.name,
       qr: data.data.BestFragranceSporty.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceSporty.fifth.image,
       name: data.data.BestFragranceSporty.fifth.name,
       qr: data.data.BestFragranceSporty.fifth.imageQr

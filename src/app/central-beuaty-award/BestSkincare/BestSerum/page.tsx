@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestSerum.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestSerum.first.image,
       name: data.data.BestSerum.first.name,
       qr: data.data.BestSerum.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestSerum.second.image,
       name: data.data.BestSerum.second.name,
       qr: data.data.BestSerum.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestSerum.third.image,
       name: data.data.BestSerum.third.name,
       qr: data.data.BestSerum.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestSerum.fourth.image,
       name: data.data.BestSerum.fourth.name,
       qr: data.data.BestSerum.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestSerum.fifth.image,
       name: data.data.BestSerum.fifth.name,
       qr: data.data.BestSerum.fifth.imageQr

@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestMenSkincare.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestMenSkincare.first.image,
       name: data.data.BestMenSkincare.first.name,
       qr: data.data.BestMenSkincare.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestMenSkincare.second.image,
       name: data.data.BestMenSkincare.second.name,
       qr: data.data.BestMenSkincare.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestMenSkincare.third.image,
       name: data.data.BestMenSkincare.third.name,
       qr: data.data.BestMenSkincare.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestMenSkincare.fourth.image,
       name: data.data.BestMenSkincare.fourth.name,
       qr: data.data.BestMenSkincare.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestMenSkincare.fifth.image,
       name: data.data.BestMenSkincare.fifth.name,
       qr: data.data.BestMenSkincare.fifth.imageQr

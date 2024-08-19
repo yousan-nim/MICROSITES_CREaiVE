@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestLipMoisturizer.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestLipMoisturizer.first.image,
       name: data.data.BestLipMoisturizer.first.name,
       qr: data.data.BestLipMoisturizer.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestLipMoisturizer.second.image,
       name: data.data.BestLipMoisturizer.second.name,
       qr: data.data.BestLipMoisturizer.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestLipMoisturizer.third.image,
       name: data.data.BestLipMoisturizer.third.name,
       qr: data.data.BestLipMoisturizer.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestLipMoisturizer.fourth.image,
       name: data.data.BestLipMoisturizer.fourth.name,
       qr: data.data.BestLipMoisturizer.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestLipMoisturizer.fifth.image,
       name: data.data.BestLipMoisturizer.fifth.name,
       qr: data.data.BestLipMoisturizer.fifth.imageQr

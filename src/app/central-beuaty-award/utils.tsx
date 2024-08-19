@@ -10,3 +10,11 @@ export const audio = Audio({
   loop: true,
   volume: 1,
 });
+
+
+
+export const AudioFunction = () => {
+  if(typeof audio !== "undefined") {
+    // audio.play();
+  }
+}

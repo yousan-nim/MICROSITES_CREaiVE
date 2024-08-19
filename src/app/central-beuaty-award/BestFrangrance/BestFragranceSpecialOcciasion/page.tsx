@@ -17,7 +17,7 @@ const page = () => {
   })
 
   const FirstClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestFragranceSpecialOcciasion.first.image,
       name: data.data.BestFragranceSpecialOcciasion.first.name,
@@ -26,7 +26,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestFragranceSpecialOcciasion.second.image,
       name: data.data.BestFragranceSpecialOcciasion.second.name,
@@ -35,7 +35,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestFragranceSpecialOcciasion.third.image,
       name: data.data.BestFragranceSpecialOcciasion.third.name,
@@ -44,7 +44,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestFragranceSpecialOcciasion.fourth.image,
       name: data.data.BestFragranceSpecialOcciasion.fourth.name,
@@ -53,7 +53,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestFragranceSpecialOcciasion.fifth.image,
       name: data.data.BestFragranceSpecialOcciasion.fifth.name,

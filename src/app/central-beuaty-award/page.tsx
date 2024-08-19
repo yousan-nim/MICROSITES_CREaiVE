@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { MdTouchApp } from "react-icons/md";
-import { audio } from "./utils"
+// import { AudioFunction } from "./utils"
 
 import Link from "next/link";
 // <!-- COLORS -->
@@ -23,7 +23,7 @@ const CentralBeuatyAward = () => {
   // /MICROSITES_CREaiVE/mp3/award.mp3
 
   const ClickHandler = () => {
-    audio.play();
+    // AudioFunction()
     setIstouch(!isTouch);
   };
 
@@ -55,7 +55,7 @@ const CentralBeuatyAward = () => {
             <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
               <img
                 src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png"
-                onClick={() => audio.play()}
+                onClick={() => {}}
               />
             </div>
 
@@ -64,7 +64,7 @@ const CentralBeuatyAward = () => {
 
                 href="/central-beuaty-award/GenerateYourBauetyGiftCard"
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40vh] m-auto "
-                onClick={() => audio.play()}
+                onClick={() => {}}
               >
                 <img
                   src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Generate your beauty giftcard.png"
@@ -75,8 +75,7 @@ const CentralBeuatyAward = () => {
               {/* Top Center */}
               <Link
                 href="/central-beuaty-award/BestFrangrance"
-                onClick={() => audio.play()}
-
+                onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[58vh] m-auto">
                   <img
@@ -88,7 +87,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestLuxury"
-                onClick={() => audio.play()}
+                onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -100,7 +99,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestMakeUp"
-                onClick={() => audio.play()}
+                onClick={() => {}}
               >
                 <button className="absolute top-1/2 right-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -112,7 +111,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestSkincare"
-                onClick={() => audio.play()}
+                onClick={() => {}}
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[22vh] m-auto">
                   <img
@@ -124,7 +123,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestEcoFriendly"
-                onClick={() => audio.play()}
+                onClick={() => {}}
               >
                 <button className="absolute top-1/2 right-[8%] -translate-y-[22vh] m-auto">
                   <img

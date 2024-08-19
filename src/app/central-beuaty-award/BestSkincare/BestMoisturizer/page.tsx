@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestMoisturizer.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestMoisturizer.first.image,
       name: data.data.BestMoisturizer.first.name,
       qr: data.data.BestMoisturizer.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestMoisturizer.second.image,
       name: data.data.BestMoisturizer.second.name,
       qr: data.data.BestMoisturizer.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestMoisturizer.third.image,
       name: data.data.BestMoisturizer.third.name,
       qr: data.data.BestMoisturizer.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestMoisturizer.fourth.image,
       name: data.data.BestMoisturizer.fourth.name,
       qr: data.data.BestMoisturizer.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestMoisturizer.fifth.image,
       name: data.data.BestMoisturizer.fifth.name,
       qr: data.data.BestMoisturizer.fifth.imageQr

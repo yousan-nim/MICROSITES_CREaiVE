@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestPowder.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestPowder.first.image,
       name: data.data.BestPowder.first.name,
       qr: data.data.BestPowder.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestPowder.second.image,
       name: data.data.BestPowder.second.name,
       qr: data.data.BestPowder.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestPowder.third.image,
       name: data.data.BestPowder.third.name,
       qr: data.data.BestPowder.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestPowder.fourth.image,
       name: data.data.BestPowder.fourth.name,
       qr: data.data.BestPowder.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestPowder.fifth.image,
       name: data.data.BestPowder.fifth.name,
       qr: data.data.BestPowder.fifth.imageQr

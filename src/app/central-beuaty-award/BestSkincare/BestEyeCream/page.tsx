@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestEyeCream.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestEyeCream.first.image,
       name: data.data.BestEyeCream.first.name,
       qr: data.data.BestEyeCream.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestEyeCream.second.image,
       name: data.data.BestEyeCream.second.name,
       qr: data.data.BestEyeCream.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestEyeCream.third.image,
       name: data.data.BestEyeCream.third.name,
       qr: data.data.BestEyeCream.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestEyeCream.fourth.image,
       name: data.data.BestEyeCream.fourth.name,
       qr: data.data.BestEyeCream.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestEyeCream.fifth.image,
       name: data.data.BestEyeCream.fifth.name,
       qr: data.data.BestEyeCream.fifth.imageQr

@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestMakeupBase.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestMakeupBase.first.image,
       name: data.data.BestMakeupBase.first.name,
       qr: data.data.BestMakeupBase.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestMakeupBase.second.image,
       name: data.data.BestMakeupBase.second.name,
       qr: data.data.BestMakeupBase.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestMakeupBase.third.image,
       name: data.data.BestMakeupBase.third.name,
       qr: data.data.BestMakeupBase.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestMakeupBase.fourth.image,
       name: data.data.BestMakeupBase.fourth.name,
       qr: data.data.BestMakeupBase.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestMakeupBase.fifth.image,
       name: data.data.BestMakeupBase.fifth.name,
       qr: data.data.BestMakeupBase.fifth.imageQr

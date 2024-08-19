@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "./data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-import { audio } from "../utils"
+// import { audio } from "../utils"
 
 
 const page = () => {
@@ -18,7 +18,7 @@ const page = () => {
   })
 
   const FirstClick = () => {
-    audio.play()
+    // // audio.play()
     setHero({
       img: data.data.BestEcoFriendly.first.image,
       name: data.data.BestEcoFriendly.first.name,
@@ -27,7 +27,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestEcoFriendly.second.image,
       name: data.data.BestEcoFriendly.second.name,
@@ -36,7 +36,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestEcoFriendly.third.image,
       name: data.data.BestEcoFriendly.third.name,
@@ -45,7 +45,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestEcoFriendly.fourth.image,
       name: data.data.BestEcoFriendly.fourth.name,
@@ -54,7 +54,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestEcoFriendly.fifth.image,
       name: data.data.BestEcoFriendly.fifth.name,

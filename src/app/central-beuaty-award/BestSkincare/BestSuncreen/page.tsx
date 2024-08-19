@@ -18,7 +18,7 @@ const page = () => {
   })
 
   const FirstClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestSuncreen.first.image,
       name: data.data.BestSuncreen.first.name,
@@ -27,7 +27,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestSuncreen.second.image,
       name: data.data.BestSuncreen.second.name,
@@ -36,7 +36,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestSuncreen.third.image,
       name: data.data.BestSuncreen.third.name,
@@ -45,7 +45,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestSuncreen.fourth.image,
       name: data.data.BestSuncreen.fourth.name,
@@ -54,7 +54,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestSuncreen.fifth.image,
       name: data.data.BestSuncreen.fifth.name,

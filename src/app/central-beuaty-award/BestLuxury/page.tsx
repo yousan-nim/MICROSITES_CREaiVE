@@ -19,17 +19,17 @@ const page = () => {
   })
 
   const FirstClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestLuxury.first.image,
       name: data.data.BestLuxury.first.name,
       qr: data.data.BestLuxury.first.imageQr
     })
-    audio.play();
+    // audio.play();
   }
 
   const SecondClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestLuxury.second.image,
       name: data.data.BestLuxury.second.name,
@@ -38,7 +38,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestLuxury.third.image,
       name: data.data.BestLuxury.third.name,
@@ -47,7 +47,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestLuxury.fourth.image,
       name: data.data.BestLuxury.fourth.name,
@@ -56,7 +56,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
-    audio.play()
+    // audio.play()
     setHero({
       img: data.data.BestLuxury.fifth.image,
       name: data.data.BestLuxury.fifth.name,

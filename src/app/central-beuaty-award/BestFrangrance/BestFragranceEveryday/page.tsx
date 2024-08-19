@@ -16,35 +16,35 @@ const page = () => {
     qr: data.data.BestFragranceEveryday.first.imageQr
   })
 
-  const FirstClick = () => {audio.play()
+  const FirstClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceEveryday.first.image,
       name: data.data.BestFragranceEveryday.first.name,
       qr: data.data.BestFragranceEveryday.first.imageQr
     })
   }
 
-  const SecondClick = () => {audio.play()
+  const SecondClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceEveryday.second.image,
       name: data.data.BestFragranceEveryday.second.name,
       qr: data.data.BestFragranceEveryday.second.imageQr
     })
   }
 
-  const ThirdClick = () => {audio.play()
+  const ThirdClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceEveryday.third.image,
       name: data.data.BestFragranceEveryday.third.name,
       qr: data.data.BestFragranceEveryday.third.imageQr
     })
   }
 
-  const FourthClick = () => {audio.play()
+  const FourthClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceEveryday.fourth.image,
       name: data.data.BestFragranceEveryday.fourth.name,
       qr: data.data.BestFragranceEveryday.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {audio.play()
+  const FifthClick = () => {// audio.play()
     setHero({      img: data.data.BestFragranceEveryday.fifth.image,
       name: data.data.BestFragranceEveryday.fifth.name,
       qr: data.data.BestFragranceEveryday.fifth.imageQr
