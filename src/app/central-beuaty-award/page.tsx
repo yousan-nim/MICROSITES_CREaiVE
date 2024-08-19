@@ -68,7 +68,7 @@ const CentralBeuatyAward = () => {
                 onClick={() => ClickSound}
               >
                 <img
-                  src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Generate your beauty giftcard.png"
+                  src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Generate your beauty card.png"
                   className="w-[40vw]"
                 />
               </Link>

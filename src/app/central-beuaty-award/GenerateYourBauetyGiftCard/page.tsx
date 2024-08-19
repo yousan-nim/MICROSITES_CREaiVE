@@ -15,11 +15,12 @@ import Loader from "@/components/Loader";
 const page = () => {
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(5);
+  const [buttonHidden, setButtonHidden] = useState<boolean>(false);
+  const [timeLeft, setTimeLeft] = useState(3);
   // const [totalImg, setTotalImg] = useState<string[]>([]);
   const [keepUrls, setKeepUrls] = useState<string>("");
 
-  const imageGen = 1
+
 
   const router = useRouter();
   const { Canvas } = useQRCode();
@@ -28,34 +29,8 @@ const page = () => {
   // #########################################################################
   // #########################################################################
   // #########################################################################
-  const POST_nextStept = async (_id: string) => {
-    const response = await fetch(
-      "https://campaign.creaive.ai/central/generateNextStep",
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          _id: _id,
-        }),
-      }
-    );
-    const result = await response.json();
-    // console.log(result, "response post next step");
-
-    if (result.images_faceSwap.length < imageGen) {
-      POST_nextStept(_id);
-    } else {
-      setKeepUrls(result.images_faceSwap);
-      // console.log(keepUrls)
-    }
-  };
-
-  // #########################################################################
-  // #########################################################################
-  // #########################################################################
   const POST_request = async (imageSrc: string) => {
+    // setButtonHidden(!buttonHidden)
     const response = await fetch(
       "https://thairath.promptdue.com/centrall/uploadBase64",
       // https://thairath.promptdue.com/centrall/uploadBase64
@@ -75,13 +50,15 @@ const page = () => {
 
     setKeepUrls(result.images_faceSwap);
     // console.log(result.images_faceSwap);
+    // setButtonHidden(!buttonHidden)
   };
 
   // #########################################################################
   // #########################################################################
   // #########################################################################
   const capture = () => {
-    const delay = 5000;
+    setButtonHidden(!buttonHidden)
+    const delay = 3000;
 
     setInterval(() => {
       setTimeLeft((timeLeft) => --timeLeft);
@@ -94,17 +71,8 @@ const page = () => {
         POST_request(imageSrc);
       }
     }, delay);
+    setButtonHidden(!buttonHidden)
   };
-
-  // const share = useCallback(() => {
-  // }, [webcamRef]);
-
-  // const retake = () => {
-  //   setImgSrc(null);
-  // };
-
-  // const takeCap = () => {
-  // };
 
   useEffect(() => {
     console.log(keepUrls);
@@ -119,34 +87,38 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
           <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
-            {/* <div className="flex justify-around  hv:justify-start hv:ml-[58px]">
-              <MdOutlineArrowBack
-                size={80}
-                onClick={() => router.back()}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-              <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-            </div> */}
           </div>
           <div className="absolute grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
               className="w-[1200px] rounded-[40px] m-auto"
             />
-            <div className="relative z-20 w-full m-auto justify-center items-center flex overflow-hidden">
-              <div className="flex m-auto justify-center items-center bg-white rounded-[20px] pb-4">
+            <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[12%] pt-4 ">
+              <div className="justify-start hv:justify-start hv:ml-[10px] ">
                 <MdOutlineArrowBack
                   size={80}
                   onClick={() => router.back()}
                   color="#e4c7ad"
                   className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
                 />
+                <MdHome
+                  size={80}
+                  onClick={() => router.push("/central-beuaty-award")}
+                  color="#e4c7ad"
+                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+                />
+              </div>
+            </div>
+
+
+            <div className="relative z-20 w-full m-auto justify-center items-center flex overflow-hidden">
+              <div className="m-auto justify-center items-center bg-white ">
+                {/* <MdOutlineArrowBack
+                  size={80}
+                  onClick={() => router.back()}
+                  color="#e4c7ad"
+                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+                /> */}
                 <Canvas
                   text={`${keepUrls}`}
                   options={{
@@ -160,27 +132,12 @@ const page = () => {
                     },
                   }}
                 />
-              <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
+                <div className="text-[10px] text-black w-full m-auto text-center">
+                  SCAN FOR DOWNLOAD
+                </div>
               </div>
-              {/* <button
-                className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
-              // onClick={share}
-              >
-                <IoShareOutline
-                  className="w-full border-[#e4c7ad]"
-                  size={80}
-                  color="#e4c7ad"
-                // style={{ color: "#7e7e7e" }}
-                />
-              </button> */}
             </div>
           </div>
-
         </div>
       ) : (
         <div className="w-screen h-screen bg-[#F6E7DF]">
@@ -188,7 +145,7 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[12%] pt-4 ">
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
             <div className="flex justify-around hv:justify-start hv:ml-[100px] ">
               <MdOutlineArrowBack
                 size={80}
@@ -214,44 +171,13 @@ const page = () => {
                 <img
                   src={imgSrc}
                   alt="webcam"
-                  className="z-0 flex blur-lg m-auto items-center justify-center bg-white rounded-[40px] w-[300px] h-[500px] object-cover hv:w-[1200px] hv:h-auto"
+                  className="z-0 flex blur-lg m-auto items-center justify-center bg-white rounded-[40px] w-[300px] h-[500px] object-center hv:w-[1200px] hv:h-auto"
                 />
                 {/*  */}
                 <div className="absolute z-10 w-full top-[40%]">
                   <Loader />
                 </div>
               </div>
-
-
-
-              {/* {keepUrls.length === 4 && (
-                <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
-                  <div className="flex w-full m-auto items-center justify-center">
-                    <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
-                  </div>
-                  <div className="relative grid grid-cols-2 w-screen h-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
-                      className="w-full h-full"
-                    />
-
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[1]}`}
-                      className="w-full h-full"
-                    />
-
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[2]}`}
-                      className="w-full h-full"
-                    />
-
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[3]}`}
-                      className="w-full h-full"
-                    />
-                  </div>
-                </div>
-              )} */}
             </div>
           ) : (
             <div>
@@ -263,22 +189,36 @@ const page = () => {
                 ref={webcamRef}
                 screenshotFormat="image/png"
                 color="#e4c7ad"
-                className="flex w-[400px] h-[600px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
               />
 
+
               <div className="relative w-full m-auto justify-center items-center flex py-4">
-                <button
-                  className="absolute top-[100%] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
-                  onClick={capture}
-                >
-                  <FaCamera
-                    className="w-full m-auto border-[#e4c7ad]"
-                    size={80}
-                    color="#e4c7ad"
-                  // style={{ color: "#7e7e7e" }}
-                  />
-                </button>
+                {
+                  buttonHidden ? (
+                    <div>
+
+                    </div>
+                  ) : (
+                    <button
+                      className="absolute top-[100%] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
+                      onClick={capture}
+                    >
+                      <FaCamera
+                        className="w-full m-auto border-[#e4c7ad] "
+                        size={80}
+                        color="#e4c7ad"
+                      // style={{ color: "#7e7e7e" }}
+                      />
+                    </button>
+                  )
+                }
               </div>
+
+
+
+
+
             </div>
           )}
         </div>
