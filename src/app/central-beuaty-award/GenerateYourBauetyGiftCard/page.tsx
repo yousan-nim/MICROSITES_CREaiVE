@@ -16,8 +16,8 @@ const page = () => {
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState(5);
-  const [totalImg, setTotalImg] = useState<string[]>([]);
-  const [keepUrls, setKeepUrls] = useState<string[]>([]);
+  // const [totalImg, setTotalImg] = useState<string[]>([]);
+  const [keepUrls, setKeepUrls] = useState<string>("");
 
   const imageGen = 1
 
@@ -57,7 +57,8 @@ const page = () => {
   // #########################################################################
   const POST_request = async (imageSrc: string) => {
     const response = await fetch(
-      "https://campaign.creaive.ai/centrall/uploadBase64",
+      "https://thairath.promptdue.com/centrall/uploadBase64",
+      // https://thairath.promptdue.com/centrall/uploadBase64
       {
         method: "POST",
         headers: {
@@ -112,7 +113,7 @@ const page = () => {
 
   return (
     <div>
-      {keepUrls.length === imageGen ? (
+      {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-full m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
@@ -135,7 +136,7 @@ const page = () => {
           </div>
           <div className="absolute grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
-              src={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
+              src={`${keepUrls}`}
               className="w-[1300px] rounded-[40px] m-auto"
             />
             <div className="relative z-20 w-full m-auto justify-center items-center flex ">
@@ -147,7 +148,7 @@ const page = () => {
                   className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
                 />
                 <Canvas
-                  text={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
+                  text={`${keepUrls}`}
                   options={{
                     errorCorrectionLevel: 'M',
                     margin: 3,
@@ -254,7 +255,7 @@ const page = () => {
             </div>
           ) : (
             <div>
-              <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
+              <div className="absolute w-full items-center justify-center flex top-[38%] text-[200px]">
                 {timeLeft}
               </div>
 
