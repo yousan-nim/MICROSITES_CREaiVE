@@ -10,16 +10,20 @@ import { MdHome } from "react-icons/md";
 import { useRouter } from "next/navigation";
 import { useQRCode } from 'next-qrcode';
 
+// "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" 
+// import ImageTest from "/MICROSITES_CREaiVE/img/CentralBauetyAward2024/AW 01 No Logo.png"
+
 import Loader from "@/components/Loader";
 
 const page = () => {
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(5);
+  const [timeLeft, setTimeLeft] = useState(2);
   // const [totalImg, setTotalImg] = useState<string[]>([]);
   const [keepUrls, setKeepUrls] = useState<string>("");
 
   const imageGen = 1
+  // const imageGenTest = ImageTest
 
   const router = useRouter();
   const { Canvas } = useQRCode();
@@ -57,7 +61,7 @@ const page = () => {
   // #########################################################################
   const POST_request = async (imageSrc: string) => {
     const response = await fetch(
-      "https://thairath.promptdue.com/centrall/uploadBase64",
+      "https://openapi.akool.com/api/open/v3/faceswap/highquality/specifyimage",
       // https://thairath.promptdue.com/centrall/uploadBase64
       {
         method: "POST",
@@ -65,8 +69,23 @@ const page = () => {
           "Content-type": "application/json",
         },
         body: JSON.stringify({
-          img_upload: imageSrc,
+          // img_upload: imageSrc,
+          clientId: "IDON4olpqHVDRKEhkx4GqHHg==",
+          clientSecret: "iGqCtwP84vfdAFDNWc5oMz2o6WU0ShK+",
+          // redirect: "follow"
+          sourceImage: [
+            {
+              path: imageSrc
+            }
+          ],
+          targetImage: [
+            {
+              path: "https://drive.google.com/file/d/1S_pAYK3efdH54iAK1TESud1wpYSP9Aqj/view?usp=sharing"
+            }
+          ],
+          face_enhance: 0
         }),
+        
       }
     );
     const result = await response.json();
@@ -81,7 +100,7 @@ const page = () => {
   // #########################################################################
   // #########################################################################
   const capture = () => {
-    const delay = 5000;
+    const delay = 2000;
 
     setInterval(() => {
       setTimeLeft((timeLeft) => --timeLeft);
@@ -115,7 +134,7 @@ const page = () => {
     <div>
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
-          <div className="flex w-[80%] m-auto items-center justify-center">
+          <div className="flex w-full m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
           <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
@@ -137,10 +156,10 @@ const page = () => {
           <div className="absolute grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
-              className="w-[1200px] rounded-[40px] m-auto"
+              className="000px] rounded-[40px] m-auto"
             />
-            <div className="relative z-20 w-full m-auto justify-center items-center flex overflow-hidden">
-              <div className="flex m-auto justify-center items-center bg-white rounded-[20px] pb-4">
+            <div className="relative z-20 w-full m-auto justify-center items-center flex ">
+              <div className="flex border-2 rounded-[40px] m-auto justify-center items-center">
                 <MdOutlineArrowBack
                   size={80}
                   onClick={() => router.back()}
@@ -153,10 +172,10 @@ const page = () => {
                     errorCorrectionLevel: 'M',
                     margin: 3,
                     scale: 8,
-                    width: 300,
+                    width: 250,
                     color: {
                       dark: '#000000',
-                      light: '#FFFFFF',
+                      light: '#F6E7DF',
                     },
                   }}
                 />
@@ -184,12 +203,12 @@ const page = () => {
         </div>
       ) : (
         <div className="w-screen h-screen bg-[#F6E7DF]">
-          <div className="flex w-[80%] m-auto items-center justify-center">
+          <div className="flex w-full m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[12%] pt-4 ">
-            <div className="flex justify-around hv:justify-start hv:ml-[100px] ">
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
+            <div className="flex justify-around  hv:justify-start hv:ml-[58px]">
               <MdOutlineArrowBack
                 size={80}
                 onClick={() => router.back()}
@@ -214,7 +233,7 @@ const page = () => {
                 <img
                   src={imgSrc}
                   alt="webcam"
-                  className="z-0 flex blur-lg m-auto items-center justify-center bg-white rounded-[40px] w-[300px] h-[500px] object-cover hv:w-[1200px] hv:h-auto"
+                  className="z-0 flex blur-lg  m-auto items-center justify-center bg-white rounded-[40px] w-[400px] h-[600px] object-cover hv:w-[1000px] hv:h-auto"
                 />
                 {/*  */}
                 <div className="absolute z-10 w-full top-[40%]">
@@ -255,7 +274,7 @@ const page = () => {
             </div>
           ) : (
             <div>
-              <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
+              <div className="absolute w-full items-center justify-center flex top-[38%] text-[200px]">
                 {timeLeft}
               </div>
 
@@ -263,10 +282,10 @@ const page = () => {
                 ref={webcamRef}
                 screenshotFormat="image/png"
                 color="#e4c7ad"
-                className="flex w-[400px] h-[600px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                className="flex w-[400px] h-[600px] object-cover hv:w-[1000px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
               />
 
-              <div className="relative w-full m-auto justify-center items-center flex py-4">
+              <div className="relative w-full m-auto  justify-center items-center flex pt-4">
                 <button
                   className="absolute top-[100%] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
                   onClick={capture}

@@ -30,6 +30,15 @@ const nextConfig = {
     // distDir: 'build'
 
     reactStrictMode: false,
+
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'https://openapi.akool.com/api/*',
+        },
+      ]
+    },
     
   };
 
