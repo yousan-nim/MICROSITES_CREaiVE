@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <audio src="/MICROSITES_CREaiVE/mp3/award.mp3" autoPlay />
+      <audio src="/MICROSITES_CREaiVE/mp3/award.mp3" autoPlay loop/>
       <body className={inter.className}>{children}</body>
       <div className="absolute flex z-50 w-full m-auto top-[97%] items-center justify-center">
         <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/PoweredBy.png" className="w-[100px] mr-10" />
