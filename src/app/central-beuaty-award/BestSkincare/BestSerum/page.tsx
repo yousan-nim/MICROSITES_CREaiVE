@@ -66,11 +66,11 @@ const page = () => {
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white ">
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
-        <div className="flex w-full m-auto items-center justify-center">
+        <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute -z-0 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
+        <div className="absolute -z-0 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-autow-full hv:w-auto">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
@@ -87,35 +87,35 @@ const page = () => {
 
         <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
-            <img src={data.data.BestSerum.first.image} className='pt-4'/>
+            <img src={data.data.BestSerum.first.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
               {data.data.BestSerum.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSerum.second.image} className='pt-4'/>
+            <img src={data.data.BestSerum.second.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
               {data.data.BestSerum.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSerum.third.image} className='pt-4'/>
+            <img src={data.data.BestSerum.third.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
               {data.data.BestSerum.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSerum.fourth.image} className='pt-4'/>
+            <img src={data.data.BestSerum.fourth.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
               {data.data.BestSerum.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSerum.fifth.image} className='pt-4'/>
+            <img src={data.data.BestSerum.fifth.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
               {data.data.BestSerum.fifth.name}
             </div>
@@ -146,7 +146,7 @@ const page = () => {
             />
             {/* {/* <div className='text-[20px] pt-4 font-gothamBook uppercase p-2'>
               BUY HERE!
-            </div> */} 
+            </div> */}
           </div>
         </div>
       </div>

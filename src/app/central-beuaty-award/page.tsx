@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { MdTouchApp } from "react-icons/md";
+import { ClickSound } from "./utils"
+
 import Link from "next/link";
 // <!-- COLORS -->
 // <!-- # -->
@@ -26,20 +28,20 @@ const CentralBeuatyAward = () => {
     setIstouch(!isTouch);
   };
 
-  const GenerateBauetyGiftCard = () => {};
+  const GenerateBauetyGiftCard = () => { };
 
   useEffect(() => {
-    
-  const heightx = window.innerHeight
-  const widthx = window.innerWidth
 
-  setHeight(heightx)
-  setWidth(widthx)
+    const heightx = window.innerHeight
+    const widthx = window.innerWidth
+
+    setHeight(heightx)
+    setWidth(widthx)
 
     if (isTouch) {
-        setTimeout(() => {
-            setIstouch(!isTouch)
-        }, 30000)
+      setTimeout(() => {
+        setIstouch(!isTouch)
+      }, 30000)
     }
   }, [isTouch]);
 
@@ -51,18 +53,19 @@ const CentralBeuatyAward = () => {
             {width}x{height}
            </div>  */}
           <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
-            <div className="flex w-full m-auto items-center justify-center">
+            <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
               <img
                 src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png"
-                // onClick={}
+              // onClick={}
               />
             </div>
 
             <div className="relative z-50 w-screen h-screen m-auto items-center justify-center top-[15%] ">
               <Link
+
                 href="/central-beuaty-award/GenerateYourBauetyGiftCard"
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40vh] m-auto "
-                onClick={() => {}}
+                onClick={() => ClickSound}
               >
                 <img
                   src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Generate your beauty giftcard.png"
@@ -73,7 +76,7 @@ const CentralBeuatyAward = () => {
               {/* Top Center */}
               <Link
                 href="/central-beuaty-award/BestFrangrance"
-                onClick={() => {}}
+                onClick={() => ClickSound}
               >
                 <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[58vh] m-auto">
                   <img
@@ -85,7 +88,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestLuxury"
-                onClick={() => {}}
+                onClick={() => ClickSound}
               >
                 <button className="absolute top-1/2 left-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -97,7 +100,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestMakeUp"
-                onClick={() => {}}
+                onClick={() => ClickSound}
               >
                 <button className="absolute top-1/2 right-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -109,7 +112,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestSkincare"
-                onClick={() => {}}
+                onClick={() => ClickSound}
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[22vh] m-auto">
                   <img
@@ -121,7 +124,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestEcoFriendly"
-                onClick={() => {}}
+                onClick={() => ClickSound}
               >
                 <button className="absolute top-1/2 right-[8%] -translate-y-[22vh] m-auto">
                   <img
@@ -147,11 +150,11 @@ const CentralBeuatyAward = () => {
           <div className="absolute z-30 w-full text-gray text-center top-[50%] hv:text-end hv:top-[20%] opacity-loop-animate">
             <button onClick={CliclHandler}>
               <div className="animate-bounce flex text-[40px] justify-center items-center w-[200px] h-[200px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase hv:mr-10">
-                Touch 
+                Touch
               </div>
             </button>
           </div>
-              {/* <MdTouchApp size={120} className="justify-end w-full"/> */}
+          {/* <MdTouchApp size={120} className="justify-end w-full"/> */}
         </div>
       )}
     </div>

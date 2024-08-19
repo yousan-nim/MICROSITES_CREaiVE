@@ -66,11 +66,11 @@ const page = () => {
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white ">
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
-        <div className="flex w-full m-auto items-center justify-center">
+        <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-0 hv:z-20 text-black text-[18px]  h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4">
+        <div className="absolute z-0 hv:z-20 text-black text-[18px]  h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
