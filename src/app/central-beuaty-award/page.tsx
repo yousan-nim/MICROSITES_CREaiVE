@@ -31,11 +31,11 @@ const CentralBeuatyAward = () => {
 
   useEffect(() => {
 
-    const heightx = window.innerHeight
-    const widthx = window.innerWidth
+    // const heightx = window.innerHeight
+    // const widthx = window.innerWidth
 
-    setHeight(heightx)
-    setWidth(widthx)
+    // setHeight(heightx)
+    // setWidth(widthx)
 
     if (isTouch) {
       setTimeout(() => {
