@@ -85,7 +85,7 @@ const page = () => {
           />
         </div>
 
-        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 '>
+        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestFragranceEveryday.first.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
