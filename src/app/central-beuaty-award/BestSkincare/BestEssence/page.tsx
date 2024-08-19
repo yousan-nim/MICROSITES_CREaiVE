@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -17,6 +17,7 @@ const page = () => {
   })
 
   const FirstClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEssence.first.image,
       name: data.data.BestEssence.first.name,
@@ -25,6 +26,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEssence.second.image,
       name: data.data.BestEssence.second.name,
@@ -33,6 +35,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEssence.third.image,
       name: data.data.BestEssence.third.name,
@@ -41,6 +44,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEssence.fourth.image,
       name: data.data.BestEssence.fourth.name,
@@ -49,6 +53,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEssence.fifth.image,
       name: data.data.BestEssence.fifth.name,
@@ -70,7 +75,7 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute -z-0 text-black text-[18px]  h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
+        <div className="absolute -z-0 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
@@ -134,7 +139,7 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase p-2 p-2'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase p-2'>
               {hero.name}
             </div>
           </div>

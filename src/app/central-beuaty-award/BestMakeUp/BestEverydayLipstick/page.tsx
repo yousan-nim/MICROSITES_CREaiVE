@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+import { audio } from "../../utils"
 
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
   })
 
   const FirstClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEverydayLipstick.first.image,
       name: data.data.BestEverydayLipstick.first.name,
@@ -25,6 +27,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEverydayLipstick.second.image,
       name: data.data.BestEverydayLipstick.second.name,
@@ -33,6 +36,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEverydayLipstick.third.image,
       name: data.data.BestEverydayLipstick.third.name,
@@ -41,6 +45,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEverydayLipstick.fourth.image,
       name: data.data.BestEverydayLipstick.fourth.name,
@@ -49,6 +54,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestEverydayLipstick.fifth.image,
       name: data.data.BestEverydayLipstick.fifth.name,

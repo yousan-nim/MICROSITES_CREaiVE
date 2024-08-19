@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestFragranceSporty.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestFragranceSporty.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSporty.first.image,
       name: data.data.BestFragranceSporty.first.name,
       qr: data.data.BestFragranceSporty.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestFragranceSporty.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSporty.second.image,
       name: data.data.BestFragranceSporty.second.name,
       qr: data.data.BestFragranceSporty.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestFragranceSporty.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSporty.third.image,
       name: data.data.BestFragranceSporty.third.name,
       qr: data.data.BestFragranceSporty.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestFragranceSporty.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSporty.fourth.image,
       name: data.data.BestFragranceSporty.fourth.name,
       qr: data.data.BestFragranceSporty.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestFragranceSporty.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSporty.fifth.image,
       name: data.data.BestFragranceSporty.fifth.name,
       qr: data.data.BestFragranceSporty.fifth.imageQr
     })

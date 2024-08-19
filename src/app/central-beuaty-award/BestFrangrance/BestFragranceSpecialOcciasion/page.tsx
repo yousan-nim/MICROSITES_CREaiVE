@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestFragranceSpecialOcciasion.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestFragranceSpecialOcciasion.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSpecialOcciasion.first.image,
       name: data.data.BestFragranceSpecialOcciasion.first.name,
       qr: data.data.BestFragranceSpecialOcciasion.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestFragranceSpecialOcciasion.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSpecialOcciasion.second.image,
       name: data.data.BestFragranceSpecialOcciasion.second.name,
       qr: data.data.BestFragranceSpecialOcciasion.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestFragranceSpecialOcciasion.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSpecialOcciasion.third.image,
       name: data.data.BestFragranceSpecialOcciasion.third.name,
       qr: data.data.BestFragranceSpecialOcciasion.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestFragranceSpecialOcciasion.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSpecialOcciasion.fourth.image,
       name: data.data.BestFragranceSpecialOcciasion.fourth.name,
       qr: data.data.BestFragranceSpecialOcciasion.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestFragranceSpecialOcciasion.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceSpecialOcciasion.fifth.image,
       name: data.data.BestFragranceSpecialOcciasion.fifth.name,
       qr: data.data.BestFragranceSpecialOcciasion.fifth.imageQr
     })

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestEyeCream.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestEyeCream.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestEyeCream.first.image,
       name: data.data.BestEyeCream.first.name,
       qr: data.data.BestEyeCream.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestEyeCream.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestEyeCream.second.image,
       name: data.data.BestEyeCream.second.name,
       qr: data.data.BestEyeCream.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestEyeCream.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestEyeCream.third.image,
       name: data.data.BestEyeCream.third.name,
       qr: data.data.BestEyeCream.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestEyeCream.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestEyeCream.fourth.image,
       name: data.data.BestEyeCream.fourth.name,
       qr: data.data.BestEyeCream.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestEyeCream.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestEyeCream.fifth.image,
       name: data.data.BestEyeCream.fifth.name,
       qr: data.data.BestEyeCream.fifth.imageQr
     })

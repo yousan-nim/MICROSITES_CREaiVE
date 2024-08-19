@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestPowder.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestPowder.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestPowder.first.image,
       name: data.data.BestPowder.first.name,
       qr: data.data.BestPowder.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestPowder.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestPowder.second.image,
       name: data.data.BestPowder.second.name,
       qr: data.data.BestPowder.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestPowder.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestPowder.third.image,
       name: data.data.BestPowder.third.name,
       qr: data.data.BestPowder.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestPowder.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestPowder.fourth.image,
       name: data.data.BestPowder.fourth.name,
       qr: data.data.BestPowder.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestPowder.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestPowder.fifth.image,
       name: data.data.BestPowder.fifth.name,
       qr: data.data.BestPowder.fifth.imageQr
     })

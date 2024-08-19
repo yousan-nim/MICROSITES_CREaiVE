@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+import { audio } from "../../utils"
 
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
   })
 
   const FirstClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestSuncreen.first.image,
       name: data.data.BestSuncreen.first.name,
@@ -25,6 +27,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestSuncreen.second.image,
       name: data.data.BestSuncreen.second.name,
@@ -33,6 +36,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestSuncreen.third.image,
       name: data.data.BestSuncreen.third.name,
@@ -41,6 +45,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestSuncreen.fourth.image,
       name: data.data.BestSuncreen.fourth.name,
@@ -49,6 +54,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestSuncreen.fifth.image,
       name: data.data.BestSuncreen.fifth.name,

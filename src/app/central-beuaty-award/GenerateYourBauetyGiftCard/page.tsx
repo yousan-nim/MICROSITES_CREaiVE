@@ -254,7 +254,7 @@ const page = () => {
             </div>
           ) : (
             <div>
-              <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
+              <div className="absolute w-full items-center justify-center flex top-[38%] text-[200px]">
                 {timeLeft}
               </div>
 

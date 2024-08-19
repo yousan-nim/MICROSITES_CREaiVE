@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestFragranceEveryday.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestFragranceEveryday.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceEveryday.first.image,
       name: data.data.BestFragranceEveryday.first.name,
       qr: data.data.BestFragranceEveryday.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestFragranceEveryday.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceEveryday.second.image,
       name: data.data.BestFragranceEveryday.second.name,
       qr: data.data.BestFragranceEveryday.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestFragranceEveryday.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceEveryday.third.image,
       name: data.data.BestFragranceEveryday.third.name,
       qr: data.data.BestFragranceEveryday.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestFragranceEveryday.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceEveryday.fourth.image,
       name: data.data.BestFragranceEveryday.fourth.name,
       qr: data.data.BestFragranceEveryday.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestFragranceEveryday.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestFragranceEveryday.fifth.image,
       name: data.data.BestFragranceEveryday.fifth.name,
       qr: data.data.BestFragranceEveryday.fifth.imageQr
     })

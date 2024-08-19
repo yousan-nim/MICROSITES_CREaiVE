@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { MdTouchApp } from "react-icons/md";
-import { ClickSound } from "./utils"
+import { audio } from "./utils"
 
 import Link from "next/link";
 // <!-- COLORS -->
@@ -11,10 +11,6 @@ import Link from "next/link";
 // <!-- #dcbb9a -->
 // <!-- #b18b68 -->
 
-interface ButtonProps {
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
 const CentralBeuatyAward = () => {
   // const router = useRouter()
   const [isTouch, setIstouch] = useState(true);
@@ -22,13 +18,16 @@ const CentralBeuatyAward = () => {
   const [height, setHeight] = useState(0)
   const [width, setWidth] = useState(0)
 
+  // var audio = new Audio('/MICROSITES_CREaiVE/mp3/click.mp3');
 
+  // /MICROSITES_CREaiVE/mp3/award.mp3
 
-  const CliclHandler = () => {
+  const ClickHandler = () => {
+    audio.play();
     setIstouch(!isTouch);
   };
 
-  const GenerateBauetyGiftCard = () => { };
+  // const GenerateBauetyGiftCard = () => { };
 
   useEffect(() => {
 
@@ -56,7 +55,7 @@ const CentralBeuatyAward = () => {
             <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
               <img
                 src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png"
-              // onClick={}
+                onClick={() => audio.play()}
               />
             </div>
 
@@ -65,7 +64,7 @@ const CentralBeuatyAward = () => {
 
                 href="/central-beuaty-award/GenerateYourBauetyGiftCard"
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40vh] m-auto "
-                onClick={() => ClickSound}
+                onClick={() => audio.play()}
               >
                 <img
                   src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Generate your beauty giftcard.png"
@@ -76,7 +75,8 @@ const CentralBeuatyAward = () => {
               {/* Top Center */}
               <Link
                 href="/central-beuaty-award/BestFrangrance"
-                onClick={() => ClickSound}
+                onClick={() => audio.play()}
+
               >
                 <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[58vh] m-auto">
                   <img
@@ -88,7 +88,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestLuxury"
-                onClick={() => ClickSound}
+                onClick={() => audio.play()}
               >
                 <button className="absolute top-1/2 left-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -100,7 +100,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestMakeUp"
-                onClick={() => ClickSound}
+                onClick={() => audio.play()}
               >
                 <button className="absolute top-1/2 right-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -112,7 +112,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestSkincare"
-                onClick={() => ClickSound}
+                onClick={() => audio.play()}
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[22vh] m-auto">
                   <img
@@ -124,7 +124,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestEcoFriendly"
-                onClick={() => ClickSound}
+                onClick={() => audio.play()}
               >
                 <button className="absolute top-1/2 right-[8%] -translate-y-[22vh] m-auto">
                   <img
@@ -138,7 +138,7 @@ const CentralBeuatyAward = () => {
           </div>
         </div>
       ) : (
-        <div className="relative w-screen h-screen overflow-hidden bg-black transition-all duration-75" onClick={CliclHandler}>
+        <div className="relative w-screen h-screen overflow-hidden bg-black transition-all duration-75" onClick={ClickHandler}>
           <div className="absolute z-20 w-full h-full opacity-60">
             <video loop muted autoPlay preload="none" className="w-screen h-screen object-cover">
               <source
@@ -148,7 +148,7 @@ const CentralBeuatyAward = () => {
             </video>
           </div>
           <div className="absolute z-30 w-full text-gray text-center top-[50%] hv:text-end hv:top-[20%] opacity-loop-animate">
-            <button onClick={CliclHandler}>
+            <button onClick={ClickHandler}>
               <div className="animate-bounce flex text-[40px] justify-center items-center w-[200px] h-[200px] border-4 rounded-[100%] font-light font-serif text-gray-200 border-gray-200 m-auto bg-black bg-opacity-50 uppercase hv:mr-10">
                 Touch
               </div>

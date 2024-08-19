@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestLipMoisturizer.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestLipMoisturizer.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestLipMoisturizer.first.image,
       name: data.data.BestLipMoisturizer.first.name,
       qr: data.data.BestLipMoisturizer.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestLipMoisturizer.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestLipMoisturizer.second.image,
       name: data.data.BestLipMoisturizer.second.name,
       qr: data.data.BestLipMoisturizer.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestLipMoisturizer.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestLipMoisturizer.third.image,
       name: data.data.BestLipMoisturizer.third.name,
       qr: data.data.BestLipMoisturizer.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestLipMoisturizer.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestLipMoisturizer.fourth.image,
       name: data.data.BestLipMoisturizer.fourth.name,
       qr: data.data.BestLipMoisturizer.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestLipMoisturizer.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestLipMoisturizer.fifth.image,
       name: data.data.BestLipMoisturizer.fifth.name,
       qr: data.data.BestLipMoisturizer.fifth.imageQr
     })

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+import { audio } from "../utils"
 
 type Props = {
   image: string;
@@ -15,7 +16,7 @@ type Props = {
 
 const First_ProductBox = ({ image, name, href_to }: Props) => {
   return (
-    <Link href={href_to}>
+    <Link href={href_to} onClick={() => audio.play()}>
       <img src={image} className="w-[20vw] h-[12vh] z-20 top-[1200px] m-auto" />
       <div className="text-black text-[10px] hv:text-[30px] font-semiBold p-4 m-auto">{name}</div>
     </Link>

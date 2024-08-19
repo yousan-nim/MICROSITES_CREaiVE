@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { data } from "../data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
-
+import { audio } from "../../utils"
 
 const page = () => {
   const router = useRouter()
@@ -16,41 +16,36 @@ const page = () => {
     qr: data.data.BestSerum.first.imageQr
   })
 
-  const FirstClick = () => {
-    setHero({
-      img: data.data.BestSerum.first.image,
+  const FirstClick = () => {audio.play()
+    setHero({      img: data.data.BestSerum.first.image,
       name: data.data.BestSerum.first.name,
       qr: data.data.BestSerum.first.imageQr
     })
   }
 
-  const SecondClick = () => {
-    setHero({
-      img: data.data.BestSerum.second.image,
+  const SecondClick = () => {audio.play()
+    setHero({      img: data.data.BestSerum.second.image,
       name: data.data.BestSerum.second.name,
       qr: data.data.BestSerum.second.imageQr
     })
   }
 
-  const ThirdClick = () => {
-    setHero({
-      img: data.data.BestSerum.third.image,
+  const ThirdClick = () => {audio.play()
+    setHero({      img: data.data.BestSerum.third.image,
       name: data.data.BestSerum.third.name,
       qr: data.data.BestSerum.third.imageQr
     })
   }
 
-  const FourthClick = () => {
-    setHero({
-      img: data.data.BestSerum.fourth.image,
+  const FourthClick = () => {audio.play()
+    setHero({      img: data.data.BestSerum.fourth.image,
       name: data.data.BestSerum.fourth.name,
       qr: data.data.BestSerum.fourth.imageQr
     })
   }
 
-  const FifthClick = () => {
-    setHero({
-      img: data.data.BestSerum.fifth.image,
+  const FifthClick = () => {audio.play()
+    setHero({      img: data.data.BestSerum.fifth.image,
       name: data.data.BestSerum.fifth.name,
       qr: data.data.BestSerum.fifth.imageQr
     })

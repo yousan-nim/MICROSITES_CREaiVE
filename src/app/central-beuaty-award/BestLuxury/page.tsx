@@ -5,10 +5,12 @@ import { useRouter } from 'next/navigation'
 import { data } from "./data"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+import { audio } from "../utils"
 
 
 const page = () => {
   const router = useRouter()
+  // var audio = new Audio('/MICROSITES_CREaiVE/public/mp3/click.mp3');
 
   const [hero, setHero] = useState({
     img: data.data.BestLuxury.first.image,
@@ -17,14 +19,17 @@ const page = () => {
   })
 
   const FirstClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestLuxury.first.image,
       name: data.data.BestLuxury.first.name,
       qr: data.data.BestLuxury.first.imageQr
     })
+    audio.play();
   }
 
   const SecondClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestLuxury.second.image,
       name: data.data.BestLuxury.second.name,
@@ -33,6 +38,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestLuxury.third.image,
       name: data.data.BestLuxury.third.name,
@@ -41,6 +47,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestLuxury.fourth.image,
       name: data.data.BestLuxury.fourth.name,
@@ -49,6 +56,7 @@ const page = () => {
   }
 
   const FifthClick = () => {
+    audio.play()
     setHero({
       img: data.data.BestLuxury.fifth.image,
       name: data.data.BestLuxury.fifth.name,
@@ -70,7 +78,7 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-0 hv:z-20 text-black text-[18px] w-screen h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
+        <div className="absolute z-0 hv:z-20 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
           <MdOutlineArrowBack
             size={80}
             onClick={() => router.back()}
