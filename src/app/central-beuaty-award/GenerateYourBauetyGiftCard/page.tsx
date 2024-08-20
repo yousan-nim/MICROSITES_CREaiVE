@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import Webcam from "react-webcam";
 import { useRef, useState, useCallback } from "react"; // import useState
 import { FaCamera } from "react-icons/fa";
-import { IoShareOutline } from "react-icons/io5";
-import { PostImgAPI, NextStepImgAPI } from "./controller";
-import { MdOutlineArrowBack } from "react-icons/md";
-import { MdHome } from "react-icons/md";
 import { useRouter } from "next/navigation";
 import { useQRCode } from 'next-qrcode';
+import useSound from 'use-sound';
+import ButtonClick from "@/app/central-beuaty-award/utils"
+
+
 
 import Loader from "@/components/Loader";
 
@@ -17,18 +17,10 @@ const page = () => {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [buttonHidden, setButtonHidden] = useState<boolean>(false);
   const [timeLeft, setTimeLeft] = useState(3);
-  // const [totalImg, setTotalImg] = useState<string[]>([]);
   const [keepUrls, setKeepUrls] = useState<string>("");
-
-
-
-  const router = useRouter();
   const { Canvas } = useQRCode();
+  const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
 
-
-  // #########################################################################
-  // #########################################################################
-  // #########################################################################
   const POST_request = async (imageSrc: string) => {
     // setButtonHidden(!buttonHidden)
     const response = await fetch(
@@ -53,10 +45,8 @@ const page = () => {
     // setButtonHidden(!buttonHidden)
   };
 
-  // #########################################################################
-  // #########################################################################
-  // #########################################################################
   const capture = () => {
+    play()
     setButtonHidden(!buttonHidden)
     const delay = 3000;
 
@@ -75,8 +65,8 @@ const page = () => {
   };
 
   useEffect(() => {
-    console.log(keepUrls);
-    console.log(keepUrls.length);
+    // console.log(keepUrls);
+    // console.log(keepUrls.length);
   }, [keepUrls]);
 
   return (
@@ -93,32 +83,12 @@ const page = () => {
               src={`${keepUrls}`}
               className="w-[1200px] rounded-[40px] m-auto"
             />
-            <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[12%] pt-4 ">
-              <div className="justify-start hv:justify-start hv:ml-[10px] ">
-                <MdOutlineArrowBack
-                  size={80}
-                  onClick={() => router.back()}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
-                <MdHome
-                  size={80}
-                  onClick={() => router.push("/central-beuaty-award")}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
-              </div>
+            <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[69%] hv:top-[17%] pt-4 ">
+              <ButtonClick />
             </div>
-
 
             <div className="relative z-20 w-full m-auto justify-center items-center flex overflow-hidden">
               <div className="m-auto justify-center items-center bg-white ">
-                {/* <MdOutlineArrowBack
-                  size={80}
-                  onClick={() => router.back()}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                /> */}
                 <Canvas
                   text={`${keepUrls}`}
                   options={{
@@ -145,21 +115,8 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
-            <div className="flex justify-around hv:justify-start hv:ml-[100px] ">
-              <MdOutlineArrowBack
-                size={80}
-                onClick={() => router.back()}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-              <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-            </div>
+          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[69%] hv:top-[17%] pt-4 ">
+            <ButtonClick />
           </div>
 
           {imgSrc ? (
@@ -214,11 +171,6 @@ const page = () => {
                   )
                 }
               </div>
-
-
-
-
-
             </div>
           )}
         </div>

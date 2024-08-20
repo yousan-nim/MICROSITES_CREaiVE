@@ -3,12 +3,11 @@ import React, { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { data } from "../data"
-import { MdOutlineArrowBack } from "react-icons/md";
-import { MdHome } from "react-icons/md";
-
+import ButtonClick from "../../utils"
+import useSound from 'use-sound';
 
 const page = () => {
-  const router = useRouter()
+  const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
 
   const [hero, setHero] = useState({
     img: data.data.BestSuncreen.first.image,
@@ -16,7 +15,8 @@ const page = () => {
     qr: data.data.BestSuncreen.first.imageQr
   })
 
-  const FirstClick = () => {
+    const FirstClick = () => {
+    play()
     setHero({
       img: data.data.BestSuncreen.first.image,
       name: data.data.BestSuncreen.first.name,
@@ -25,6 +25,7 @@ const page = () => {
   }
 
   const SecondClick = () => {
+    play()
     setHero({
       img: data.data.BestSuncreen.second.image,
       name: data.data.BestSuncreen.second.name,
@@ -33,6 +34,7 @@ const page = () => {
   }
 
   const ThirdClick = () => {
+    play()
     setHero({
       img: data.data.BestSuncreen.third.image,
       name: data.data.BestSuncreen.third.name,
@@ -41,6 +43,7 @@ const page = () => {
   }
 
   const FourthClick = () => {
+    play()
     setHero({
       img: data.data.BestSuncreen.fourth.image,
       name: data.data.BestSuncreen.fourth.name,
@@ -49,6 +52,8 @@ const page = () => {
   }
 
   const FifthClick = () => {
+    play()
+    play()
     setHero({
       img: data.data.BestSuncreen.fifth.image,
       name: data.data.BestSuncreen.fifth.name,
@@ -71,18 +76,7 @@ const page = () => {
         </div>
 
         <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
-          <MdOutlineArrowBack
-            size={80}
-            onClick={() => router.back()}
-            color="#e4c7ad"
-            className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-          />
-          <MdHome
-            size={80}
-            onClick={() => router.push("/central-beuaty-award")}
-            color="#e4c7ad"
-            className="m-4 border-2 border-[#e4c7ad] rounded-[100px] "
-          />
+          <ButtonClick />
         </div>
 
         {/* appear-animetion */}

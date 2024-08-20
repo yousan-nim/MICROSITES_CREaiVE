@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { MdTouchApp } from "react-icons/md";
-import { ClickSound } from "./utils"
+import useSound from 'use-sound';
 
 import Link from "next/link";
 // <!-- COLORS -->
@@ -22,13 +21,13 @@ const CentralBeuatyAward = () => {
   const [height, setHeight] = useState(0)
   const [width, setWidth] = useState(0)
 
+  const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
+
 
 
   const CliclHandler = () => {
     setIstouch(!isTouch);
   };
-
-  const GenerateBauetyGiftCard = () => { };
 
   useEffect(() => {
 
@@ -65,7 +64,7 @@ const CentralBeuatyAward = () => {
 
                 href="/central-beuaty-award/GenerateYourBauetyGiftCard"
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40vh] m-auto "
-                onClick={() => ClickSound}
+                onClick={() => play()}
               >
                 <img
                   src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/Generate your beauty card.png"
@@ -76,7 +75,7 @@ const CentralBeuatyAward = () => {
               {/* Top Center */}
               <Link
                 href="/central-beuaty-award/BestFrangrance"
-                onClick={() => ClickSound}
+                onClick={() => play()}
               >
                 <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[58vh] m-auto">
                   <img
@@ -88,7 +87,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestLuxury"
-                onClick={() => ClickSound}
+                onClick={() => play()}
               >
                 <button className="absolute top-1/2 left-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -100,7 +99,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestMakeUp"
-                onClick={() => ClickSound}
+                onClick={() => play()}
               >
                 <button className="absolute top-1/2 right-[2%] -translate-y-[44vh] m-auto">
                   <img
@@ -112,7 +111,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestSkincare"
-                onClick={() => ClickSound}
+                onClick={() => play()}
               >
                 <button className="absolute top-1/2 left-[8%] -translate-y-[22vh] m-auto">
                   <img
@@ -124,7 +123,7 @@ const CentralBeuatyAward = () => {
 
               <Link
                 href="/central-beuaty-award/BestEcoFriendly"
-                onClick={() => ClickSound}
+                onClick={() => play()}
               >
                 <button className="absolute top-1/2 right-[8%] -translate-y-[22vh] m-auto">
                   <img

@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import { data } from "./data";
-import { useRouter } from "next/navigation";
+import useSound from 'use-sound';
 
 import Link from "next/link";
-import { MdOutlineArrowBack } from "react-icons/md";
-import { MdHome } from "react-icons/md";
+import ButtonClick from '@/app/central-beuaty-award/utils'
+
 
 type Props = {
   image: string;
@@ -14,8 +14,9 @@ type Props = {
 };
 
 const First_ProductBox = ({ image, name, href_to }: Props) => {
+  const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
   return (
-    <Link href={href_to}>
+    <Link href={href_to} onClick={() => play()}>
       <img src={image} className="w-[20vw] h-[12vh] z-20 top-[1200px] m-auto" />
       <div className="text-black text-[10px] hv:text-[30px] font-semiBold p-4 m-auto">{name}</div>
     </Link>
@@ -23,7 +24,7 @@ const First_ProductBox = ({ image, name, href_to }: Props) => {
 };
 
 function BestSkincare() {
-  const router = useRouter();
+
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-white">
@@ -33,18 +34,7 @@ function BestSkincare() {
         </div>
 
         <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
-          <MdOutlineArrowBack
-            size={80}
-            onClick={() => router.back()}
-            color="#e4c7ad"
-            className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-          />
-          <MdHome
-            size={80}
-            onClick={() => router.push("/central-beuaty-award")}
-            color="#e4c7ad"
-            className="m-4 border-2 border-[#e4c7ad] rounded-[100px] "
-          />
+          <ButtonClick />
         </div>
 
         <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase appear-animetion">
