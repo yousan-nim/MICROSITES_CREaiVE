@@ -106,7 +106,7 @@ const page = () => {
                     },
                   }}
                 />
-                <div className="text-[10px] text-semiBlod text-black w-full m-auto text-center">
+                <div className="text-[18px] text-semiBlod text-black w-full m-auto text-center">
                   SCAN TO DOWNLOAD
                 </div>
               </div>
@@ -127,7 +127,7 @@ const page = () => {
                 className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
               />
 
-              <div className="w-[200px] text-[40px] hv:hidden uppercase font-gothamLight">
+              <div className="w-[200px] text-[18px] hv:hidden uppercase font-gothamLight">
                 HOLD TO DOWNLOAD
               </div>
 
