@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 
 import { data } from "../data"
 import ButtonClick from '@/app/central-beuaty-award/utils'
+import useSound from 'use-sound';
 
 const page = () => {
   const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
