@@ -106,7 +106,7 @@ const page = () => {
                     },
                   }}
                 />
-                <div className="text-[18px] text-semiBlod text-black w-full m-auto text-center">
+                <div className="text-[10px] text-semiBlod text-black w-full m-auto text-center">
                   SCAN TO DOWNLOAD
                 </div>
               </div>
