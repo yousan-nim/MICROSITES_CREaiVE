@@ -11,53 +11,53 @@ const page = () => {
   const router = useRouter()
 
   const [hero, setHero] = useState({
-    img: data.data.BestFragranceSpecialOcciasion.first.image,
-    name: data.data.BestFragranceSpecialOcciasion.first.name,
-    qr: data.data.BestFragranceSpecialOcciasion.first.imageQr
+    img: data.data.BestFragranceSpecialOccasion.first.image,
+    name: data.data.BestFragranceSpecialOccasion.first.name,
+    qr: data.data.BestFragranceSpecialOccasion.first.imageQr
   })
 
     const FirstClick = () => {
     play()
     setHero({
-      img: data.data.BestFragranceSpecialOcciasion.first.image,
-      name: data.data.BestFragranceSpecialOcciasion.first.name,
-      qr: data.data.BestFragranceSpecialOcciasion.first.imageQr
+      img: data.data.BestFragranceSpecialOccasion.first.image,
+      name: data.data.BestFragranceSpecialOccasion.first.name,
+      qr: data.data.BestFragranceSpecialOccasion.first.imageQr
     })
   }
 
   const SecondClick = () => {
     play()
     setHero({
-      img: data.data.BestFragranceSpecialOcciasion.second.image,
-      name: data.data.BestFragranceSpecialOcciasion.second.name,
-      qr: data.data.BestFragranceSpecialOcciasion.second.imageQr
+      img: data.data.BestFragranceSpecialOccasion.second.image,
+      name: data.data.BestFragranceSpecialOccasion.second.name,
+      qr: data.data.BestFragranceSpecialOccasion.second.imageQr
     })
   }
 
   const ThirdClick = () => {
     play()
     setHero({
-      img: data.data.BestFragranceSpecialOcciasion.third.image,
-      name: data.data.BestFragranceSpecialOcciasion.third.name,
-      qr: data.data.BestFragranceSpecialOcciasion.third.imageQr
+      img: data.data.BestFragranceSpecialOccasion.third.image,
+      name: data.data.BestFragranceSpecialOccasion.third.name,
+      qr: data.data.BestFragranceSpecialOccasion.third.imageQr
     })
   }
 
   const FourthClick = () => {
     play()
     setHero({
-      img: data.data.BestFragranceSpecialOcciasion.fourth.image,
-      name: data.data.BestFragranceSpecialOcciasion.fourth.name,
-      qr: data.data.BestFragranceSpecialOcciasion.fourth.imageQr
+      img: data.data.BestFragranceSpecialOccasion.fourth.image,
+      name: data.data.BestFragranceSpecialOccasion.fourth.name,
+      qr: data.data.BestFragranceSpecialOccasion.fourth.imageQr
     })
   }
 
   const FifthClick = () => {
     play()
     setHero({
-      img: data.data.BestFragranceSpecialOcciasion.fifth.image,
-      name: data.data.BestFragranceSpecialOcciasion.fifth.name,
-      qr: data.data.BestFragranceSpecialOcciasion.fifth.imageQr
+      img: data.data.BestFragranceSpecialOccasion.fifth.image,
+      name: data.data.BestFragranceSpecialOccasion.fifth.name,
+      qr: data.data.BestFragranceSpecialOccasion.fifth.imageQr
     })
   }
 
@@ -81,44 +81,44 @@ const page = () => {
 
         <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
-            <img src={data.data.BestFragranceSpecialOcciasion.first.image} className='hv:pt-4' />
+            <img src={data.data.BestFragranceSpecialOccasion.first.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestFragranceSpecialOcciasion.first.name}
+              {data.data.BestFragranceSpecialOccasion.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFragranceSpecialOcciasion.second.image} className='hv:pt-4' />
+            <img src={data.data.BestFragranceSpecialOccasion.second.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestFragranceSpecialOcciasion.second.name}
+              {data.data.BestFragranceSpecialOccasion.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFragranceSpecialOcciasion.third.image} className='hv:pt-4' />
+            <img src={data.data.BestFragranceSpecialOccasion.third.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestFragranceSpecialOcciasion.third.name}
+              {data.data.BestFragranceSpecialOccasion.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFragranceSpecialOcciasion.fourth.image} className='hv:pt-4' />
+            <img src={data.data.BestFragranceSpecialOccasion.fourth.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestFragranceSpecialOcciasion.fourth.name}
+              {data.data.BestFragranceSpecialOccasion.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestFragranceSpecialOcciasion.fifth.image} className='hv:pt-4' />
+            <img src={data.data.BestFragranceSpecialOccasion.fifth.image} className='hv:pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestFragranceSpecialOcciasion.fifth.name}
+              {data.data.BestFragranceSpecialOccasion.fifth.name}
             </div>
           </div>
         </div>
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
-            {data.dataPageTitle} : {data.data.BestFragranceSpecialOcciasion.name}
+            {data.dataPageTitle} : {data.data.BestFragranceSpecialOccasion.name}
           </div>
 
           {/* Hero image */}

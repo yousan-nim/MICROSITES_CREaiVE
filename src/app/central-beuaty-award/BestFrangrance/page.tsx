@@ -58,9 +58,9 @@ function BestSkincare() {
 
             <div className="col-start-9 col-span-3 text-[40px]">
               <First_ProductBox
-                image={data.data.BestFragranceSpecialOcciasion.first.image}
-                name={data.data.BestFragranceSpecialOcciasion.name}
-                href_to={data.data.BestFragranceSpecialOcciasion.href}
+                image={data.data.BestFragranceSpecialOccasion.first.image}
+                name={data.data.BestFragranceSpecialOccasion.name}
+                href_to={data.data.BestFragranceSpecialOccasion.href}
               />
             </div>
           </div>
