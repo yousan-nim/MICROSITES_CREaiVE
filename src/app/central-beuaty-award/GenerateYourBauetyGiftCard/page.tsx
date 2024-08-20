@@ -79,23 +79,22 @@ const page = () => {
   return (
     <div>
       {keepUrls.length > 0 ? (
-        <div className="absolute z-100 w-screen h-auto bg-[#F6E7DF]">
+        <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-full m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
+            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
           </div>
-          <div className=" grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
+          <div className=" grid grid-cols-1 p-4 gap-4  bg-[#F6E7DF] pt-8">
             <img
-              src={`${keepUrls}`}
-              className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto"
+              // src={`${keepUrls}`}
+              src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/AW 01 No Logo.png"
+              className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto "
             />
-            <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
-              <ButtonClick />
-            </div>
 
-            <div className="hidden relative z-20 w-full m-auto justify-center items-center hv:flex overflow-hidden">
+            <div className="hidden relative z-20 m-auto justify-center items-center hv:flex overflow-hidden ">
               <div className="m-auto justify-center items-center bg-white ">
                 <Canvas
-                  text={`${keepUrls}`}
+                  // text={`${keepUrls}`}
+                  text='test'
                   options={{
                     errorCorrectionLevel: 'M',
                     margin: 3,
@@ -112,19 +111,47 @@ const page = () => {
                 </div>
               </div>
             </div>
+
+            <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[12%] pt-4 hidden hv:flex">
+              <ButtonClick />
+            </div>
+
+            <div className="flex m-auto justify-between">
+              <MdOutlineArrowBack
+                size={50}
+                onClick={() => {
+                  play()
+                  router.back()
+                }}
+                color="#e4c7ad"
+                className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
+              />
+
+              <div className="w-[200px]">
+
+              </div>
+
+              <MdHome
+                size={50}
+                onClick={() => {
+                  play()
+                  router.push("/central-beuaty-award")
+                }}
+                color="#e4c7ad"
+                className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
+              />
+            </div>
           </div>
         </div>
       ) : (
         <div className=" bg-[#F6E7DF]">
 
-          <div className="flex w-full m-auto items-center justify-center">
+          <div className="flex w-full m-auto items-center justify-around">
             <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
           </div>
 
           {imgSrc ? (
-            <div className="border-[#e4c7ad] h-screen">
-              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-              </div>
+            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0">
               <div className="relative">
                 {/*  */}
                 <img
@@ -139,12 +166,12 @@ const page = () => {
               </div>
             </div>
           ) : (
-            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0">
+            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0 overflow-hidden">
               <div className="absolute w-screen items-center justify-center flex top-[30%] text-[200px]">
                 {timeLeft}
               </div>
 
-              <div className="absolute hidden hv:flex justify-start ml-[100px] text-black text-[18px]  h-[100px] top-[69%] hv:top-[12%] pt-4 ">
+              <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[12%] pt-4 hidden hv:flex">
                 <ButtonClick />
               </div>
 
@@ -156,14 +183,14 @@ const page = () => {
               />
 
 
-              <div className="relative h-auto w-screen m-auto  items-center flex py-4">
+              <div className="relative h-auto w-screen m-auto items-center flex py-4">
                 {
                   buttonHidden ? (
                     <div>
 
                     </div>
                   ) : (
-                    <div className="flex items-center justify-around w-[430px] m-auto">
+                    <div className="flex items-center justify-around w-[430px] m-auto px-4 hv:px-0">
                       <MdOutlineArrowBack
                         size={50}
                         onClick={() => {

@@ -3,59 +3,31 @@ import React, { useEffect } from "react";
 import Webcam from "react-webcam";
 import { useRef, useState, useCallback } from "react"; // import useState
 import { FaCamera } from "react-icons/fa";
-import { IoShareOutline } from "react-icons/io5";
-import { PostImgAPI, NextStepImgAPI } from "./controller";
+import { useQRCode } from 'next-qrcode';
+import useSound from 'use-sound';
+import ButtonClick from "@/app/central-beuaty-award/utils"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 import { useRouter } from "next/navigation";
-import { useQRCode } from 'next-qrcode';
+
 
 import Loader from "@/components/Loader";
 
 const page = () => {
+
+  // window.my_mute = false;
+
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(5);
-  // const [totalImg, setTotalImg] = useState<string[]>([]);
+  const [buttonHidden, setButtonHidden] = useState<boolean>(false);
+  const [timeLeft, setTimeLeft] = useState(3);
   const [keepUrls, setKeepUrls] = useState<string>("");
-
-  const imageGen = 1
-
-  const router = useRouter();
   const { Canvas } = useQRCode();
-
-
-  // #########################################################################
-  // #########################################################################
-  // #########################################################################
-  const POST_nextStept = async (_id: string) => {
-    const response = await fetch(
-      "https://campaign.creaive.ai/central/generateNextStep",
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          _id: _id,
-        }),
-      }
-    );
-    const result = await response.json();
-    // console.log(result, "response post next step");
-
-    if (result.images_faceSwap.length < imageGen) {
-      POST_nextStept(_id);
-    } else {
-      setKeepUrls(result.images_faceSwap);
-      // console.log(keepUrls)
-    }
-  };
-
-  // #########################################################################
-  // #########################################################################
-  // #########################################################################
+  const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
+  const [count] = useSound('/MICROSITES_CREaiVE/mp3/cound.mp3');
+  const router = useRouter();
   const POST_request = async (imageSrc: string) => {
+    // setButtonHidden(!buttonHidden)
     const response = await fetch(
       "https://thairath.promptdue.com/centrall/uploadBase64",
       // https://thairath.promptdue.com/centrall/uploadBase64
@@ -75,13 +47,14 @@ const page = () => {
 
     setKeepUrls(result.images_faceSwap);
     // console.log(result.images_faceSwap);
+    // setButtonHidden(!buttonHidden)
   };
 
-  // #########################################################################
-  // #########################################################################
-  // #########################################################################
   const capture = () => {
-    const delay = 5000;
+    // play()
+    count()
+    setButtonHidden(!buttonHidden)
+    const delay = 3000;
 
     setInterval(() => {
       setTimeLeft((timeLeft) => --timeLeft);
@@ -94,190 +67,131 @@ const page = () => {
         POST_request(imageSrc);
       }
     }, delay);
+    setButtonHidden(!buttonHidden)
   };
 
-  // const share = useCallback(() => {
-  // }, [webcamRef]);
-
-  // const retake = () => {
-  //   setImgSrc(null);
-  // };
-
-  // const takeCap = () => {
-  // };
-
   useEffect(() => {
-    console.log(keepUrls);
-    console.log(keepUrls.length);
+    // console.log(keepUrls);
+    // console.log(keepUrls.length)
+
   }, [keepUrls]);
 
   return (
     <div>
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
-          <div className="flex w-full m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
-          </div>
-          <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
-            {/* <div className="flex justify-around  hv:justify-start hv:ml-[58px]">
-              <MdOutlineArrowBack
-                size={80}
-                onClick={() => router.back()}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-              <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-            </div> */}
-          </div>
-          <div className="absolute grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
-            <img
-              src={`${keepUrls}`}
-              className="w-[1300px] rounded-[40px] m-auto"
-            />
-            <div className="relative z-20 w-full m-auto justify-center items-center flex ">
-              <div className="flex border-2 rounded-[40px] m-auto justify-center items-center">
-                <MdOutlineArrowBack
-                  size={80}
-                  onClick={() => router.back()}
-                  color="#e4c7ad"
-                  className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-                />
-                <Canvas
-                  text={`${keepUrls}`}
-                  options={{
-                    errorCorrectionLevel: 'M',
-                    margin: 3,
-                    scale: 8,
-                    width: 200,
-                    color: {
-                      dark: '#000000',
-                      light: '#F6E7DF',
-                    },
-                  }}
-                />
-              <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
-              </div>
-              {/* <button
-                className="absolute z-50 w-[150px] h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
-              // onClick={share}
-              >
-                <IoShareOutline
-                  className="w-full border-[#e4c7ad]"
-                  size={80}
-                  color="#e4c7ad"
-                // style={{ color: "#7e7e7e" }}
-                />
-              </button> */}
-            </div>
-          </div>
-
+        <div className="flex w-full m-auto items-center justify-center">
+          <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
         </div>
-      ) : (
-        <div className="w-screen h-screen bg-[#F6E7DF]">
-          <div className="flex w-full m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
-          </div>
-
-          <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
-            <div className="flex justify-around  hv:justify-start hv:ml-[58px]">
-              <MdOutlineArrowBack
-                size={80}
-                onClick={() => router.back()}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+        <div className=" grid grid-cols-1 p-4 gap-4  bg-[#F6E7DF] pt-8">
+          <img
+            // src={`${keepUrls}`}
+            src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/AW 01 No Logo.png"
+            className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto "
+          />
+  
+          <div className="hidden relative z-20 m-auto justify-center items-center hv:flex overflow-hidden ">
+            <div className="m-auto justify-center items-center bg-white ">
+              <Canvas
+                // text={`${keepUrls}`}
+                text='test'
+                options={{
+                  errorCorrectionLevel: 'M',
+                  margin: 3,
+                  scale: 8,
+                  width: 300,
+                  color: {
+                    dark: '#000000',
+                    light: '#FFFFFF',
+                  },
+                }}
               />
-              <MdHome
-                size={80}
-                onClick={() => router.push("/central-beuaty-award")}
-                color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
-              />
+              <div className="text-[18px] text-semiBlod text-black w-full m-auto text-center">
+                SCAN TO DOWNLOAD
+              </div>
             </div>
+          </div>
+  
+          <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[12%] pt-4 hidden hv:flex">
+            <ButtonClick />
+          </div>
+        </div>
+      </div>
+      ) : (
+        <div className=" bg-[#F6E7DF]">
+
+          <div className="flex w-full m-auto items-center justify-center">
+            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
           </div>
 
           {imgSrc ? (
-            <div>
-              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
-              </div>
+            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0">
               <div className="relative">
                 {/*  */}
                 <img
                   src={imgSrc}
                   alt="webcam"
-                  className="z-0 flex blur-lg  m-auto items-center justify-center bg-white rounded-[40px] w-[400px] h-[600px] object-cover hv:w-[1300px] hv:h-auto"
+                  className="z-0 flex blur-lg m-auto items-center justify-center bg-white rounded-[40px] w-[400px] h-[500px] object-center hv:w-[1200px] hv:h-auto"
                 />
                 {/*  */}
                 <div className="absolute z-10 w-full top-[40%]">
                   <Loader />
                 </div>
               </div>
-
-
-
-              {/* {keepUrls.length === 4 && (
-                <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
-                  <div className="flex w-full m-auto items-center justify-center">
-                    <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
-                  </div>
-                  <div className="relative grid grid-cols-2 w-screen h-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[0]}`}
-                      className="w-full h-full"
-                    />
-
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[1]}`}
-                      className="w-full h-full"
-                    />
-
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[2]}`}
-                      className="w-full h-full"
-                    />
-
-                    <img
-                      src={`https://campaign.creaive.ai/images/replicate/${keepUrls[3]}`}
-                      className="w-full h-full"
-                    />
-                  </div>
-                </div>
-              )} */}
             </div>
           ) : (
-            <div>
-              <div className="absolute w-full items-center justify-center flex top-[38%] text-[200px]">
+            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0">
+              <div className="absolute w-screen items-center justify-center flex top-[30%] text-[200px]">
                 {timeLeft}
+              </div>
+
+              <div className="absolute hidden hv:flex justify-start ml-[100px] text-black text-[18px]  h-[100px] top-[69%] hv:top-[12%] pt-4 ">
+                <ButtonClick />
               </div>
 
               <Webcam
                 ref={webcamRef}
                 screenshotFormat="image/png"
                 color="#e4c7ad"
-                className="flex w-[400px] h-[600px] object-cover hv:w-[1300px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
               />
 
-              <div className="relative w-full m-auto  justify-center items-center flex pt-4">
-                <button
-                  className="absolute top-[100%] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
-                  onClick={capture}
-                >
-                  <FaCamera
-                    className="w-full m-auto border-[#e4c7ad]"
-                    size={80}
-                    color="#e4c7ad"
-                  // style={{ color: "#7e7e7e" }}
-                  />
-                </button>
+
+              <div className="relative h-auto w-screen m-auto items-center flex py-4">
+                {
+                  buttonHidden ? (
+                    <div>
+
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-around w-[430px] m-auto px-4 hv:px-0">
+                      <MdOutlineArrowBack
+                        size={50}
+                        onClick={() => {
+                          play()
+                          router.back()
+                        }}
+                        color="#e4c7ad"
+                        className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
+                      />
+                      <FaCamera
+                        className="w-[100px] h-[100px] m-auto border-[#e4c7ad] border-2 rounded-[150px] "
+                        size={80}
+                        color="#e4c7ad"
+                        onClick={capture}
+                      />
+                      <MdHome
+                        size={50}
+                        onClick={() => {
+                          play()
+                          router.push("/central-beuaty-award")
+                        }}
+                        color="#e4c7ad"
+                        className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
+                      />
+                    </div>
+                  )
+                }
               </div>
             </div>
           )}

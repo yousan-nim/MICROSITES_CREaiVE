@@ -27,18 +27,18 @@ const ButtonClick = () => {
 
 
     return (
-        <div className="justify-around hv:justify-start flex hv:flex-none hv:ml-[10px]"> 
+        <div className="justify-around hv:justify-start flex hv:flex-none hv:ml-[100px] gap-4"> 
             <MdOutlineArrowBack
                 size={80}
                 onClick={BackClick}
                 color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+                className=" border-2 border-[#e4c7ad] rounded-[100px]"
             />
             <MdHome
                 size={80}
                 onClick={BackHome}
                 color="#e4c7ad"
-                className="m-4 border-2 border-[#e4c7ad] rounded-[100px]"
+                className=" border-2 border-[#e4c7ad] rounded-[100px]"
             />
         </div>
     )
