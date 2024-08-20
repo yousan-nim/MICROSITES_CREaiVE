@@ -127,8 +127,8 @@ const page = () => {
                 className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
               />
 
-              <div className="w-[200px]">
-
+              <div className="w-[200px] text-[40px]">
+                HOLD TO DOWNLOAD
               </div>
 
               <MdHome
