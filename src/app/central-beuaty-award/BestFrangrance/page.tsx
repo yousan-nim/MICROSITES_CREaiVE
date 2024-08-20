@@ -30,7 +30,7 @@ function BestSkincare() {
     <div className="relative w-screen h-screen overflow-hidden bg-white ">
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
         <div className="flex w-full m-auto items-center justify-center ">
-          <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
+          <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
         </div>
 
         <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">

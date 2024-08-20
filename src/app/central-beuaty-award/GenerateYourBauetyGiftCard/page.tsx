@@ -80,7 +80,7 @@ const page = () => {
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-[80%] m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
+            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
           {/* <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[17%] pt-4 ">
           </div> */}
@@ -118,7 +118,7 @@ const page = () => {
       ) : (
         <div className="w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-[80%] m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
+            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
 
           <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[13%] pt-4">

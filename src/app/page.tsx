@@ -15,22 +15,22 @@ export default function Home() {
 
       <div className="w-full text-black m-auto grid grid-cols-4 gap-4">
         <div className="border-2 p-4 rounded-xl">
-          <Link href="/central-beuaty-award">
+          <Link href="/central-beauty-award">
             Centrall Beauty Award 2024
           </Link>
         </div>
         <div className="border-2 p-4 rounded-xl">
-          <Link href="/central-beuaty-award">
+          <Link href="/central-beauty-award">
             Centrall Beauty Award 2024
           </Link>
         </div>
         <div className="border-2 p-4 rounded-xl">
-          <Link href="/central-beuaty-award">
+          <Link href="/central-beauty-award">
             Centrall Beauty Award 2024
           </Link>
         </div>
         <div className="border-2 p-4 rounded-xl">
-          <Link href="/central-beuaty-award">
+          <Link href="/central-beauty-award">
             Centrall Beauty Award 2024
           </Link>
         </div>
