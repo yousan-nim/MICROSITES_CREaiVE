@@ -78,7 +78,7 @@ const page = () => {
   return (
     <div>
       {keepUrls.length > 0 ? (
-        <div className="absolute z-100 w-screen h-full bg-[#F6E7DF]">
+        <div className="absolute z-100 w-screen h-auto bg-[#F6E7DF]">
           <div className="flex w-[80%] m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
@@ -88,7 +88,7 @@ const page = () => {
             <img
               src={`${keepUrls}`}
               className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto"
-            /> 
+            />
             <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
               <ButtonClick />
             </div>
@@ -116,18 +116,15 @@ const page = () => {
           </div>
         </div>
       ) : (
-        <div className="w-screen h-screen bg-[#F6E7DF]">
+        <div className="w-screen h-auto bg-[#F6E7DF]">
+
           <div className="flex w-[80%] m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[80%] hv:top-[12%] pt-4">
-            <ButtonClick />
-          </div>
-
           {imgSrc ? (
-            <div>
-              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
+            <div className="border-[#e4c7ad] h-full">
+              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4 ">
               </div>
               <div className="relative">
                 {/*  */}
@@ -143,20 +140,22 @@ const page = () => {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="border-[#e4c7ad] h-[100vh]">
               <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
                 {timeLeft}
               </div>
 
-              <Webcam
-                ref={webcamRef}
-                screenshotFormat="image/png"
-                color="#e4c7ad"
-                className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
-              />
+              <div>
+                <Webcam
+                  ref={webcamRef}
+                  screenshotFormat="image/png"
+                  color="#e4c7ad"
+                  className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+                />
+              </div>
 
 
-              <div className="relative w-full m-auto justify-center items-center flex py-4">
+              <div className="relative w-full h-auto m-auto justify-center items-center flex py-4 border-[#e4c7ad]">
                 {
                   buttonHidden ? (
                     <div>
@@ -164,7 +163,7 @@ const page = () => {
                     </div>
                   ) : (
                     <button
-                      className="absolute top-[10vh] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
+                      className="relative top-[10vh] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
                       onClick={capture}
                     >
                       <FaCamera
