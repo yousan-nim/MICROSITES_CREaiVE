@@ -20,6 +20,7 @@ const page = () => {
   const [keepUrls, setKeepUrls] = useState<string>("");
   const { Canvas } = useQRCode();
   const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
+  const [count] = useSound('/MICROSITES_CREaiVE/mp3/cound.mp3');
 
   const POST_request = async (imageSrc: string) => {
     // setButtonHidden(!buttonHidden)
@@ -46,7 +47,8 @@ const page = () => {
   };
 
   const capture = () => {
-    play()
+    // play()
+    count()
     setButtonHidden(!buttonHidden)
     const delay = 3000;
 
