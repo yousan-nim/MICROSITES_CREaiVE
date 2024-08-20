@@ -89,7 +89,7 @@ const page = () => {
               src={`${keepUrls}`}
               className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto"
             /> 
-            <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[13%] pt-4 ">
+            <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
               <ButtonClick />
             </div>
 
@@ -121,7 +121,7 @@ const page = () => {
             <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
 
-          <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[13%] pt-4">
+          <div className="absolute text-black text-[18px] justify-center w-full h-[100px] top-[69%] hv:top-[12%] pt-4">
             <ButtonClick />
           </div>
 
