@@ -168,7 +168,7 @@ const page = () => {
                     </div>
                   ) : (
                     <button
-                      className="relative flex justify-around top-[10vh] w-auto  hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] rounded-[100%]  "
+                      className="relative flex justify-around w-auto  hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] rounded-[100%]  "
                       onClick={capture}
                     >
                       <MdOutlineArrowBack
