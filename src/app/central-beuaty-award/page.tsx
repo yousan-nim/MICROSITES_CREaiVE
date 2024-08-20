@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import useSound from 'use-sound';
-import { useAppSelector, useAppDispatch, useAppStore } from '../../lib/hook'
+// import { useAppSelector, useAppDispatch, useAppStore } from '../../lib/hook'
 import Link from "next/link";
 // <!-- COLORS -->
 // <!-- # -->
@@ -13,12 +13,12 @@ import Link from "next/link";
 
 const CentralBeuatyAward = () => {
   // const router = useRouter()
-  const store = useAppStore()
-  const initialized = useRef(false)
-  if (!initialized.current) {
-    // store.dispatch(initializeProduct(product))
-    initialized.current = true
-  }
+  // const store = useAppStore()
+  // const initialized = useRef(false)
+  // if (!initialized.current) {
+  //   // store.dispatch(initializeProduct(product))
+  //   initialized.current = true
+  // }
 
 
   const [isTouch, setIstouch] = useState(true);
