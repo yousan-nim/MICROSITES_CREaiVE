@@ -80,8 +80,8 @@ const page = () => {
     <div>
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-auto bg-[#F6E7DF]">
-          <div className="flex w-[80%] m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
+          <div className="flex w-full m-auto items-center justify-center">
+            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
           </div>
           <div className=" grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
@@ -115,15 +115,15 @@ const page = () => {
           </div>
         </div>
       ) : (
-        <div className="w-screen  bg-[#F6E7DF]">
+        <div className=" bg-[#F6E7DF]">
 
-          <div className="flex w-[80%] h-full m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
+          <div className="flex w-full m-auto items-center justify-center">
+            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
           </div>
 
           {imgSrc ? (
             <div className="border-[#e4c7ad] h-screen">
-              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4 ">
+              <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4">
               </div>
               <div className="relative">
                 {/*  */}
@@ -139,12 +139,12 @@ const page = () => {
               </div>
             </div>
           ) : (
-            <div className="border-[#e4c7ad] h-screen  px-0 hv:px-0">
-              <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
+            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0">
+              <div className="absolute w-screen items-center justify-center flex top-[30%] text-[200px]">
                 {timeLeft}
               </div>
 
-              <div className="absolute hidden hv:flex justify-start ml-[100px] text-black text-[18px]  w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
+              <div className="absolute hidden hv:flex justify-start ml-[100px] text-black text-[18px]  h-[100px] top-[69%] hv:top-[12%] pt-4 ">
                 <ButtonClick />
               </div>
 
@@ -156,14 +156,14 @@ const page = () => {
               />
 
 
-              <div className="relative h-auto m-auto  items-center flex py-4">
+              <div className="relative h-auto w-screen m-auto  items-center flex py-4">
                 {
                   buttonHidden ? (
                     <div>
 
                     </div>
                   ) : (
-                    <div className="flex items-center justify-around w-[430px]">
+                    <div className="flex items-center justify-around w-[430px] m-auto">
                       <MdOutlineArrowBack
                         size={50}
                         onClick={() => {
