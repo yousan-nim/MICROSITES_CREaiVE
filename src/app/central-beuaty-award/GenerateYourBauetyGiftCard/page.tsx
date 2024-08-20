@@ -83,8 +83,6 @@ const page = () => {
           <div className="flex w-[80%] m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
-          {/* <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[17%] pt-4 ">
-          </div> */}
           <div className=" grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
@@ -110,21 +108,21 @@ const page = () => {
                   }}
                 />
                 <div className="text-[18px] text-semiBlod text-black w-full m-auto text-center">
-                  SCAN FOR DOWNLOAD
+                  SCAN TO DOWNLOAD
                 </div>
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <div className="w-screen h-auto bg-[#F6E7DF]">
+        <div className="w-screen  bg-[#F6E7DF]">
 
-          <div className="flex w-[80%] m-auto items-center justify-center">
+          <div className="flex w-[80%] h-full m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
           </div>
 
           {imgSrc ? (
-            <div className="border-[#e4c7ad] h-full">
+            <div className="border-[#e4c7ad] h-screen">
               <div className="absolute text-black text-[18px] w-[100px] h-[100px] top-[50%] p-4 ">
               </div>
               <div className="relative">
@@ -141,7 +139,7 @@ const page = () => {
               </div>
             </div>
           ) : (
-            <div className="border-[#e4c7ad] h-[100vh]">
+            <div className="border-[#e4c7ad] h-screen  px-0 hv:px-0">
               <div className="absolute w-full items-center justify-center flex top-[30%] text-[200px]">
                 {timeLeft}
               </div>
@@ -150,52 +148,47 @@ const page = () => {
                 <ButtonClick />
               </div>
 
-              <div>
-                <Webcam
-                  ref={webcamRef}
-                  screenshotFormat="image/png"
-                  color="#e4c7ad"
-                  className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
-                />
-              </div>
+              <Webcam
+                ref={webcamRef}
+                screenshotFormat="image/png"
+                color="#e4c7ad"
+                className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
+              />
 
 
-              <div className="relative w-full h-auto m-auto justify-center items-center flex py-4 border-[#e4c7ad]">
+              <div className="relative h-auto m-auto  items-center flex py-4">
                 {
                   buttonHidden ? (
                     <div>
 
                     </div>
                   ) : (
-                    <button
-                      className="relative flex justify-around w-auto  hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] rounded-[100%]  "
-                      onClick={capture}
-                    >
+                    <div className="flex items-center justify-around w-[430px]">
                       <MdOutlineArrowBack
-                        size={80}
+                        size={50}
                         onClick={() => {
                           play()
                           router.back()
                         }}
                         color="#e4c7ad"
-                        className="m-4 border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] w-[150px] hv:hidden"
+                        className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
                       />
                       <FaCamera
-                        className="w-full m-auto border-[#e4c7ad] "
+                        className="w-[100px] h-[100px] m-auto border-[#e4c7ad] border-2 rounded-[150px] "
                         size={80}
                         color="#e4c7ad"
-                      // style={{ color: "#7e7e7e" }}
+                        onClick={capture}
                       />
                       <MdHome
-                        size={80}
+                        size={50}
                         onClick={() => {
                           play()
                           router.push("/central-beuaty-award")
                         }}
                         color="#e4c7ad"
-                        className="m-4 border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] w-[150px] hv:hidden"
+                        className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
                       />
-                    </button>
+                    </div>
                   )
                 }
               </div>
