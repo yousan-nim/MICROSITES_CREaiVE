@@ -27,7 +27,7 @@ const ButtonClick = () => {
 
 
     return (
-        <div className="justify-between hv:justify-start flex hv:flex-none hv:ml-[10px] "> 
+        <div className="justify-around hv:justify-start flex hv:flex-none hv:ml-[10px]"> 
             <MdOutlineArrowBack
                 size={80}
                 onClick={BackClick}
