@@ -85,16 +85,16 @@ const page = () => {
           </div>
           <div className=" grid grid-cols-1 p-4 gap-4  bg-[#F6E7DF] pt-8">
             <img
-              // src={`${keepUrls}`}
-              src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/AW 01 No Logo.png"
+              src={`${keepUrls}`}
+              // src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/AW 01 No Logo.png"
               className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto "
             />
 
             <div className="hidden relative z-20 m-auto justify-center items-center hv:flex overflow-hidden ">
               <div className="m-auto justify-center items-center bg-white ">
                 <Canvas
-                  // text={`${keepUrls}`}
-                  text='test'
+                  text={`${keepUrls}`}
+                  // text='test'
                   options={{
                     errorCorrectionLevel: 'M',
                     margin: 3,
