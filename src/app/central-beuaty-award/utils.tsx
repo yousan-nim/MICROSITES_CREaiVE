@@ -1,10 +1,14 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from "next/navigation";
 import useSound from 'use-sound';
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+
+
+
+
 
 
 const ButtonClick = () => {
@@ -20,6 +24,7 @@ const ButtonClick = () => {
         play()
         router.push("/central-beuaty-award")
     }
+
 
     return (
         <div className="justify-start hv:justify-start hv:ml-[10px]"> 

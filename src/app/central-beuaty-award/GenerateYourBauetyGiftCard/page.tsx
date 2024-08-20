@@ -13,6 +13,9 @@ import ButtonClick from "@/app/central-beuaty-award/utils"
 import Loader from "@/components/Loader";
 
 const page = () => {
+
+  // window.my_mute = false;
+
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [buttonHidden, setButtonHidden] = useState<boolean>(false);
@@ -68,7 +71,8 @@ const page = () => {
 
   useEffect(() => {
     // console.log(keepUrls);
-    // console.log(keepUrls.length);
+    // console.log(keepUrls.length)
+
   }, [keepUrls]);
 
   return (

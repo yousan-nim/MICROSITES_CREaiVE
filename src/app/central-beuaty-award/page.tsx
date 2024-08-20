@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import useSound from 'use-sound';
-
+import { useAppSelector, useAppDispatch, useAppStore } from '../../lib/hook'
 import Link from "next/link";
 // <!-- COLORS -->
 // <!-- # -->
@@ -10,19 +10,23 @@ import Link from "next/link";
 // <!-- #dcbb9a -->
 // <!-- #b18b68 -->
 
-interface ButtonProps {
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
 
 const CentralBeuatyAward = () => {
   // const router = useRouter()
+  const store = useAppStore()
+  const initialized = useRef(false)
+  if (!initialized.current) {
+    // store.dispatch(initializeProduct(product))
+    initialized.current = true
+  }
+
+
   const [isTouch, setIstouch] = useState(true);
 
   const [height, setHeight] = useState(0)
   const [width, setWidth] = useState(0)
 
   const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
-
 
 
   const CliclHandler = () => {
