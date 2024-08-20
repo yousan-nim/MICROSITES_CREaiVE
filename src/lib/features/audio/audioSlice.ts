@@ -3,7 +3,7 @@ import { countReset } from 'console'
 
 
 
-const audioSlice = createSlice({
+export const audioSlice = createSlice({
     name: 'audio', 
     initialState: {
         play: true
@@ -12,13 +12,15 @@ const audioSlice = createSlice({
         controlAudio: state => {
             state.play =!state.play
         }
+    },
+    selectors: {
+        selectAudio: (audio) => audio.play
     }
 })
 
 
 export const { controlAudio } = audioSlice.actions
 
+export const { selectAudio } = audioSlice.selectors
 
-const store = configureStore({
-    reducer: audioSlice.reducer
-})
+// export const audi..... // thunk 

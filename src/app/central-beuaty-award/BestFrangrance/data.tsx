@@ -82,8 +82,8 @@ export const data = {
       },
     },
     BestFragranceSpecialOcciasion: {
-      name:"Fragrance Special Occiasion",
-      href:"/central-beuaty-award/BestFrangrance/BestFragranceSpecialOcciasion",
+      name:"Fragrance Special Occasion",
+      href:"/central-beuaty-award/BestFrangrance/BestFragranceSpecialOccasion",
       first: {
         id: 1,
         name: "NARCISO RODRIGUEZ ALL OF ME EDP",

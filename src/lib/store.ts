@@ -1,4 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+import type { Actions, ThunkAction} from "@reduxjs/toolkit"
+import { combineSlices, configureStore } from "@reduxjs/toolkit";
+// import { counterSlice } from './features/counter/counterSlice'
+import { audioSlice } from "./features/audio/audioSlice"
+
 
 export const Store = () => {
     return configureStore({
