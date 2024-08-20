@@ -3,11 +3,12 @@ import React, { useEffect } from "react";
 import Webcam from "react-webcam";
 import { useRef, useState, useCallback } from "react"; // import useState
 import { FaCamera } from "react-icons/fa";
-import { useRouter } from "next/navigation";
 import { useQRCode } from 'next-qrcode';
 import useSound from 'use-sound';
 import ButtonClick from "@/app/central-beuaty-award/utils"
-
+import { MdOutlineArrowBack } from "react-icons/md";
+import { MdHome } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 
 import Loader from "@/components/Loader";
@@ -24,7 +25,7 @@ const page = () => {
   const { Canvas } = useQRCode();
   const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
   const [count] = useSound('/MICROSITES_CREaiVE/mp3/cound.mp3');
-
+  const router = useRouter();
   const POST_request = async (imageSrc: string) => {
     // setButtonHidden(!buttonHidden)
     const response = await fetch(
@@ -145,6 +146,10 @@ const page = () => {
                 {timeLeft}
               </div>
 
+              <div className="absolute hidden hv:flex justify-start ml-[100px] text-black text-[18px]  w-full h-[100px] top-[69%] hv:top-[12%] pt-4 ">
+                <ButtonClick />
+              </div>
+
               <div>
                 <Webcam
                   ref={webcamRef}
@@ -163,14 +168,32 @@ const page = () => {
                     </div>
                   ) : (
                     <button
-                      className="relative top-[10vh] w-[100px] h-[100px] hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] bg-[#F6E7DF] border-[#e4c7ad] rounded-[100%] border-2 "
+                      className="relative flex justify-around top-[10vh] w-auto  hv:w-[150px] hv:h-[150px] text-black text-center text-[40px] rounded-[100%]  "
                       onClick={capture}
                     >
+                      <MdOutlineArrowBack
+                        size={80}
+                        onClick={() => {
+                          play()
+                          router.back()
+                        }}
+                        color="#e4c7ad"
+                        className="m-4 border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] w-[150px] hv:hidden"
+                      />
                       <FaCamera
                         className="w-full m-auto border-[#e4c7ad] "
                         size={80}
                         color="#e4c7ad"
                       // style={{ color: "#7e7e7e" }}
+                      />
+                      <MdHome
+                        size={80}
+                        onClick={() => {
+                          play()
+                          router.push("/central-beuaty-award")
+                        }}
+                        color="#e4c7ad"
+                        className="m-4 border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] w-[150px] hv:hidden"
                       />
                     </button>
                   )
