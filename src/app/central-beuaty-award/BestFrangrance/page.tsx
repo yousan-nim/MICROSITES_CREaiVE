@@ -33,7 +33,7 @@ function BestSkincare() {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
+        <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
           <ButtonClick />
         </div>
 

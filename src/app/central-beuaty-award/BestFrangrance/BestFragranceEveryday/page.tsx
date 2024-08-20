@@ -75,7 +75,7 @@ const page = () => {
           <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
         </div>
 
-        <div className="absolute z-0 hv:z-20 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] flex hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
+        <div className="absolute z-0 hv:z-20 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%] hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
           <ButtonClick />
         </div>
 
@@ -134,13 +134,13 @@ const page = () => {
           </div>
 
           {/* QR code */}
-          <div className='w-full m-auto text-black pt-2 '>
+          <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
             <img src={hero.qr}
-              className='w-[90%] m-auto border-2 rounded-[20px] shadow-sm p-4'
+              className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
-            <div className='hidden hv:text-[20px] hv:pt-4 hv:font-gothamBook hv:uppercase hv:p-2'>
-              BUY HERE!
-            </div>
+            <div className='text-[12px] hv:text-[40px] pt-2 font-gothamBook uppercase p-2'>
+              SCAN HERE!
+            </div> 
           </div>
         </div>
       </div>

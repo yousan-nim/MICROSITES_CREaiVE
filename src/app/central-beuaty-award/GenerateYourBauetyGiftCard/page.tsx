@@ -82,18 +82,18 @@ const page = () => {
           <div className="flex w-[80%] m-auto items-center justify-center">
             <img src="/MICROSITES_CREaiVE/img/CentralBauetyAward2024/CentralBauetyAward2024.png" />
           </div>
-          <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[15%] pt-4 ">
+          <div className="absolute z-100 text-black text-[18px] justify-end w-full h-[100px] top-[80%] hv:top-[17%] pt-4 ">
           </div>
-          <div className="absolute grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
+          <div className=" grid grid-cols-1 w-screen p-4 gap-4 bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
-              className="w-[1200px] rounded-[40px] m-auto"
-            />
-            <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[69%] hv:top-[17%] pt-4 ">
+              className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto"
+            /> 
+            <div className="absolute text-black text-[18px] justify-end w-full h-[100px] top-[69%] hv:top-[30%] pt-4 ">
               <ButtonClick />
             </div>
 
-            <div className="relative z-20 w-full m-auto justify-center items-center flex overflow-hidden">
+            <div className="hidden relative z-20 w-full m-auto justify-center items-center hv:flex overflow-hidden">
               <div className="m-auto justify-center items-center bg-white ">
                 <Canvas
                   text={`${keepUrls}`}
@@ -134,7 +134,7 @@ const page = () => {
                 <img
                   src={imgSrc}
                   alt="webcam"
-                  className="z-0 flex blur-lg m-auto items-center justify-center bg-white rounded-[40px] w-[300px] h-[500px] object-center hv:w-[1200px] hv:h-auto"
+                  className="z-0 flex blur-lg m-auto items-center justify-center bg-white rounded-[40px] w-[400px] h-[500px] object-center hv:w-[1200px] hv:h-auto"
                 />
                 {/*  */}
                 <div className="absolute z-10 w-full top-[40%]">
