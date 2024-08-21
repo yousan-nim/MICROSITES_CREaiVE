@@ -50,9 +50,9 @@ function BestSkincare() {
 
             <div className="col-end-11 col-span-3 items-center justify-center m-auto">
               <First_ProductBox
-                image={data.data.BestSuncreen.first.image}
-                name={data.data.BestSuncreen.name}
-                href_to={data.data.BestSuncreen.href}
+                image={data.data.BestSunscreen.first.image}
+                name={data.data.BestSunscreen.name}
+                href_to={data.data.BestSunscreen.href}
               />
             </div>
 

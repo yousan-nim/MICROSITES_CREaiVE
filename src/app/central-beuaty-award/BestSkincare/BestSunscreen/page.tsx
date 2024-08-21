@@ -10,44 +10,44 @@ const page = () => {
   const [play] = useSound('/mp3/click.mp3');
 
   const [hero, setHero] = useState({
-    img: data.data.BestSuncreen.first.image,
-    name: data.data.BestSuncreen.first.name,
-    qr: data.data.BestSuncreen.first.imageQr
+    img: data.data.BestSunscreen.first.image,
+    name: data.data.BestSunscreen.first.name,
+    qr: data.data.BestSunscreen.first.imageQr
   })
 
     const FirstClick = () => {
     play()
     setHero({
-      img: data.data.BestSuncreen.first.image,
-      name: data.data.BestSuncreen.first.name,
-      qr: data.data.BestSuncreen.first.imageQr
+      img: data.data.BestSunscreen.first.image,
+      name: data.data.BestSunscreen.first.name,
+      qr: data.data.BestSunscreen.first.imageQr
     })
   }
 
   const SecondClick = () => {
     play()
     setHero({
-      img: data.data.BestSuncreen.second.image,
-      name: data.data.BestSuncreen.second.name,
-      qr: data.data.BestSuncreen.second.imageQr
+      img: data.data.BestSunscreen.second.image,
+      name: data.data.BestSunscreen.second.name,
+      qr: data.data.BestSunscreen.second.imageQr
     })
   }
 
   const ThirdClick = () => {
     play()
     setHero({
-      img: data.data.BestSuncreen.third.image,
-      name: data.data.BestSuncreen.third.name,
-      qr: data.data.BestSuncreen.third.imageQr
+      img: data.data.BestSunscreen.third.image,
+      name: data.data.BestSunscreen.third.name,
+      qr: data.data.BestSunscreen.third.imageQr
     })
   }
 
   const FourthClick = () => {
     play()
     setHero({
-      img: data.data.BestSuncreen.fourth.image,
-      name: data.data.BestSuncreen.fourth.name,
-      qr: data.data.BestSuncreen.fourth.imageQr
+      img: data.data.BestSunscreen.fourth.image,
+      name: data.data.BestSunscreen.fourth.name,
+      qr: data.data.BestSunscreen.fourth.imageQr
     })
   }
 
@@ -55,9 +55,9 @@ const page = () => {
     play()
     play()
     setHero({
-      img: data.data.BestSuncreen.fifth.image,
-      name: data.data.BestSuncreen.fifth.name,
-      qr: data.data.BestSuncreen.fifth.imageQr
+      img: data.data.BestSunscreen.fifth.image,
+      name: data.data.BestSunscreen.fifth.name,
+      qr: data.data.BestSunscreen.fifth.imageQr
     })
   }
 
@@ -83,44 +83,44 @@ const page = () => {
 
         <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
-            <img src={data.data.BestSuncreen.first.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.first.image} className='pt-4'/>
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestSuncreen.first.name}
+              {data.data.BestSunscreen.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSuncreen.second.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.second.image} className='pt-4'/>
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestSuncreen.second.name}
+              {data.data.BestSunscreen.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSuncreen.third.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.third.image} className='pt-4'/>
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestSuncreen.third.name}
+              {data.data.BestSunscreen.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSuncreen.fourth.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.fourth.image} className='pt-4'/>
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestSuncreen.fourth.name}
+              {data.data.BestSunscreen.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSuncreen.fifth.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.fifth.image} className='pt-4'/>
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
-              {data.data.BestSuncreen.fifth.name}
+              {data.data.BestSunscreen.fifth.name}
             </div>
           </div>
         </div>
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
-            {data.dataPageTitle}: {data.data.BestSuncreen.name}
+            {data.dataPageTitle}: {data.data.BestSunscreen.name}
           </div>
 
           {/* Hero image */}
