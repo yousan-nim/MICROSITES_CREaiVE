@@ -13,22 +13,12 @@ import Link from "next/link";
 
 
 const CentralBeuatyAward = () => {
-  // const router = useRouter()
-  // const store = useAppStore()
-  // const initialized = useRef(false)
-  // if (!initialized.current) {
-  //   // store.dispatch(initializeProduct(product))
-  //   initialized.current = true
-  // }
-
-
-  const [isTouch, setIstouch] = useState(true);
+  const [isTouch, setIstouch] = useState(false);
 
   const [height, setHeight] = useState(0)
   const [width, setWidth] = useState(0)
 
   const [play] = useSound('/mp3/click.mp3');
-
 
   const CliclHandler = () => {
     setIstouch(!isTouch);
