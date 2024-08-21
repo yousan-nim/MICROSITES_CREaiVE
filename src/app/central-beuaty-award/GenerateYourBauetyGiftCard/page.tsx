@@ -23,8 +23,8 @@ const page = () => {
   const [timeLeft, setTimeLeft] = useState(3);
   const [keepUrls, setKeepUrls] = useState<string>("");
   const { Canvas } = useQRCode();
-  const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
-  const [count] = useSound('/MICROSITES_CREaiVE/mp3/cound.mp3');
+  const [play] = useSound('/mp3/click.mp3');
+  const [count] = useSound('/mp3/cound.mp3');
   const router = useRouter();
   const POST_request = async (imageSrc: string) => {
     // setButtonHidden(!buttonHidden)
@@ -81,12 +81,12 @@ const page = () => {
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-full m-auto items-center justify-center">
-            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
+            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
           </div>
           <div className=" grid grid-cols-1 p-4 gap-4  bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
-              // src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/AW 01 No Logo.png"
+              // src="/img/CentralBeautyAward2024/AW 01 No Logo.png"
               className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto "
             />
 
@@ -135,7 +135,8 @@ const page = () => {
                 size={50}
                 onClick={() => {
                   play()
-                  router.push("/central-beuaty-award")
+                  // router.push("/central-beuaty-award")
+                  window.location.href = `https://ide.creaive.ai/nisa_central`
                 }}
                 color="#e4c7ad"
                 className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
@@ -147,7 +148,7 @@ const page = () => {
         <div className=" bg-[#F6E7DF]">
 
           <div className="flex w-full m-auto items-center justify-around">
-            <img src="/MICROSITES_CREaiVE/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
+            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
           </div>
 
           {imgSrc ? (
@@ -210,7 +211,8 @@ const page = () => {
                         size={50}
                         onClick={() => {
                           play()
-                          router.push("/central-beuaty-award")
+                          // router.push("/central-beuaty-award")
+                          window.location.href = `https://ide.creaive.ai/nisa_central`
                         }}
                         color="#e4c7ad"
                         className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"

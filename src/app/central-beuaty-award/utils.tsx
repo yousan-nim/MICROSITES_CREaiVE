@@ -6,14 +6,14 @@ import useSound from 'use-sound';
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 
-
+import { redirect } from 'next/navigation'
 
 
 
 
 const ButtonClick = () => {
     const router = useRouter();
-    const [play] = useSound('/MICROSITES_CREaiVE/mp3/click.mp3');
+    const [play] = useSound('/mp3/click.mp3');
 
 
     const BackClick = () => {
@@ -22,7 +22,10 @@ const ButtonClick = () => {
     }
     const BackHome = () => {
         play()
-        router.push("/central-beuaty-award")
+        // router.push("/central-beuaty-award")
+        // router.redire
+        // redirect(`https://ide.creaive.ai/nisa_central`)
+        window.location.href = `https://ide.creaive.ai/nisa_central`
     }
 
 
