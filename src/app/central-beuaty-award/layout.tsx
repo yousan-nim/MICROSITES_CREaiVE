@@ -22,7 +22,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                {/* <audio src="/mp3/award.mp3" autoPlay loop /> */}
+                <audio src="/mp3/award.mp3" autoPlay loop />
                 <div className="flex w-[80%] hv:w-full m-auto items-center justify-center z-0 absolute">
                     <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className='w-[70%]'/>
                 </div>
