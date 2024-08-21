@@ -11,7 +11,6 @@ import Link from "next/link";
 // <!-- #dcbb9a -->
 // <!-- #b18b68 -->
 
-
 const CentralBeuatyAward = () => {
   const [isTouch, setIstouch] = useState(false);
 
