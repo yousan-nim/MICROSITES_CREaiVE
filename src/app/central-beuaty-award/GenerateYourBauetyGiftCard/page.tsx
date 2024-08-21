@@ -9,7 +9,7 @@ import ButtonClick from "@/app/central-beuaty-award/utils"
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 import { useRouter } from "next/navigation";
-
+import Sound from "../Sound";
 
 import Loader from "@/components/Loader";
 
@@ -78,6 +78,8 @@ const page = () => {
 
   return (
     <div>
+      <Sound muted={false} />
+
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-full m-auto items-center justify-center">
@@ -148,7 +150,7 @@ const page = () => {
         <div className=" bg-[#F6E7DF]">
 
           <div className="flex w-full m-auto items-center justify-around">
-            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
+            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%] " />
           </div>
 
           {imgSrc ? (
@@ -201,12 +203,14 @@ const page = () => {
                         color="#e4c7ad"
                         className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
                       />
-                      <FaCamera
-                        className="w-[100px] h-[100px] m-auto border-[#e4c7ad] border-2 rounded-[150px] "
-                        size={80}
-                        color="#e4c7ad"
-                        onClick={capture}
-                      />
+                      <div className="w-[100px] h-[100px] m-auto border-[#e4c7ad] border-2 rounded-[150px]">
+                        <FaCamera
+                          className="m-auto h-full"
+                          size={50}
+                          color="#e4c7ad"
+                          onClick={capture}
+                        />
+                      </div>
                       <MdHome
                         size={50}
                         onClick={() => {
