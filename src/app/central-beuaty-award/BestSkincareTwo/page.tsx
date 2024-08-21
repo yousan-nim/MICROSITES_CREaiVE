@@ -65,35 +65,35 @@ const First_ProductBox = ({ image, name, PRODUCT_DATA }: Props) => {
                             {/* <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
                                 <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
                                     <img src={data.data.BestSunscreen.first.image} className='pt-4' />
-                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
                                         {data.data.BestSunscreen.first.name}
                                     </div>
                                 </div>
 
                                 <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
                                     <img src={data.data.BestSunscreen.second.image} className='pt-4' />
-                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
                                         {data.data.BestSunscreen.second.name}
                                     </div>
                                 </div>
 
                                 <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
                                     <img src={data.data.BestSunscreen.third.image} className='pt-4' />
-                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
                                         {data.data.BestSunscreen.third.name}
                                     </div>
                                 </div>
 
                                 <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
                                     <img src={data.data.BestSunscreen.fourth.image} className='pt-4' />
-                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
                                         {data.data.BestSunscreen.fourth.name}
                                     </div>
                                 </div>
 
                                 <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
                                     <img src={data.data.BestSunscreen.fifth.image} className='pt-4' />
-                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+                                    <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
                                         {data.data.BestSunscreen.fifth.name}
                                     </div>
                                 </div>

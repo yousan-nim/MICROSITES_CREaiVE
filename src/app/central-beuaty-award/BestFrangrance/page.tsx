@@ -37,7 +37,7 @@ function BestSkincare() {
           <ButtonClick />
         </div>
 
-        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase appear-animetion">
+        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-sctoBold uppercase appear-animetion">
           <div className="grid grid-cols-12 justify-center items-center m-auto gap-10 w-screen">
             <div className="col-start-4">{/*  */}</div>
             <div className="col-start-5 col-span-4 items-center justify-center m-auto top-[10vh]">

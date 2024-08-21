@@ -83,42 +83,42 @@ const page = () => {
         <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation'>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestMakeupBase.first.image} className='hv:pt-4' />
-            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestMakeupBase.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestMakeupBase.second.image} className='hv:pt-4' />
-            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestMakeupBase.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestMakeupBase.third.image} className='hv:pt-4' />
-            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestMakeupBase.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestMakeupBase.fourth.image} className='hv:pt-4' />
-            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestMakeupBase.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
             <img src={data.data.BestMakeupBase.fifth.image} className='hv:pt-4' />
-            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-gothamBook uppercase'>
+            <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestMakeupBase.fifth.name}
             </div>
           </div>
         </div>
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
-          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
+          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-sctoBold'>
             {data.dataPageTitle}: {data.data.BestMakeupBase.name}
           </div>
 
@@ -129,7 +129,7 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase p-2'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-sctoBold uppercase p-2'>
               {hero.name}
             </div>
           </div>
@@ -139,7 +139,7 @@ const page = () => {
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
-            <div className='text-[12px] hv:text-[40px] pt-2 font-gothamBook uppercase p-2'>
+            <div className='text-[12px] hv:text-[40px] pt-2 font-sctoBold uppercase p-2'>
               SCAN HERE!
             </div> 
           </div>
