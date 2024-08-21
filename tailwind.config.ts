@@ -27,6 +27,7 @@ const config: Config = {
         centrallMeduim: ["Centrall-Medium", "sans-serif"],
         gothamLight: ["Gotham-Light", "sans-serif"],
         gothamBook: ["Gotham-Book", "sans-serified"],
+        sctoBold: ["SCTO", "sans-serif"],
       }
     },
   },

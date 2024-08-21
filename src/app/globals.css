@@ -19,6 +19,11 @@
   src: url('../../public/font/Gotham-Book.otf') format('otf');
 }
 
+@font-face {
+  font-family: "SCTO";
+  src: url('../../public/font/Scto Grotesk B Bold 2.otf') format('otf');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -48,9 +53,24 @@ body {
   }
 }
 
+@keyframes hidden_key {
+  from {
+    opacity: 1;
+    /* scale: 0.8; */
+  } to {
+    opacity: 0;
+    /* scale: 1; */
+  }
+}
+
 .appear-animetion {
   animation: appear 1s linear
 }
+
+.hidden-animetion {
+  animation: hidden_key 1s linear
+}
+
 
 
 @keyframes moveLeft {

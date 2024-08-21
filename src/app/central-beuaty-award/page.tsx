@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import useSound from 'use-sound';
+import ButtonClick from '@/app/central-beuaty-award/utils'
 // import { useAppSelector, useAppDispatch, useAppStore } from '../../lib/hook'
 import Link from "next/link";
 // <!-- COLORS -->
@@ -52,6 +53,7 @@ const CentralBeuatyAward = () => {
     <div>
       {isTouch ? (
         <div className="relative w-screen h-screen overflow-hidden bg-white appear-animetion">
+          <audio src="/mp3/award.mp3" autoPlay loop />
           {/* <div className="absolute text-[100px] bg-red-600">
             {width}x{height}
            </div>  */}
@@ -136,6 +138,10 @@ const CentralBeuatyAward = () => {
                   />
                 </button>
               </Link>
+            </div>
+
+            <div className="absolute z-50 text-black text-[18px] h-[10vh] top-[85%] hv:top-[30%]  hv:flex-none hv:justify-start justify-around p-4 w-full hv:w-auto">
+              <ButtonClick />
             </div>
 
           </div>

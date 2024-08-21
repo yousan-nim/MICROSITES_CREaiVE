@@ -4,7 +4,7 @@ export const data = {
     "/img/CentralBeautyAward2024/Trophys/Best Fragrance.png",
   data: {
     BestFragranceEveryday: {
-      name:"Frangrance Everyday",
+      name:"Fragrance Everyday",
       href:"/central-beuaty-award/BestFrangrance/BestFragranceEveryday",
       first: {
         id: 1,

@@ -37,10 +37,10 @@ function BestSkincare() {
           <ButtonClick />
         </div>
 
-        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-gothamBook uppercase appear-animetion">
+        <div className="absolute z-10 flex  hv:top-[25vh] w-screen m-auto font-sctoBold uppercase appear-animetion">
           <div className="grid grid-cols-12 justify-center items-center m-auto gap-10 w-screen">
             <div className="col-start-4">{/*  */}</div>
-            <div className="col-start-3 col-span-3 items-center justify-center m-auto">
+            <div className="col-start-4 col-span-3 items-center justify-center m-auto">
               <First_ProductBox
                 image={data.data.BestEssence.first.image}
                 name={data.data.BestEssence.name}
@@ -48,7 +48,7 @@ function BestSkincare() {
               />
             </div>
 
-            <div className="col-end-11 col-span-3 items-center justify-center m-auto">
+            <div className="col-end-10 col-span-3 items-center justify-center m-auto">
               <First_ProductBox
                 image={data.data.BestSunscreen.first.image}
                 name={data.data.BestSunscreen.name}

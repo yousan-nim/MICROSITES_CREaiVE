@@ -119,7 +119,7 @@ const page = () => {
         </div>
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
-          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
+          <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-sctoBold'>
             {data.dataPageTitle}: {data.data.BestSunscreen.name}
           </div>
 
@@ -130,7 +130,7 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-gothamBook uppercase p-2'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-sctoBold font-semibold uppercase p-2'>
               {hero.name}
             </div>
           </div>
@@ -140,7 +140,7 @@ const page = () => {
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
-            <div className='text-[12px] hv:text-[40px] pt-2 font-gothamBook uppercase p-2'>
+            <div className='text-[12px] hv:text-[40px] pt-2 font-sctoBold uppercase p-2'>
               SCAN HERE!
             </div> 
           </div>
