@@ -118,7 +118,7 @@ const page = () => {
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[40px] uppercase font-gothamBook'>
-            {data.dataPageTitle} : {data.data.BestCushion.name}
+            {data.dataPageTitle}: {data.data.BestCushion.name}
           </div>
 
           {/* Hero image */}
