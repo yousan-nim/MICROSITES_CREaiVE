@@ -61,11 +61,11 @@ const CentralBeuatyAward = () => {
             <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
               <img
                 src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png"
-              // onClick={}
+                className="w-[70%]"
               />
             </div>
 
-            <div className="relative z-50 w-screen h-screen m-auto items-center justify-center top-[15%] ">
+            <div className="relative z-50 w-screen h-screen m-auto items-center justify-center top-[20%] ">
               <Link
 
                 href="/central-beuaty-award/GenerateYourBauetyGiftCard"
