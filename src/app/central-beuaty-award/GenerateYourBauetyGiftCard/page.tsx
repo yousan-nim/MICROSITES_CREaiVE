@@ -148,7 +148,7 @@ const page = () => {
         <div className=" bg-[#F6E7DF]">
 
           <div className="flex w-full m-auto items-center justify-around">
-            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[80%]" />
+            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
           </div>
 
           {imgSrc ? (
