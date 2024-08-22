@@ -116,7 +116,7 @@ export const data = {
         id: 5,
         name: "SUQQU THE FOUNDATION",
         image: "/img/CentralBeautyAward2024/BestMakeUp/BestFoundation/5.png",
-        imageQr: "/img/CentralBeautyAward2024/BestMakeUp/BestFoundation/qr4.png",
+        imageQr: "/img/CentralBeautyAward2024/BestMakeUp/BestFoundation/qr5.png",
         link: "",
       },
     },
