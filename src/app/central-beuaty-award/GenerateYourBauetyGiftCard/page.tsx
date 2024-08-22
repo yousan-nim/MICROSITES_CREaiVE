@@ -22,6 +22,7 @@ const page = () => {
   const [buttonHidden, setButtonHidden] = useState<boolean>(false);
   const [timeLeft, setTimeLeft] = useState(3);
   const [keepUrls, setKeepUrls] = useState<string>("");
+  const [newImage, setNewImage] = useState<string>("");
   const { Canvas } = useQRCode();
   const [play] = useSound('/mp3/click.mp3');
   const [count] = useSound('/mp3/cound.mp3');
@@ -47,6 +48,8 @@ const page = () => {
 
     setKeepUrls(result.images_faceSwap);
     // console.log(result.images_faceSwap);
+
+    setNewImage("https://centralawards.creaive.ai/central-beuaty-award/GenerateYourBauetyGiftCard/" + result.images_faceSwap.replace("https://thairath.promptdue.com/images/replicate/","").replace(".png",""))
     // setButtonHidden(!buttonHidden)
   };
 
@@ -89,6 +92,7 @@ const page = () => {
           <div className=" grid grid-cols-1 p-4 gap-4  bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
+              // central-beuaty-award/GenerateYourBauetyGiftCard/
               // src="/img/CentralBeautyAward2024/AW 01 No Logo.png"
               className="w-[400px] hv:w-[1200px] rounded-[40px] m-auto "
             />
@@ -96,7 +100,7 @@ const page = () => {
             <div className="hidden relative z-20 m-auto justify-center items-center hv:flex overflow-hidden ">
               <div className="m-auto justify-center items-center bg-white ">
                 <Canvas
-                  text={`${keepUrls}`}
+                  text={`${newImage}`}
                   // text='test'
                   options={{
                     errorCorrectionLevel: 'M',
@@ -170,7 +174,7 @@ const page = () => {
               </div>
 
               <div className="flex w-full m-auto items-center justify-center pt-[10vh]">
-                <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
+                <img src="/img/CentralBeautyAward2024/BEAUTY AWARDS 2024.png" className="w-[70%]" />
               </div>
 
             </div>
@@ -233,7 +237,7 @@ const page = () => {
                 }
               </div>
               <div className="absolute w-full m-auto items-center justify-center hv:pt-[10vh] ">
-                <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%] m-auto" />
+                <img src="/img/CentralBeautyAward2024/BEAUTY AWARDS 2024.png" className="w-[70%] m-auto" />
               </div>
             </div>
           )}
