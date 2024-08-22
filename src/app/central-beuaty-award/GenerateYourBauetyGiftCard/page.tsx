@@ -115,7 +115,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[12%] pt-4 hidden hv:flex">
+            <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[10%] pt-4 hidden hv:flex">
               <ButtonClick />
             </div>
 
@@ -180,7 +180,7 @@ const page = () => {
                 {timeLeft}
               </div>
 
-              <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[12%] pt-4 hidden hv:flex">
+              <div className="absolute text-black text-[18px] justify-center h-[100px] top-[80%] hv:top-[10%] pt-4 hidden hv:flex">
                 <ButtonClick />
               </div>
 
@@ -193,11 +193,10 @@ const page = () => {
                 />
               </div>
 
-
               <div className="relative h-auto w-screen m-auto items-center flex py-4">
                 {
                   buttonHidden ? (
-                    <div>
+                    <div className=" hv:w-[100px] hv:h-[100px]">
 
                     </div>
                   ) : (
@@ -233,8 +232,8 @@ const page = () => {
                   )
                 }
               </div>
-              <div className="flex w-full m-auto items-center justify-center pt-[10vh]">
-                <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
+              <div className="absolute w-full m-auto items-center justify-center hv:pt-[10vh] ">
+                <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%] m-auto" />
               </div>
             </div>
           )}

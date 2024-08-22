@@ -43,9 +43,9 @@ const CentralBeuatyAward = () => {
       {isTouch ? (
         <div className="relative w-screen h-screen overflow-hidden bg-white appear-animetion">
           {/* <audio src="/mp3/award.mp3" autoPlay loop /> */}
-          {/* <div className="absolute text-[100px] bg-red-600">
+          <div className="absolute text-[100px] bg-red-600">
             {width}x{height}
-           </div>  */}
+           </div> 
           <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
             <div className="flex hv:w-full m-auto items-center justify-center">
               <img
