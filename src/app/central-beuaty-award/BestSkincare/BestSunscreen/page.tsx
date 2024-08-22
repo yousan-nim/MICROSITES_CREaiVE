@@ -15,7 +15,7 @@ const page = () => {
     qr: data.data.BestSunscreen.first.imageQr
   })
 
-    const FirstClick = () => {
+  const FirstClick = () => {
     play()
     setHero({
       img: data.data.BestSunscreen.first.image,
@@ -83,35 +83,35 @@ const page = () => {
 
         <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
-            <img src={data.data.BestSunscreen.first.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.first.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestSunscreen.first.name}
             </div>
           </div>
 
           <div onClick={SecondClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSunscreen.second.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.second.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestSunscreen.second.name}
             </div>
           </div>
 
           <div onClick={ThirdClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSunscreen.third.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.third.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestSunscreen.third.name}
             </div>
           </div>
 
           <div onClick={FourthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSunscreen.fourth.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.fourth.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestSunscreen.fourth.name}
             </div>
           </div>
 
           <div onClick={FifthClick} className='pt-4 mt-4  border-2 rounded-[20px] shadow-xl'>
-            <img src={data.data.BestSunscreen.fifth.image} className='pt-4'/>
+            <img src={data.data.BestSunscreen.fifth.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
               {data.data.BestSunscreen.fifth.name}
             </div>
@@ -130,19 +130,19 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-sctoBold font-semibold uppercase p-2'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-[5vh] m-auto shadow-sm hv:p-4 font-sctoBold  uppercase p-2 font-semibold'>
               {hero.name}
             </div>
           </div>
 
           {/* QR code */}
           <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
+            <div className='text-[12px] hv:text-[20px] pt-2 font-sctoBold uppercase p-2'>
+              SCAN HERE!
+            </div>
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
-            <div className='text-[12px] hv:text-[40px] pt-2 font-sctoBold uppercase p-2'>
-              SCAN HERE!
-            </div> 
           </div>
         </div>
       </div>

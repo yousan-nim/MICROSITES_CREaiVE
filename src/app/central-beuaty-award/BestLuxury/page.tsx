@@ -128,19 +128,19 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-auto m-auto shadow-sm hv:p-4 font-sctoBold uppercase p-2'>
+            <div className='text-black text-[15px] hv:text-[25px] border-2 rounded-[20px] w-[90%] h-[5vh] m-auto shadow-sm hv:p-4 font-sctoBold font-semibold uppercase p-2'>
               {hero.name}
             </div>
           </div>
 
           {/* QR code */}
           <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
+            <div className='text-[12px] hv:text-[20px] pt-2 font-sctoBold uppercase p-2'>
+              SCAN HERE!
+            </div>
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
-            <div className='text-[12px] hv:text-[40px] pt-2 font-sctoBold uppercase p-2'>
-              SCAN HERE!
-            </div> 
           </div>
         </div>
       </div>

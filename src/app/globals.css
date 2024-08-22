@@ -64,7 +64,7 @@ body {
 }
 
 .appear-animetion {
-  animation: appear 1s linear
+  animation: appear 1.5s linear
 }
 
 .hidden-animetion {

@@ -129,7 +129,7 @@ const page = () => {
                 className="w-[80px] h-[80px] border-2 border-[#e4c7ad] rounded-[100px] bg-[#F6E7DF] hv:hidden"
               />
 
-              <div className="w-[200px] text-[10px] hv:hidden uppercase font-gothamLight items-center text-center">
+              <div className="w-[200px] text-[10px] hv:hidden uppercase font-semibold items-center text-center">
                 HOLD TO DOWNLOAD
               </div>
 
