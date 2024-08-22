@@ -83,8 +83,9 @@ const page = () => {
       {keepUrls.length > 0 ? (
         <div className="absolute z-100 w-screen h-screen bg-[#F6E7DF]">
           <div className="flex w-full m-auto items-center justify-center">
-            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
+            <img src="/img/CentralBeautyAward2024/BeautyGalerie.png" className="w-[70%]" />
           </div>
+
           <div className=" grid grid-cols-1 p-4 gap-4  bg-[#F6E7DF] pt-8">
             <img
               src={`${keepUrls}`}
@@ -150,12 +151,12 @@ const page = () => {
         <div className=" bg-[#F6E7DF]">
 
           <div className="flex w-full m-auto items-center justify-around">
-            <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%] " />
+            <img src="/img/CentralBeautyAward2024/BeautyGalerie.png" className="w-[70%] " />
           </div>
 
           {imgSrc ? (
-            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0">
-              <div className="relative">
+            <div className="border-[#e4c7ad] w-screen h-screen hv:px-0 ">
+              <div className="relative pt-4">
                 {/*  */}
                 <img
                   src={imgSrc}
@@ -167,6 +168,11 @@ const page = () => {
                   <Loader />
                 </div>
               </div>
+
+              <div className="flex w-full m-auto items-center justify-center pt-[10vh]">
+                <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
+              </div>
+
             </div>
           ) : (
             <div className="border-[#e4c7ad] w-screen h-screen hv:px-0 overflow-hidden">
@@ -178,12 +184,14 @@ const page = () => {
                 <ButtonClick />
               </div>
 
-              <Webcam
-                ref={webcamRef}
-                screenshotFormat="image/png"
-                color="#e4c7ad"
-                className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px]"
-              />
+              <div className=" pt-4">
+                <Webcam
+                  ref={webcamRef}
+                  screenshotFormat="image/png"
+                  color="#e4c7ad"
+                  className="flex w-[400px] h-[500px] object-cover hv:w-[1200px] hv:h-auto m-auto items-center justify-center bg-white rounded-[40px] top-[4vh]"
+                />
+              </div>
 
 
               <div className="relative h-auto w-screen m-auto items-center flex py-4">
@@ -224,6 +232,9 @@ const page = () => {
                     </div>
                   )
                 }
+              </div>
+              <div className="flex w-full m-auto items-center justify-center pt-[10vh]">
+                <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className="w-[70%]" />
               </div>
             </div>
           )}

@@ -27,7 +27,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <Sound muted={true}/>
                 <div className="flex hv:w-full m-auto items-center justify-center z-0 absolute w-full">
-                    <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" className='w-[70%] '/>
+                    <img src="/img/CentralBeautyAward2024/BeautyGalerie.png" className='w-[70%] '/>
                 </div>
                 <div className="w-screen h-screen overflow-hidden">
                     {children}

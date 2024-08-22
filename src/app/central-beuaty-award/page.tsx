@@ -49,7 +49,7 @@ const CentralBeuatyAward = () => {
           <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
             <div className="flex hv:w-full m-auto items-center justify-center">
               <img
-                src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png"
+                src="/img/CentralBeautyAward2024/BeautyGalerie.png"
                 className="w-[70%]"
               />
             </div>
