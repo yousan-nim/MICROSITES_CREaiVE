@@ -135,7 +135,7 @@ export const data = {
         name: "Lip Moisturizers 2024 HERMÈS Rouge Hermès, Lip care balm",
         image: "/img/CentralBeautyAward2024/BestMakeUp/BestLipMoisturizer/2.png",
         imageQr: "/img/CentralBeautyAward2024/BestMakeUp/BestLipMoisturizer/qr2.png",
-        link: "",getOffBool: true,
+        link: "",getOffBool: false,
       },
       third: {
         id: 3,
