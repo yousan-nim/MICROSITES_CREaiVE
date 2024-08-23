@@ -13,7 +13,8 @@ const page = () => {
   const [hero, setHero] = useState({
     img: data.data.BestMenSkincare.first.image,
     name: data.data.BestMenSkincare.first.name,
-    qr: data.data.BestMenSkincare.first.imageQr
+    qr: data.data.BestMenSkincare.first.imageQr,
+    getOff: data.data.BestMenSkincare.first.getOffBool
   })
 
     const FirstClick = () => {
@@ -21,7 +22,8 @@ const page = () => {
     setHero({
       img: data.data.BestMenSkincare.first.image,
       name: data.data.BestMenSkincare.first.name,
-      qr: data.data.BestMenSkincare.first.imageQr
+      qr: data.data.BestMenSkincare.first.imageQr,
+      getOff: data.data.BestMenSkincare.first.getOffBool
     })
   }
 
@@ -30,7 +32,8 @@ const page = () => {
     setHero({
       img: data.data.BestMenSkincare.second.image,
       name: data.data.BestMenSkincare.second.name,
-      qr: data.data.BestMenSkincare.second.imageQr
+      qr: data.data.BestMenSkincare.second.imageQr,
+      getOff: data.data.BestMenSkincare.second.getOffBool
     })
   }
 
@@ -39,7 +42,8 @@ const page = () => {
     setHero({
       img: data.data.BestMenSkincare.third.image,
       name: data.data.BestMenSkincare.third.name,
-      qr: data.data.BestMenSkincare.third.imageQr
+      qr: data.data.BestMenSkincare.third.imageQr,
+      getOff: data.data.BestMenSkincare.third.getOffBool
     })
   }
 
@@ -48,7 +52,8 @@ const page = () => {
     setHero({
       img: data.data.BestMenSkincare.fourth.image,
       name: data.data.BestMenSkincare.fourth.name,
-      qr: data.data.BestMenSkincare.fourth.imageQr
+      qr: data.data.BestMenSkincare.fourth.imageQr,
+      getOff: data.data.BestMenSkincare.fourth.getOffBool
     })
   }
 
@@ -57,7 +62,8 @@ const page = () => {
     setHero({
       img: data.data.BestMenSkincare.fifth.image,
       name: data.data.BestMenSkincare.fifth.name,
-      qr: data.data.BestMenSkincare.fifth.imageQr
+      qr: data.data.BestMenSkincare.fifth.imageQr,
+      getOff: data.data.BestMenSkincare.first.getOffBool
     })
   }
 
@@ -118,7 +124,7 @@ const page = () => {
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[30px] uppercase font-sctoBold'>
-            {data.dataPageTitle}: {data.data.BestMenSkincare.name}
+            {data.dataPageTitle}: {data.data.BestSunscreen.name}
           </div>
 
           {/* Hero image */}
@@ -128,19 +134,29 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] w-[90%] m-auto  hv:p-4 font-sctoBold uppercase p-2  h-[5vh]'>
+            <div className='text-black text-[15px] hv:text-[25px] w-[90%] h-[5vh] m-auto hv:p-4 font-sctoBold  uppercase p-2 '>
               {hero.name}
             </div>
           </div>
 
           {/* QR code */}
           <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
+
             <div className='text-[12px] hv:text-[20px] pt-2 font-sctoBold uppercase p-2'>
               SCAN HERE!
             </div>
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
+            <div className='justify-center m-auto'>
+              {hero.getOff && (
+                <div className='text-[20px] text-red-700 p-4'>
+                  GET OFF: 12%<br/>
+                  CODE: T12AUSS25<br/>
+                  27-29 AUG 2024<br/>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

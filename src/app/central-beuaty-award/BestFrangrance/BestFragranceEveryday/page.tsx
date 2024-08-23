@@ -13,7 +13,8 @@ const page = () => {
   const [hero, setHero] = useState({
     img: data.data.BestFragranceEveryday.first.image,
     name: data.data.BestFragranceEveryday.first.name,
-    qr: data.data.BestFragranceEveryday.first.imageQr
+    qr: data.data.BestFragranceEveryday.first.imageQr,
+    getOff: data.data.BestFragranceEveryday.first.getOffBool
   })
 
     const FirstClick = () => {
@@ -21,7 +22,8 @@ const page = () => {
     setHero({
       img: data.data.BestFragranceEveryday.first.image,
       name: data.data.BestFragranceEveryday.first.name,
-      qr: data.data.BestFragranceEveryday.first.imageQr
+      qr: data.data.BestFragranceEveryday.first.imageQr,
+      getOff: data.data.BestFragranceEveryday.first.getOffBool
     })
   }
 
@@ -30,7 +32,8 @@ const page = () => {
     setHero({
       img: data.data.BestFragranceEveryday.second.image,
       name: data.data.BestFragranceEveryday.second.name,
-      qr: data.data.BestFragranceEveryday.second.imageQr
+      qr: data.data.BestFragranceEveryday.second.imageQr,
+      getOff: data.data.BestFragranceEveryday.first.getOffBool
     })
   }
 
@@ -39,7 +42,8 @@ const page = () => {
     setHero({
       img: data.data.BestFragranceEveryday.third.image,
       name: data.data.BestFragranceEveryday.third.name,
-      qr: data.data.BestFragranceEveryday.third.imageQr
+      qr: data.data.BestFragranceEveryday.third.imageQr,
+      getOff: data.data.BestFragranceEveryday.first.getOffBool
     })
   }
 
@@ -48,7 +52,8 @@ const page = () => {
     setHero({
       img: data.data.BestFragranceEveryday.fourth.image,
       name: data.data.BestFragranceEveryday.fourth.name,
-      qr: data.data.BestFragranceEveryday.fourth.imageQr
+      qr: data.data.BestFragranceEveryday.fourth.imageQr,
+      getOff: data.data.BestFragranceEveryday.first.getOffBool
     })
   }
 
@@ -57,7 +62,8 @@ const page = () => {
     setHero({
       img: data.data.BestFragranceEveryday.fifth.image,
       name: data.data.BestFragranceEveryday.fifth.name,
-      qr: data.data.BestFragranceEveryday.fifth.imageQr
+      qr: data.data.BestFragranceEveryday.fifth.imageQr,
+      getOff: data.data.BestFragranceEveryday.first.getOffBool
     })
   }
 
@@ -128,19 +134,29 @@ const page = () => {
             />
 
             {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] w-[90%] h-[5vh] m-auto hv:p-4 font-sctoBold  uppercase p-2'>
+            <div className='text-black text-[15px] hv:text-[25px] w-[90%] h-[5vh] m-auto hv:p-4 font-sctoBold  uppercase p-2 '>
               {hero.name}
             </div>
           </div>
 
           {/* QR code */}
           <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
+
             <div className='text-[12px] hv:text-[20px] pt-2 font-sctoBold uppercase p-2'>
               SCAN HERE!
             </div>
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
+            <div className='justify-center m-auto'>
+              {hero.getOff && (
+                <div className='text-[20px] text-red-700 p-4'>
+                  GET OFF: 12%<br/>
+                  CODE: T12AUSS25<br/>
+                  27-29 AUG 2024<br/>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

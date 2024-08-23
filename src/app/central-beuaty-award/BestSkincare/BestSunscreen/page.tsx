@@ -12,7 +12,8 @@ const page = () => {
   const [hero, setHero] = useState({
     img: data.data.BestSunscreen.first.image,
     name: data.data.BestSunscreen.first.name,
-    qr: data.data.BestSunscreen.first.imageQr
+    qr: data.data.BestSunscreen.first.imageQr,
+    getOff: data.data.BestSunscreen.first.getOffBool
   })
 
   const FirstClick = () => {
@@ -20,7 +21,8 @@ const page = () => {
     setHero({
       img: data.data.BestSunscreen.first.image,
       name: data.data.BestSunscreen.first.name,
-      qr: data.data.BestSunscreen.first.imageQr
+      qr: data.data.BestSunscreen.first.imageQr,
+      getOff: data.data.BestSunscreen.first.getOffBool
     })
   }
 
@@ -29,7 +31,8 @@ const page = () => {
     setHero({
       img: data.data.BestSunscreen.second.image,
       name: data.data.BestSunscreen.second.name,
-      qr: data.data.BestSunscreen.second.imageQr
+      qr: data.data.BestSunscreen.second.imageQr,
+      getOff: data.data.BestSunscreen.second.getOffBool
     })
   }
 
@@ -38,7 +41,8 @@ const page = () => {
     setHero({
       img: data.data.BestSunscreen.third.image,
       name: data.data.BestSunscreen.third.name,
-      qr: data.data.BestSunscreen.third.imageQr
+      qr: data.data.BestSunscreen.third.imageQr,
+      getOff: data.data.BestSunscreen.third.getOffBool
     })
   }
 
@@ -47,7 +51,8 @@ const page = () => {
     setHero({
       img: data.data.BestSunscreen.fourth.image,
       name: data.data.BestSunscreen.fourth.name,
-      qr: data.data.BestSunscreen.fourth.imageQr
+      qr: data.data.BestSunscreen.fourth.imageQr,
+      getOff: data.data.BestSunscreen.fourth.getOffBool
     })
   }
 
@@ -57,7 +62,8 @@ const page = () => {
     setHero({
       img: data.data.BestSunscreen.fifth.image,
       name: data.data.BestSunscreen.fifth.name,
-      qr: data.data.BestSunscreen.fifth.imageQr
+      qr: data.data.BestSunscreen.fifth.imageQr,
+      getOff: data.data.BestSunscreen.fifth.getOffBool
     })
   }
 
@@ -137,12 +143,22 @@ const page = () => {
 
           {/* QR code */}
           <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
+
             <div className='text-[12px] hv:text-[20px] pt-2 font-sctoBold uppercase p-2'>
               SCAN HERE!
             </div>
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
+            <div className='justify-center m-auto'>
+              {hero.getOff && (
+                <div className='text-[20px] text-red-700 p-4'>
+                  GET OFF: 12%<br/>
+                  CODE: T12AUSS25<br/>
+                  27-29 AUG 2024<br/>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
