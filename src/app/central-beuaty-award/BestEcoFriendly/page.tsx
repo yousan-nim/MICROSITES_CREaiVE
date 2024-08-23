@@ -138,18 +138,6 @@ const page = () => {
             </div>
           </div>
 
-          {/* Hero image */}
-          <div className='relative m-auto pt-10 justify-center items-center text-center w-full'>
-            <img src={hero.img}
-              className='w-[90vw] m-auto pb-2 hv:pb-8'
-            />
-
-            {/* Text */}
-            <div className='text-black text-[15px] hv:text-[25px] w-[90%] h-[5vh] m-auto hv:p-4 font-sctoBold  uppercase p-2 '>
-              {hero.name}
-            </div>
-          </div>
-
           {/* QR code */}
           <div className='w-full m-auto text-black pt-10 hv:pt-[5vh] '>
 
