@@ -62,7 +62,7 @@ const First_ProductBox = ({ image, name, PRODUCT_DATA }: Props) => {
                             </div >
                         </div>
                         <div onClick={toggleIsHidden} className="absolute w-screen h-screen top-0 left-0 bg-white appear-animetion">
-                            {/* <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
+                            {/* <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[5vh] hv:top-[20vh] top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
                                 <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
                                     <img src={data.data.BestSunscreen.first.image} className='pt-4' />
                                     <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>

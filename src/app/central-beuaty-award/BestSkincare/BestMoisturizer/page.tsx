@@ -85,7 +85,7 @@ const page = () => {
           <ButtonClick />
         </div>
 
-        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
+        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[5vh] hv:top-[20vh] top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestMoisturizer.first.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
@@ -124,7 +124,7 @@ const page = () => {
 
         <div className='w-[55vw] h-auto m-auto appear-animetion'>
           <div className='relative m-auto pt-10 justify-center items-center text-center w-full text-black text-[15px] hv:text-[30px] uppercase font-sctoBold'>
-            {data.dataPageTitle}: {data.data.BestSunscreen.name}
+            {data.dataPageTitle}: {data.data.BestMoisturizer.name}
           </div>
 
           {/* Hero image */}
@@ -148,9 +148,9 @@ const page = () => {
             <img src={hero.qr}
               className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
             />
-            <div className='justify-center m-auto'>
+            <div className='absolute hv:top-[78%] top-[68%] hv:right-[12vw] right-[65vw]'>
               {hero.getOff && (
-                <div className='text-[20px] text-red-700 p-4'>
+                <div className='text-[10px] hv:text-[20px] font-semibold text-red-500 p-4 '>
                   GET OFF: 12%<br/>
                   CODE: T12AUSS25<br/>
                   27-29 AUG 2024<br/>
