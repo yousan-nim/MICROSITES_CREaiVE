@@ -74,7 +74,7 @@ const page = () => {
   };
 
   useEffect(() => {
-    // console.log(keepUrls);
+    console.log(keepUrls);
     // console.log(keepUrls.length)
 
   }, [keepUrls]);
