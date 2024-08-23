@@ -33,7 +33,7 @@ const page = () => {
       img: data.data.BestCushion.second.image,
       name: data.data.BestCushion.second.name,
       qr: data.data.BestCushion.second.imageQr,
-      getOff: data.data.BestCushion.first.getOffBool
+      getOff: data.data.BestCushion.second.getOffBool
     })
   }
 
@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestCushion.third.image,
       name: data.data.BestCushion.third.name,
       qr: data.data.BestCushion.third.imageQr,
-      getOff: data.data.BestCushion.first.getOffBool
+      getOff: data.data.BestCushion.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestCushion.fourth.image,
       name: data.data.BestCushion.fourth.name,
       qr: data.data.BestCushion.fourth.imageQr,
-      getOff: data.data.BestCushion.first.getOffBool
+      getOff: data.data.BestCushion.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestCushion.fifth.image,
       name: data.data.BestCushion.fifth.name,
       qr: data.data.BestCushion.fifth.imageQr,
-      getOff: data.data.BestCushion.first.getOffBool
+      getOff: data.data.BestCushion.fifth.getOffBool
     })
   }
 

@@ -33,7 +33,7 @@ const page = () => {
       img: data.data.BestFragranceSpecialOccasion.second.image,
       name: data.data.BestFragranceSpecialOccasion.second.name,
       qr: data.data.BestFragranceSpecialOccasion.second.imageQr,
-      getOff: data.data.BestFragranceSpecialOccasion.first.getOffBool
+      getOff: data.data.BestFragranceSpecialOccasion.second.getOffBool
     })
   }
 
@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestFragranceSpecialOccasion.third.image,
       name: data.data.BestFragranceSpecialOccasion.third.name,
       qr: data.data.BestFragranceSpecialOccasion.third.imageQr,
-      getOff: data.data.BestFragranceSpecialOccasion.first.getOffBool
+      getOff: data.data.BestFragranceSpecialOccasion.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestFragranceSpecialOccasion.fourth.image,
       name: data.data.BestFragranceSpecialOccasion.fourth.name,
       qr: data.data.BestFragranceSpecialOccasion.fourth.imageQr,
-      getOff: data.data.BestFragranceSpecialOccasion.first.getOffBool
+      getOff: data.data.BestFragranceSpecialOccasion.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestFragranceSpecialOccasion.fifth.image,
       name: data.data.BestFragranceSpecialOccasion.fifth.name,
       qr: data.data.BestFragranceSpecialOccasion.fifth.imageQr,
-      getOff: data.data.BestFragranceSpecialOccasion.first.getOffBool
+      getOff: data.data.BestFragranceSpecialOccasion.fifth.getOffBool
     })
   }
 

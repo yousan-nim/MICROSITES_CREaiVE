@@ -32,7 +32,7 @@ const page = () => {
       img: data.data.BestEcoFriendly.second.image,
       name: data.data.BestEcoFriendly.second.name,
       qr: data.data.BestEcoFriendly.second.imageQr,
-      getOff: data.data.BestEcoFriendly.first.getOffBool
+      getOff: data.data.BestEcoFriendly.second.getOffBool
     })
   }
 
@@ -42,7 +42,7 @@ const page = () => {
       img: data.data.BestEcoFriendly.third.image,
       name: data.data.BestEcoFriendly.third.name,
       qr: data.data.BestEcoFriendly.third.imageQr,
-      getOff: data.data.BestEcoFriendly.first.getOffBool
+      getOff: data.data.BestEcoFriendly.third.getOffBool
     })
   }
 
@@ -52,7 +52,7 @@ const page = () => {
       img: data.data.BestEcoFriendly.fourth.image,
       name: data.data.BestEcoFriendly.fourth.name,
       qr: data.data.BestEcoFriendly.fourth.imageQr,
-      getOff: data.data.BestEcoFriendly.first.getOffBool
+      getOff: data.data.BestEcoFriendly.fourth.getOffBool
     })
   }
 
@@ -62,7 +62,7 @@ const page = () => {
       img: data.data.BestEcoFriendly.fifth.image,
       name: data.data.BestEcoFriendly.fifth.name,
       qr: data.data.BestEcoFriendly.fifth.imageQr,
-      getOff: data.data.BestEcoFriendly.first.getOffBool
+      getOff: data.data.BestEcoFriendly.fifth.getOffBool
     })
   }
 

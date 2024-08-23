@@ -33,7 +33,7 @@ const page = () => {
       img: data.data.BestLuxury.second.image,
       name: data.data.BestLuxury.second.name,
       qr: data.data.BestLuxury.second.imageQr,
-      getOff: data.data.BestLuxury.first.getOffBool
+      getOff: data.data.BestLuxury.second.getOffBool
     })
   }
 
@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestLuxury.third.image,
       name: data.data.BestLuxury.third.name,
       qr: data.data.BestLuxury.third.imageQr,
-      getOff: data.data.BestLuxury.first.getOffBool
+      getOff: data.data.BestLuxury.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestLuxury.fourth.image,
       name: data.data.BestLuxury.fourth.name,
       qr: data.data.BestLuxury.fourth.imageQr,
-      getOff: data.data.BestLuxury.first.getOffBool
+      getOff: data.data.BestLuxury.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestLuxury.fifth.image,
       name: data.data.BestLuxury.fifth.name,
       qr: data.data.BestLuxury.fifth.imageQr,
-      getOff: data.data.BestLuxury.first.getOffBool
+      getOff: data.data.BestLuxury.fifth.getOffBool
     })
   }
 

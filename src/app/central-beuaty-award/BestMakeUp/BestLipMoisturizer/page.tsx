@@ -33,7 +33,7 @@ const page = () => {
       img: data.data.BestLipMoisturizer.second.image,
       name: data.data.BestLipMoisturizer.second.name,
       qr: data.data.BestLipMoisturizer.second.imageQr,
-      getOff: data.data.BestLipMoisturizer.first.getOffBool
+      getOff: data.data.BestLipMoisturizer.second.getOffBool
     })
   }
 
@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestLipMoisturizer.third.image,
       name: data.data.BestLipMoisturizer.third.name,
       qr: data.data.BestLipMoisturizer.third.imageQr,
-      getOff: data.data.BestLipMoisturizer.first.getOffBool
+      getOff: data.data.BestLipMoisturizer.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestLipMoisturizer.fourth.image,
       name: data.data.BestLipMoisturizer.fourth.name,
       qr: data.data.BestLipMoisturizer.fourth.imageQr,
-      getOff: data.data.BestLipMoisturizer.first.getOffBool
+      getOff: data.data.BestLipMoisturizer.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestLipMoisturizer.fifth.image,
       name: data.data.BestLipMoisturizer.fifth.name,
       qr: data.data.BestLipMoisturizer.fifth.imageQr,
-      getOff: data.data.BestLipMoisturizer.first.getOffBool
+      getOff: data.data.BestLipMoisturizer.fifth.getOffBool
     })
   }
 

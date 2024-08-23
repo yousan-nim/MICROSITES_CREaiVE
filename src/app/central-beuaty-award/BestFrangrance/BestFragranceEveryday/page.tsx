@@ -33,7 +33,7 @@ const page = () => {
       img: data.data.BestFragranceEveryday.second.image,
       name: data.data.BestFragranceEveryday.second.name,
       qr: data.data.BestFragranceEveryday.second.imageQr,
-      getOff: data.data.BestFragranceEveryday.first.getOffBool
+      getOff: data.data.BestFragranceEveryday.second.getOffBool
     })
   }
 
@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestFragranceEveryday.third.image,
       name: data.data.BestFragranceEveryday.third.name,
       qr: data.data.BestFragranceEveryday.third.imageQr,
-      getOff: data.data.BestFragranceEveryday.first.getOffBool
+      getOff: data.data.BestFragranceEveryday.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestFragranceEveryday.fourth.image,
       name: data.data.BestFragranceEveryday.fourth.name,
       qr: data.data.BestFragranceEveryday.fourth.imageQr,
-      getOff: data.data.BestFragranceEveryday.first.getOffBool
+      getOff: data.data.BestFragranceEveryday.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestFragranceEveryday.fifth.image,
       name: data.data.BestFragranceEveryday.fifth.name,
       qr: data.data.BestFragranceEveryday.fifth.imageQr,
-      getOff: data.data.BestFragranceEveryday.first.getOffBool
+      getOff: data.data.BestFragranceEveryday.fifth.getOffBool
     })
   }
 

@@ -34,7 +34,7 @@ const page = () => {
       img: data.data.BestMakeupBase.second.image,
       name: data.data.BestMakeupBase.second.name,
       qr: data.data.BestMakeupBase.second.imageQr,
-      getOff: data.data.BestMakeupBase.first.getOffBool
+      getOff: data.data.BestMakeupBase.second.getOffBool
     })
   }
 
@@ -44,7 +44,7 @@ const page = () => {
       img: data.data.BestMakeupBase.third.image,
       name: data.data.BestMakeupBase.third.name,
       qr: data.data.BestMakeupBase.third.imageQr,
-      getOff: data.data.BestMakeupBase.first.getOffBool
+      getOff: data.data.BestMakeupBase.third.getOffBool
     })
   }
 
@@ -54,7 +54,7 @@ const page = () => {
       img: data.data.BestMakeupBase.fourth.image,
       name: data.data.BestMakeupBase.fourth.name,
       qr: data.data.BestMakeupBase.fourth.imageQr,
-      getOff: data.data.BestMakeupBase.first.getOffBool
+      getOff: data.data.BestMakeupBase.fourth.getOffBool
     })
   }
 
@@ -64,7 +64,7 @@ const page = () => {
       img: data.data.BestMakeupBase.fifth.image,
       name: data.data.BestMakeupBase.fifth.name,
       qr: data.data.BestMakeupBase.fifth.imageQr,
-      getOff: data.data.BestMakeupBase.first.getOffBool
+      getOff: data.data.BestMakeupBase.fifth.getOffBool
     })
   }
 

@@ -33,7 +33,7 @@ const page = () => {
       img: data.data.BestEverydayLipstick.second.image,
       name: data.data.BestEverydayLipstick.second.name,
       qr: data.data.BestEverydayLipstick.second.imageQr,
-      getOff: data.data.BestEverydayLipstick.first.getOffBool
+      getOff: data.data.BestEverydayLipstick.second.getOffBool
     })
   }
 
@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestEverydayLipstick.third.image,
       name: data.data.BestEverydayLipstick.third.name,
       qr: data.data.BestEverydayLipstick.third.imageQr,
-      getOff: data.data.BestEverydayLipstick.first.getOffBool
+      getOff: data.data.BestEverydayLipstick.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestEverydayLipstick.fourth.image,
       name: data.data.BestEverydayLipstick.fourth.name,
       qr: data.data.BestEverydayLipstick.fourth.imageQr,
-      getOff: data.data.BestEverydayLipstick.first.getOffBool
+      getOff: data.data.BestEverydayLipstick.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestEverydayLipstick.fifth.image,
       name: data.data.BestEverydayLipstick.fifth.name,
       qr: data.data.BestEverydayLipstick.fifth.imageQr,
-      getOff: data.data.BestEverydayLipstick.first.getOffBool
+      getOff: data.data.BestEverydayLipstick.fifth.getOffBool
     })
   }
 
