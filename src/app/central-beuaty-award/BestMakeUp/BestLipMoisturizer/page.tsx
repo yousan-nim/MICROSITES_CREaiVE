@@ -17,7 +17,7 @@ const page = () => {
     getOff: data.data.BestLipMoisturizer.first.getOffBool
   })
 
-    const FirstClick = () => {
+  const FirstClick = () => {
     play()
     setHero({
       img: data.data.BestLipMoisturizer.first.image,
@@ -145,15 +145,24 @@ const page = () => {
             <div className='text-[12px] hv:text-[20px] pt-2 font-sctoBold uppercase p-2'>
               SCAN HERE!
             </div>
-            <img src={hero.qr}
-              className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
-            />
+            {
+              hero.qr !== '' ? (
+                <img src={hero.qr}
+                className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
+              />
+              ) : (
+                <div>
+
+                </div>
+                
+              )
+            }
             <div className='absolute hv:top-[78%] top-[68%] hv:right-[12vw] right-[65vw]'>
               {hero.getOff && (
                 <div className='text-[10px] hv:text-[20px] font-semibold text-red-500 p-4 '>
-                  GET OFF: 12%<br/>
-                  CODE: T12AUSS25<br/>
-                  27-29 AUG 2024<br/>
+                  GET OFF: 12%<br />
+                  CODE: T12AUSS25<br />
+                  27-29 AUG 2024<br />
                 </div>
               )}
             </div>

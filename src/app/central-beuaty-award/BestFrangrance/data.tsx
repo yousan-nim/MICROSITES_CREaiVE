@@ -107,7 +107,7 @@ export const data = {
       },
       fourth: {
         id: 4,
-        name: "Occasional Fragrances 2024 HERMÈS Hermessence Oud Alezan Eau De Parfum",
+        name: "HERMÈS Hermessence Oud Alezan Eau De Parfum",
         image: "/img/CentralBeautyAward2024/BestFrangrance/BestFragranceSpecialOccasion/4.png",
         imageQr: "/img/CentralBeautyAward2024/BestFrangrance/BestFragranceSpecialOccasion/qr4.png",
         link: "",getOffBool: false,

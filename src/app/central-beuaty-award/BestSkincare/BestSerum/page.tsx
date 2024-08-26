@@ -43,7 +43,7 @@ const page = () => {
       img: data.data.BestSerum.third.image,
       name: data.data.BestSerum.third.name,
       qr: data.data.BestSerum.third.imageQr,
-      getOff: data.data.BestSerum.second.getOffBool
+      getOff: data.data.BestSerum.third.getOffBool
     })
   }
 
@@ -53,7 +53,7 @@ const page = () => {
       img: data.data.BestSerum.fourth.image,
       name: data.data.BestSerum.fourth.name,
       qr: data.data.BestSerum.fourth.imageQr,
-      getOff: data.data.BestSerum.second.getOffBool
+      getOff: data.data.BestSerum.fourth.getOffBool
     })
   }
 
@@ -63,7 +63,7 @@ const page = () => {
       img: data.data.BestSerum.fifth.image,
       name: data.data.BestSerum.fifth.name,
       qr: data.data.BestSerum.fifth.imageQr,
-      getOff: data.data.BestSerum.second.getOffBool
+      getOff: data.data.BestSerum.fifth.getOffBool
     })
   }
 
