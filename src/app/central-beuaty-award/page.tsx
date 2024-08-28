@@ -24,13 +24,11 @@ const CentralBeuatyAward = () => {
   };
 
   useEffect(() => {
-    function handleContextMenu(e: { preventDefault: () => void; }) {
-      e.preventDefault(); // prevents the default right-click menu from appearing
-    }
-    // add the event listener to the component's root element
-    const rootElement = (document.getElementById('my-component') as HTMLFormElement);
-    rootElement.addEventListener('contextmenu', handleContextMenu);
-    // remove the event listener when the component is unmounted
+    // function handleContextMenu(e: { preventDefault: () => void; }) {
+    //   e.preventDefault(); // prevents the default right-click menu from appearing
+    // }
+    // const rootElement = (document.getElementById('my-component') as HTMLFormElement);
+    // rootElement.addEventListener('contextmenu', handleContextMenu);
 
     
     const heightx = window.innerHeight
@@ -45,13 +43,18 @@ const CentralBeuatyAward = () => {
       }, 30000)
     }
 
-    return () => {
-      rootElement.removeEventListener('contextmenu', handleContextMenu);
-    };
+    // return () => {
+    //   rootElement.removeEventListener('contextmenu', handleContextMenu);
+    // };
   }, [isTouch]);
 
   return (
-    <div id="my-component">
+    <div 
+    // id="my-component" 
+    // onContextMenu={(e) => {
+    //   e.preventDefault()
+    // }}
+    >
       {isTouch ? (
         <div className="relative w-screen h-screen overflow-hidden bg-white appear-animetion">
           {/* <audio src="/mp3/award.mp3" autoPlay loop /> */}

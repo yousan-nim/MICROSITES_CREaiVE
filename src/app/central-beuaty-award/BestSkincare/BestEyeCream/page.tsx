@@ -17,7 +17,7 @@ const page = () => {
     getOff: data.data.BestEyeCream.first.getOffBool
   })
 
-    const FirstClick = () => {
+  const FirstClick = () => {
     play()
     setHero({
       img: data.data.BestEyeCream.first.image,
@@ -75,7 +75,10 @@ const page = () => {
   }, [hero])
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-white ">
+    <div className="relative w-screen h-screen overflow-hidden bg-white "
+      onContextMenu={(e) => {
+        e.preventDefault()
+      }}>
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
         <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
           <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
@@ -85,7 +88,7 @@ const page = () => {
           <ButtonClick />
         </div>
 
-        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black top-[5vh] hv:top-[20vh] top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
+        <div className='absolute z-50 right-1 hv:right-8 w-[20vw] hv:w-[250px] text-black hv:top-[20vh] top-[20vh] hv:p-4 hv:pt-0 move-left-animation '>
           <div onClick={FirstClick} className='border-2 rounded-[20px] shadow-xl '>
             <img src={data.data.BestEyeCream.first.image} className='pt-4' />
             <div className='hidden hv:text-[14px] hv:pt-4 hv:px-2 font-sctoBold uppercase'>
@@ -151,9 +154,9 @@ const page = () => {
             <div className='absolute hv:top-[78%] top-[68%] hv:right-[12vw] right-[65vw]'>
               {hero.getOff && (
                 <div className='text-[10px] hv:text-[20px] font-semibold text-red-500 p-4 '>
-                  GET OFF: 12%<br/>
-                  CODE: T12AUSS25<br/>
-                  27-29 AUG 2024<br/>
+                  GET OFF: 12%<br />
+                  CODE: T12AUSS25<br />
+                  27-29 AUG 2024<br />
                 </div>
               )}
             </div>

@@ -27,7 +27,10 @@ function BestSkincare() {
 
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-white">
+    <div className="relative w-screen h-screen overflow-hidden bg-white"     
+    onContextMenu={(e) => {
+      e.preventDefault()
+    }}>
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
         <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
           <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
