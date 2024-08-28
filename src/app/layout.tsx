@@ -7,6 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MICROSITES",
   description: "Microsites Power by Creaive.ai",
+  // viewport: "viewport",
+  // content: "width=device-width, user-scalable=no",
 };
 
 
@@ -20,6 +22,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content= "width=device-width, user-scalable=no"/>
+      </head>
       <body className={inter.className}>
         {children}
       </body>
