@@ -75,7 +75,11 @@ const page = () => {
   }, [hero])
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-white ">
+    <div className="relative w-screen h-screen overflow-hidden bg-white "
+      onContextMenu={(e) => {
+        e.preventDefault()
+      }}
+    >
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
         <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
           <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
@@ -148,13 +152,13 @@ const page = () => {
             {
               hero.qr !== '' ? (
                 <img src={hero.qr}
-                className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
-              />
+                  className='w-[30vw] m-auto border-2 rounded-[20px] shadow-sm p-4'
+                />
               ) : (
                 <div>
 
                 </div>
-                
+
               )
             }
             <div className='absolute hv:top-[78%] top-[68%] hv:right-[12vw] right-[65vw]'>

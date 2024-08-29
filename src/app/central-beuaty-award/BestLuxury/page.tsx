@@ -17,7 +17,7 @@ const page = () => {
     getOff: data.data.BestLuxury.first.getOffBool
   })
 
-    const FirstClick = () => {
+  const FirstClick = () => {
     play()
     setHero({
       img: data.data.BestLuxury.first.image,
@@ -75,7 +75,11 @@ const page = () => {
   }, [hero])
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-white ">
+    <div className="relative w-screen h-screen overflow-hidden bg-white "
+      onContextMenu={(e) => {
+        e.preventDefault()
+      }}
+    >
       <div className="relative w-screen h-screen items-center text-center text-[200px] m-auto">
         <div className="flex w-[80%] hv:w-full m-auto items-center justify-center">
           <img src="/img/CentralBeautyAward2024/CentralBeautyAward2024.png" />
@@ -151,9 +155,9 @@ const page = () => {
             <div className='absolute hv:top-[78%] top-[68%] hv:right-[12vw] right-[65vw]'>
               {hero.getOff && (
                 <div className='text-[10px] hv:text-[20px] font-semibold text-red-500 p-4 '>
-                  GET OFF: 12%<br/>
-                  CODE: T12AUSS25<br/>
-                  27-29 AUG 2024<br/>
+                  GET OFF: 12%<br />
+                  CODE: T12AUSS25<br />
+                  27-29 AUG 2024<br />
                 </div>
               )}
             </div>
