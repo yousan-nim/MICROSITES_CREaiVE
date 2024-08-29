@@ -27,8 +27,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  minimumScale: 1,
   maximumScale: 1,
+  viewportFit: 'cover',
   userScalable: false,
+  // interactiveWidget: 'overlays-content',
+  // layout: viewportLayout, // Example usage of custom viewport layout
 }
 
 export default function RootLayout({
@@ -38,10 +42,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-      />
+      
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+        />
+      </head>
 
       <body
         className={inter.className}
