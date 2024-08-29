@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Viewport } from 'next'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,24 @@ export const metadata: Metadata = {
   // content: "width=device-width, user-scalable=no",
 };
 
+// export type ViewportLayout = {
+//   width?: string | number;
+//   height?: string | number;
+//   initialScale?: 1;
+//   minimumScale?: 1;
+//   maximumScale?: 1;
+//   userScalable?: boolean;
+//   viewportFit?: 'auto' | 'cover' | 'contain';
+//   interactiveWidget?: 'resizes-visual' | 'resizes-content' | 'overlays-content';
+// };
+
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 export default function RootLayout({
   children,
@@ -19,12 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <head>
-        <meta charSet="utf-8" />
-        {/* <meta name="viewport" content="width=device-width, user-scalable=no" /> */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"></meta>
-      </head>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      />
 
       <body
         className={inter.className}
