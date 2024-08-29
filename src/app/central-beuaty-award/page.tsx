@@ -30,13 +30,13 @@ const CentralBeuatyAward = () => {
     // const rootElement = (document.getElementById('my-component') as HTMLFormElement);
     // rootElement.addEventListener('contextmenu', handleContextMenu);
 
-    
+
     const heightx = window.innerHeight
     const widthx = window.innerWidth
-    
+
     setHeight(heightx)
     setWidth(widthx)
-    
+
     if (isTouch) {
       setTimeout(() => {
         setIstouch(!isTouch)
@@ -49,11 +49,11 @@ const CentralBeuatyAward = () => {
   }, [isTouch]);
 
   return (
-    <div 
-    // id="my-component" 
-    // onContextMenu={(e) => {
-    //   e.preventDefault()
-    // }}
+    <div
+      // id="my-component" 
+      onContextMenu={(e) => {
+        e.preventDefault()
+      }}
     >
       {isTouch ? (
         <div className="relative w-screen h-screen overflow-hidden bg-white appear-animetion">

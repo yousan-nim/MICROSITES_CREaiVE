@@ -49,7 +49,7 @@ const page = () => {
     setKeepUrls(result.images_faceSwap);
     // console.log(result.images_faceSwap);
 
-    setNewImage("https://centralawards.creaive.ai/central-beuaty-award/GenerateYourBauetyGiftCard/" + result.images_faceSwap.replace("https://thairath.promptdue.com/images/replicate/","").replace(".png",""))
+    setNewImage("https://centralawards.creaive.ai/central-beuaty-award/GenerateYourBauetyGiftCard/" + result.images_faceSwap.replace("https://thairath.promptdue.com/images/replicate/", "").replace(".png", ""))
     // setButtonHidden(!buttonHidden)
   };
 
@@ -80,7 +80,11 @@ const page = () => {
   }, [keepUrls]);
 
   return (
-    <div>
+    <div
+      onContextMenu={(e) => {
+        e.preventDefault()
+      }}
+    >
       <Sound muted={false} />
 
       {keepUrls.length > 0 ? (
