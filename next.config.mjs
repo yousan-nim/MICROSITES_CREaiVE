@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 
-const withPWA = require('next-pwa')({
-  dest: 'public'
-})
+// const withPWA = require('next-pwa')({
+//   dest: 'public'
+// })
 
 
 
@@ -39,14 +39,6 @@ const nextConfig = {
 
   reactStrictMode: false,
 
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://openapi.akool.com/api/*',
-      },
-    ]
-  },
 
 };
 
