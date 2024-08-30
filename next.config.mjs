@@ -52,6 +52,6 @@ const nextConfig = {
 
 
 
-// export default nextConfig;
+export default nextConfig;
 
-module.exports = withPWA(nextConfig)
+// module.exports = withPWA(nextConfig)
