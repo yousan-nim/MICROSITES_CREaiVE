@@ -6,10 +6,6 @@ import useSound from 'use-sound';
 import { MdOutlineArrowBack } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 
-import { redirect } from 'next/navigation'
-
-
-
 
 const ButtonClick = () => {
     const router = useRouter();
@@ -37,12 +33,12 @@ const ButtonClick = () => {
                 color="#e4c7ad"
                 className=" border-2 border-[#e4c7ad] rounded-[100px]"
             />
-            <MdHome
+            {/* <MdHome
                 size={80}
                 onClick={BackHome}
                 color="#e4c7ad"
                 className=" border-2 border-[#e4c7ad] rounded-[100px]"
-            />
+            /> */}
         </div>
     )
 }
