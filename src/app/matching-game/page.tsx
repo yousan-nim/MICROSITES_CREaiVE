@@ -90,13 +90,13 @@ const MatchingGame = () => {
     return (
         <div>
             {/*  */}
-            <div className='text-[16em] font-bold text-white w-full text-center pt-[8vh]'>
+            <div className='text-[8em] font-bold text-white w-full text-center pt-[8vh]'>
                 MATCHING GAMES
             </div>
             {/*  */}
-            <div className='w-[80%] pt-[10vh] m-auto'>
+            <div className='w-full pt-[2vh] m-auto'>
 
-                <div className='grid grid-cols-4 gap-[100px]'>
+                <div className='grid grid-cols-4 gap-[1vw] w-full'>
                     {
                         cardState?.map((card_) => {
                             return (

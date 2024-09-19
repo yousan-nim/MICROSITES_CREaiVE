@@ -16,7 +16,9 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
       onClick={(e) => onClick && onClick(e)}
       data-testid={card.id}
     >
-      Card
+      <a className='relative text-[40px] flex text-center m-auto justify-center items-center pt-[30%]'>
+        ?
+      </a>
     </div>
   )
 }
