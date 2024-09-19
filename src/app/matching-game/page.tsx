@@ -70,22 +70,19 @@ const MatchingGame = () => {
             listcard.push(card)
             console.log("first")
         } else if (listcard.length <= 1) {
-            changeCardStatusHandler(card);
-            listcard.push(card)
-            console.log("second")
-            setTimeout(() => {
-                checker()
-            }, 1000);
+            if (card.id != listcard[0].id) {
+                changeCardStatusHandler(card);
+                listcard.push(card)
+                console.log("second")
+                setTimeout(() => {
+                    checker()
+                }, 1000);
 
+            }
 
         }
 
     };
-
-
-    useEffect(() => {
-        // checker();
-    }, [])
 
     return (
         <div>

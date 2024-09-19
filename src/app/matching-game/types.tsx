@@ -7,3 +7,11 @@ export type DataShow = {
     open: null | boolean,
     isFlipped: null | boolean,
 }
+
+
+export type Data = {
+    id: null | number,
+    name: null | string,
+    color: null | string,
+    img: null | string,
+}

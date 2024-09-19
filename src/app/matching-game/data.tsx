@@ -1,3 +1,5 @@
+
+import { Data } from './types'
 const data = [
     {
         id: 1,
@@ -116,10 +118,28 @@ const data = [
 export default data
 
 
+const shuffle = (array: Data[]) => {
+    let currentIndex = array.length;
 
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
 
-export const cardsData = data.map((card) => ({
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array
+}
+
+const datax = shuffle(data)
+
+export const cardsData = datax.map((card) => ({
     ...card,
-    order: Math.floor(Math.random() * 12),
+    order: Math.floor(Math.random() * 16),
     isFlipped: false,
 }));
