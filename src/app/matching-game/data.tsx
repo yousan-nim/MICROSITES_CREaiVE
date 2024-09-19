@@ -7,6 +7,8 @@ const data = [
         color: "bg-red-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 2,
@@ -14,6 +16,9 @@ const data = [
         color: "bg-blue-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
+
     },
     {
         id: 3,
@@ -21,6 +26,8 @@ const data = [
         color: "bg-yellow-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 4,
@@ -28,6 +35,8 @@ const data = [
         color: "bg-green-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 5,
@@ -35,6 +44,8 @@ const data = [
         color: "bg-pink-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 6,
@@ -42,6 +53,8 @@ const data = [
         color: "bg-orange-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 7,
@@ -49,6 +62,8 @@ const data = [
         color: "bg-gray-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 8,
@@ -56,6 +71,8 @@ const data = [
         color: "bg-black",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 11,
@@ -63,6 +80,8 @@ const data = [
         color: "bg-red-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 12,
@@ -70,6 +89,8 @@ const data = [
         color: "bg-blue-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 13,
@@ -77,6 +98,8 @@ const data = [
         color: "bg-yellow-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 14,
@@ -84,6 +107,8 @@ const data = [
         color: "bg-green-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 15,
@@ -91,6 +116,8 @@ const data = [
         color: "bg-pink-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 16,
@@ -98,6 +125,8 @@ const data = [
         color: "bg-orange-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 17,
@@ -105,6 +134,8 @@ const data = [
         color: "bg-gray-500",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
     {
         id: 18,
@@ -112,6 +143,8 @@ const data = [
         color: "bg-black",
         img: "",
         open: false,
+        order: false,
+        isFlipped: false,
     },
 ]
 
@@ -140,6 +173,6 @@ const datax = shuffle(data)
 
 export const cardsData = datax.map((card) => ({
     ...card,
-    order: Math.floor(Math.random() * 16),
-    isFlipped: false,
+    // order: Math.floor(Math.random() * 16),
+    // isFlipped: false,
 }));

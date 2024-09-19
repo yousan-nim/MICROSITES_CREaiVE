@@ -3,7 +3,7 @@ export type DataShow = {
     name: null | string,
     color: null | string,
     img: null | string,
-    order: null | number,
+    // order: null | number,
     open: null | boolean,
     isFlipped: null | boolean,
 }
@@ -14,4 +14,7 @@ export type Data = {
     name: null | string,
     color: null | string,
     img: null | string,
+    // order: null | number,
+    open: null | boolean,
+    isFlipped: null | boolean,
 }
