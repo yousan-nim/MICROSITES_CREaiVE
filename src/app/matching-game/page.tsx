@@ -4,6 +4,7 @@ import useSound from 'use-sound';
 import data, { cardsData } from './data'
 import CardComponent from './CardComponent'
 // import Sound from './Sound';
+import { Data } from './types'
 import { DataShow } from './types'
 
 const Sound = () => {
@@ -28,7 +29,7 @@ const MatchingGame = () => {
     const [win] = useSound('/mp3/Win Game Sound.wav');
     const [correct] = useSound('/mp3/Positive Game Sound.wav');
     const [fail] = useSound('/mp3/Game Fail Sound.wav');
-    
+
     // const [soundGame] = useSound('/mp3/Full Version.mp3');
     // const [soundgame, setSoundGame] = useState<boolean>(false);
 
@@ -38,14 +39,31 @@ const MatchingGame = () => {
     const [time, setTIme] = useState(50)
     const [timeOut, setTimeOut] = useState(false)
 
-    if(start) {
+    if (start) {
         setTimeout(() => {
 
 
-        },time)
+        }, time)
     }
 
 
+    const shuffle = (array: Data[]) => {
+        let currentIndex = array.length;
+
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+
+            // Pick a remaining element...
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array
+    }
 
     const checker = async () => {
 
@@ -56,6 +74,7 @@ const MatchingGame = () => {
             console.log("win")
             setTimeout(() => {
                 cardState.map(data => changeCardStatusHandler(data))
+                setCradState(shuffle(cardsData))
             }, 3000)
             win()
             setStart(false)
@@ -134,11 +153,11 @@ const MatchingGame = () => {
         <div className='max-w-[1780px] m-auto xl:w-[1280px] relative'>
             {!start && (
                 <div className='absolute z-10 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm'>
-                    <button 
+                    <button
 
-                    onClick={() => setStart(true)}
-                    
-                    className='bg-purple-400 flex justify-center items-center m-auto w-[400px] h-[400px] rounded-[100%] text-black font-bold border-[2px] border-gray-700 '>
+                        onClick={() => setStart(true)}
+
+                        className='bg-purple-400 flex justify-center items-center m-auto w-[400px] h-[400px] rounded-[100%] text-black font-bold border-[2px] border-gray-700 '>
                         START
                     </button>
                 </div>

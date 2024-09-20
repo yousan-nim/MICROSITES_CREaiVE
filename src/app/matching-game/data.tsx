@@ -173,6 +173,4 @@ const datax = shuffle(data)
 
 export const cardsData = datax.map((card) => ({
     ...card,
-    // order: Math.floor(Math.random() * 16),
-    // isFlipped: false,
 }));
