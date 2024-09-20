@@ -28,8 +28,8 @@ const MatchingGame = () => {
     const [win] = useSound('/mp3/Win Game Sound.wav');
     const [correct] = useSound('/mp3/Positive Game Sound.wav');
     const [fail] = useSound('/mp3/Game Fail Sound.wav');
+    
     // const [soundGame] = useSound('/mp3/Full Version.mp3');
-
     // const [soundgame, setSoundGame] = useState<boolean>(false);
 
     const audioRef = useRef<HTMLAudioElement>(null);
