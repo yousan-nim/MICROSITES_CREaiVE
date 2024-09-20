@@ -30,7 +30,7 @@ const MatchingGame = () => {
     const [fail] = useSound('/mp3/Game Fail Sound.wav');
     // const [soundGame] = useSound('/mp3/Full Version.mp3');
 
-    const [soundgame, setSoundGame] = useState<boolean>(true);
+    const [soundgame, setSoundGame] = useState<boolean>(false);
 
 
 
@@ -110,10 +110,10 @@ const MatchingGame = () => {
 
     // soundGame()
 
-    // useEffect(() => {
-    //     soundGame()
-    // },[])
-    
+    useEffect(() => {
+        setSoundGame(true)
+    },[])
+
     return (
         <div className='max-w-[1780px] m-auto xl:w-[1280px]'>
             {
