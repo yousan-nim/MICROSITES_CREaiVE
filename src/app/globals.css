@@ -143,6 +143,35 @@ html, body {
     opacity: 1;
   }
 }
+
+
+
+.flip {
+  transform: rotateY(180deg);
+}
+.memory-card {
+
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
 .opacity-loop-animate {
   -webkit-animation: flickerAnimation 6s infinite;
   -moz-animation: flickerAnimation 6s infinite;
