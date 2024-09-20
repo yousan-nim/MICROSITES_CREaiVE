@@ -16,6 +16,29 @@ const Sound = () => {
     )
 }
 
+
+// const CouterTime = ({ start }: { start: boolean }) => {
+//     // const [start, setStart] = useState(false)
+//     const [time, setTIme] = useState(50)
+//     const [timeOut, setTimeOut] = useState(false)
+//     const [failGame, setFailGame] = useState(false)
+
+
+//     if (start) {
+//         setTimeout(() => {
+//             setTIme((time) => time - 1);
+//         }, 1000)
+//     }
+
+//     return (
+//         <div className='absolute w-[150px] h-[150px] text-[80px] font-mono text-pink-500 border-pink-500 border-2 rounded-[100%] text-center pt-4'>
+//             {
+//                 time
+//             }s
+//         </div>
+//     )
+// }
+
 const MatchingGame = () => {
     let [cardState, setCradState] = useState(cardsData)
     // let [clickSet, setClickSet] = useState([])
@@ -38,36 +61,33 @@ const MatchingGame = () => {
     const audioRef = useRef<HTMLAudioElement>(null);
 
     const [start, setStart] = useState(false)
-    const [time, setTIme] = useState(50)
+    const [time, setTime] = useState(5);
     const [timeOut, setTimeOut] = useState(false)
     const [failGame, setFailGame] = useState(false)
 
-    if (start) {
+    // if (start) {
+    //     setTimeout(() => {
+    //         setTIme((time) => time - 1);
+    //     }, 1000)
+    // }
 
-        setTimeout(() => {
-            if (time > 0) {
-                setTIme((time) => time - 1);
-            }
-            else if (time === 0) {
-                setFailGame(true)
-                setTimeOut(true)
-                setTIme(50)
-                setStart(false)
-                setTimeOut(false)
-                overtime()
-                
-                setTimeout(() => {
-                    youlose()
-                }, 1000);
+    // if (time === 0) {
+    //     setFailGame(true)
+    //     setTimeOut(true)
+    //     setTIme(50)
+    //     setStart(false)
+    //     setTimeOut(false)
+    //     overtime()
 
-                setTimeout(() => {
-                    // youlose()
-                    setFailGame(false)
-                }, 5000);
-            }
+    //     setTimeout(() => {
+    //         youlose()
+    //     }, 1000);
 
-        }, 1000)
-    }
+    //     setTimeout(() => {
+    //         // youlose()
+    //         setFailGame(false)
+    //     }, 5000);
+    // }
 
 
     const shuffle = (array: Data[]) => {
@@ -164,13 +184,43 @@ const MatchingGame = () => {
 
     };
 
-    // soundGame()
+    // Timer Logic
+    useEffect(() => {
+        if (!start || time <= 0) return;
+
+        const timer = setInterval(() => {
+            setTime((prevTime) => prevTime - 1);
+        }, 1000);
+
+        // Cleanup timer
+        return () => clearInterval(timer);
+    }, [start, time]);
+
+    useEffect(() => {
+        // Handle timer reaching zero
+        if (time <= 0) {
+            setFailGame(true);
+            setStart(false);
+            overtime();
+            setTimeout(() => {
+                youlose();
+            }, 1000);
+
+            setTimeout(() => {
+                // youlose()
+                setFailGame(false)
+                setTime(50)
+            }, 5000);
+        }
+    }, [time]);
 
     useEffect(() => {
         if (audioRef.current) {
             audioRef.current.play();
         }
-    }, []);
+
+
+    }, [1000]);
 
     return (
         <div className='max-w-[1780px] m-auto xl:w-[1280px] relative'>
@@ -179,6 +229,7 @@ const MatchingGame = () => {
                     time
                 }s
             </div>
+            {/* <CouterTime start={start} /> */}
             {!start && (
                 <div className='absolute z-10 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm'>
                     <button
