@@ -29,6 +29,8 @@ const MatchingGame = () => {
     const [win] = useSound('/mp3/Win Game Sound.wav');
     const [correct] = useSound('/mp3/Positive Game Sound.wav');
     const [fail] = useSound('/mp3/Game Fail Sound.wav');
+    const [overtime] = useSound('/mp3/timeout.mp3');
+    const [youlose] = useSound('/mp3/youlose.mp3');
 
     // const [soundGame] = useSound('/mp3/Full Version.mp3');
     // const [soundgame, setSoundGame] = useState<boolean>(false);
@@ -38,12 +40,33 @@ const MatchingGame = () => {
     const [start, setStart] = useState(false)
     const [time, setTIme] = useState(50)
     const [timeOut, setTimeOut] = useState(false)
+    const [failGame, setFailGame] = useState(false)
 
     if (start) {
+
         setTimeout(() => {
+            if (time > 0) {
+                setTIme((time) => time - 1);
+            }
+            else if (time === 0) {
+                setFailGame(true)
+                setTimeOut(true)
+                setTIme(50)
+                setStart(false)
+                setTimeOut(false)
+                overtime()
+                
+                setTimeout(() => {
+                    youlose()
+                }, 1000);
 
+                setTimeout(() => {
+                    // youlose()
+                    setFailGame(false)
+                }, 5000);
+            }
 
-        }, time)
+        }, 1000)
     }
 
 
@@ -151,6 +174,11 @@ const MatchingGame = () => {
 
     return (
         <div className='max-w-[1780px] m-auto xl:w-[1280px] relative'>
+            <div className='absolute w-[150px] h-[150px] text-[80px] font-mono text-pink-500 border-pink-500 border-2 rounded-[100%] text-center pt-4'>
+                {
+                    time
+                }s
+            </div>
             {!start && (
                 <div className='absolute z-10 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm'>
                     <button
@@ -162,6 +190,16 @@ const MatchingGame = () => {
                     </button>
                 </div>
             )}
+
+            {failGame && (
+                <div className='absolute z-10 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm'>
+                    <button
+                        className='bg-purple-400 flex justify-center items-center m-auto w-[400px] h-[400px] rounded-[100%] text-black font-bold border-[2px] border-gray-700 '>
+                        FAIL
+                    </button>
+                </div>
+            )}
+
             <audio ref={audioRef} loop>
                 <source src="/mp3/Full Version.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
