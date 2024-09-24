@@ -13,7 +13,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
 
   return (
     <div
-      className={`w-[11.5vh] h-[11.5vh] col-span-1 rounded-xl  ${card.open ? "transition-all duration-300 [transform:rotateY(180deg)] bg-white" : "bg-black "}`}
+      className={`w-[11.5vh] h-[11.5vh] col-span-1 rounded-xl m-auto shadow-2xl shadow-black ${card.open ? "transition-all duration-300 [transform:rotateY(180deg)] bg-white" : "bg-black "}`}
 
       onClick={(e) => onClick && onClick(e)}
       data-testid={card.id}
@@ -23,7 +23,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
           card.open ? <div className=''>
             <img
               src={`/assets/${card.img} `}
-              className='w-full p-4 [transform:rotateY(180deg)]'
+              className='w-full p-0 [transform:rotateY(180deg)] rounded-xl'
             />
           </div>
             :

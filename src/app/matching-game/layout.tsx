@@ -32,7 +32,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             {/* <Sound /> */}
-            <div className="w-screen h-screen bg-purple-800 p-[100px]">
+            <div className="w-screen h-screen p-[100px]">
                 {children}
             </div>
         </html>
