@@ -223,7 +223,7 @@ const MatchingGame = () => {
     }, [1000]);
 
     return (
-        <div className='max-w-[1780px] m-auto xl:w-[1440px] relative'>
+        <div className='max-w-[1780px] m-auto xl:[1280px] relative'>
             <div className='absolute w-[150px] h-[150px] text-[80px] font-mono text-pink-500 border-pink-500 border-2 rounded-[100%] text-center pt-4'>
                 {
                     time
@@ -268,7 +268,7 @@ const MatchingGame = () => {
             <div className='w-full pt-[2vh] m-auto'>
 
 
-                <div className='grid grid-cols-4 gap-[1vw] w-full m-auto '>
+                <div className='grid grid-cols-4 gap-[1vw] m-auto '>
                     {
                         cardState?.map((card_) => {
                             return (
