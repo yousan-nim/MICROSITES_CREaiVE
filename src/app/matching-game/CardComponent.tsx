@@ -13,7 +13,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
 
   return (
     <div
-      className={`w-[11.5vh] h-[11.5vh] col-span-1 rounded-[32px] m-auto shadow-2xl shadow-black bg-transparent ${card.open ? "transition-all duration-300 [transform:rotateY(180deg)] bg-white" : "bg-transparent"}`}
+      className={`w-[11.5vh] h-[11.5vh] col-span-1 rounded-[40px] m-auto shadow-2xl shadow-black bg-transparent ${card.open ? "transition-all duration-300 [transform:rotateY(180deg)] bg-white" : "bg-transparent"}`}
 
       onClick={(e) => onClick && onClick(e)}
       data-testid={card.id}
