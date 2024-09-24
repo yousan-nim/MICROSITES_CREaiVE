@@ -18,7 +18,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
       onClick={(e) => onClick && onClick(e)}
       data-testid={card.id}
     >
-      <a className='relative text-[40px] flex text-center m-auto justify-center items-center '>
+      <a className='relative text-[45px] flex text-center m-auto justify-center items-center '>
         {
           card.open ? <div className=''>
             <img
