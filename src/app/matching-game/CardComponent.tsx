@@ -13,7 +13,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
 
   return (
     <div
-      className={`w-[11.5vh] h-[11.5vh] col-span-1 rounded-xl m-auto shadow-2xl shadow-black ${card.open ? "transition-all duration-300 [transform:rotateY(180deg)] bg-white" : "bg-black "}`}
+      className={`w-[11.5vh] h-[11.5vh] col-span-1 rounded-xl m-auto shadow-2xl shadow-black ${card.open ? "transition-all duration-300 [transform:rotateY(180deg)] bg-white" : "bg-transparent"}`}
 
       onClick={(e) => onClick && onClick(e)}
       data-testid={card.id}
@@ -29,8 +29,8 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
             :
             <div className={`flex text-center m-auto justify-center items-center ${card.open ? '' : "transition-all duration-300 [transform:rotateY(360deg)]"}`}>
               <img
-                src='/assets/Creaive Logo Final 06.png'
-                className='p-[1vh] m-[1vh] h-full pt-[30%]'
+                src='/assets/AI Games Source-01.png'
+                className='w-full '
               />
             </div>
         }
