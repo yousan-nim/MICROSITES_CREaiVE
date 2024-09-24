@@ -29,7 +29,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
             :
             <div className={`flex text-center m-auto justify-center items-center ${card.open ? '' : "transition-all duration-300 [transform:rotateY(360deg)]"}`}>
               <img
-                src='/assets/AI Games Source-01.png'
+                src='/assets/AI Games Source-02.png'
                 className='w-full '
               />
             </div>
