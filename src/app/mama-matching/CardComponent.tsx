@@ -22,7 +22,7 @@ const CardComponent: React.FC<Props> = ({ onClick, card }) => {
         {
           card.open ? <div className=''>
             <img
-              src={`/assets/${card.img} `}
+              src={`/MAMA/${card.img} `}
               className='w-full [transform:rotateY(180deg)] rounded-xl'
             />
           </div>

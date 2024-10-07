@@ -38,7 +38,7 @@ const MatchingGame = () => {
     const audioRef = useRef<HTMLAudioElement>(null);
 
     const [start, setStart] = useState(false)
-    const [time, setTime] = useState(5);
+    const [time, setTime] = useState(50);
     const [timeOut, setTimeOut] = useState(false)
     const [failGame, setFailGame] = useState(false)
 
@@ -175,7 +175,7 @@ const MatchingGame = () => {
                 setFailGame(false)
                 cardState.map(data => changeCardStatusHandlerCloseAll(data))
                 setCradState(shuffle(cardsData))
-                setTime(5)
+                setTime(50)
             }, 3000);
         }
     }, [time]);
