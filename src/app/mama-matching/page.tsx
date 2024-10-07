@@ -7,6 +7,9 @@ import CardComponent from './CardComponent'
 import { Data } from './types'
 import { DataShow } from './types'
 
+import { IoMdRefresh } from "react-icons/io";
+
+
 const Sound = () => {
     return (
         <audio loop autoPlay>
@@ -40,11 +43,8 @@ const MatchingGame = () => {
     const [start, setStart] = useState(false)
     const [time, setTime] = useState(50);
     const [timeOut, setTimeOut] = useState(false)
+    const [winGame, setWinGame] = useState(false)
     const [failGame, setFailGame] = useState(false)
-
-    const gameStart = () => {
-        setCradState(shuffle(cardsData))
-    }
 
 
     const shuffle = (array: Data[]) => {
@@ -58,8 +58,7 @@ const MatchingGame = () => {
             currentIndex--;
 
             // And swap it with the current element.
-            [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]];
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
         }
 
         return array
@@ -70,14 +69,30 @@ const MatchingGame = () => {
         console.log("check")
         console.log(listcard)
 
+        // cardState.map(data => changeCardStatusHandlerOpenAll(data))
+
         if (cardState.every(data => data.open === true)) {
+            setWinGame(true)
+
             console.log("win")
             setTimeout(() => {
                 cardState.map(data => changeCardStatusHandler(data))
                 setCradState(shuffle(cardsData))
+                setStart(false)
+                // setWinGame(true)
+
             }, 3000)
             win()
-            setStart(false)
+
+            
+
+
+
+            setTimeout(() => {
+                setCradState(shuffle(cardsData))
+                // setStart(false)
+                // setWinGame(false)
+            }, 6000)
 
         }
 
@@ -123,6 +138,12 @@ const MatchingGame = () => {
         await setCradState(newState);
     };
 
+    const changeCardStatusHandlerOpenAll = async (card: DataShow) => {
+        card.open = true
+        let newState = [...cardState];
+        await setCradState(newState);
+    };
+
     const handleClick = (e: React.MouseEvent<HTMLDivElement>, card: DataShow) => {
         e.preventDefault()
 
@@ -151,7 +172,7 @@ const MatchingGame = () => {
 
     // Timer Logic
     useEffect(() => {
-        if (!start || time <= 0) return;
+        if (winGame || !start || time <= 0) return;
 
         const timer = setInterval(() => {
             setTime((prevTime) => prevTime - 1);
@@ -176,7 +197,7 @@ const MatchingGame = () => {
                 cardState.map(data => changeCardStatusHandlerCloseAll(data))
                 setCradState(shuffle(cardsData))
                 setTime(50)
-            }, 3000);
+            }, 6000);
         }
     }, [time]);
 
@@ -205,14 +226,29 @@ const MatchingGame = () => {
                 </div>
             )}
 
-            {/* {failGame && (
-                <div className='absolute z-10 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm'>
-                    <button
-                        className='bg-purple-400 flex justify-center items-center m-auto w-[400px] h-[400px] rounded-[100%] text-black font-bold border-[2px] border-gray-700 '>
-                        FAIL
-                    </button>
+            {winGame && (
+                <div className='absolute z-20 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm'>
+                    <img src="/MAMA/You Win.png" className='w-full h-full' />
+
+                    {!start && (
+                        <button
+                            onClick={() => {
+                                setStart(false)
+                                setWinGame(false)
+                                setTime(50)
+                            }}
+                            className='flex justify-center items-center m-auto w-[400px] pt-[30px] text-black font-bold '>
+                            <IoMdRefresh size={80} className='text-purple-700'/>
+                        </button>
+                    )}
                 </div>
-            )} */}
+            )}
+
+            {failGame && (
+                <div className='absolute z-10 w-full text-[120px] top-[20%] text-center h-[60vh] pt-[15vh] backdrop-blur-sm '>
+                    <img src="/MAMA/You Lose.png" className='w-full h-full' />
+                </div>
+            )}
 
             <audio ref={audioRef} loop>
                 <source src="/mp3/Full Version.mp3" type="audio/mpeg" />
