@@ -35,7 +35,7 @@ const nextConfig = {
   // distDir: 'build'
 
   output: "export", // <=== enables static exports
-  reactStrictMode: true,
+  reactStrictMode: true, 
 };
 
 export default nextConfig;
