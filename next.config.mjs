@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
 
-
 // const withPWA = require('next-pwa')({
 //   dest: 'public'
 // })
-
-
 
 const nextConfig = {
   /**
@@ -37,12 +34,9 @@ const nextConfig = {
   staticPageGenerationTimeout: 1000,
   // distDir: 'build'
 
-  reactStrictMode: false,
-
-
+  output: "export", // <=== enables static exports
+  reactStrictMode: true,
 };
-
-
 
 export default nextConfig;
 
